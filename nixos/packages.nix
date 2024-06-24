@@ -28,14 +28,17 @@
     discord
     # firefox # already enabled in configuration.nix?
     obsidian
-    ulauncher
-    vivaldi
+    # ulauncher
+    vivaldi # Run using this command until further noticevivaldi --disable-features=AllowQt
+
+    # Wayland
+    xwayland
 
     # GPU
     amdvlk
 
     # Window Management
-    wmctrl
+    # wmctrl
 
     # Other
     home-manager
