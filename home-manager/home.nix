@@ -6,7 +6,7 @@
     ./apps.nix
     ./git.nix
     # QT added for vivaldi support...
-    ./qt.nix
+    # ./qt.nix
   ];
 
   home = {
