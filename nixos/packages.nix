@@ -43,8 +43,8 @@
     # Other
     home-manager
     samba
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
+    # libsForQt5.qtstyleplugin-kvantum
+    # libsForQt5.qt5ct
   ];
 
   fonts.packages = with pkgs; [

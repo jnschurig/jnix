@@ -11,11 +11,11 @@
     rm -f ~/.gitconfig
   '';
 
-  home.file."recharge/.gitconfig".text = ''
-    [user]
-      email = "derek.bunch@rechargeapps.com";
-      name = "Derek Bunch"
-  '';
+  # home.file."recharge/.gitconfig".text = ''
+  #   [user]
+  #     email = "james.schurig@rechargeapps.com";
+  #     name = "James Schurig"
+  # '';
 
   programs.git = {
     enable = true;
@@ -28,8 +28,8 @@
       {
         # use diffrent email & name for work
         path = "~/recharge/.gitconfig";
-        # userName = "Derek Bunch";
-        # userEmail = "derek.bunch@rechargeapps.com";
+        # userName = "James Schurig";
+        # userEmail = "james.schurig@rechargeapps.com";
         condition = "gitdir:~/recharge/";
       }
     ];
