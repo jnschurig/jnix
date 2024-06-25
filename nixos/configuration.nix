@@ -15,8 +15,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  networking.hostName = "jnix"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
+  # networking.hostName = "jnix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -88,6 +88,10 @@
     #  thunderbird
     ];
   };
+
+  # Enable Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
+  # Auto upgrade nix package and the daemon service.
 
   # Install firefox.
   programs.firefox.enable = true;

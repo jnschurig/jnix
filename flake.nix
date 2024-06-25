@@ -3,12 +3,12 @@
 
   inputs = {
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     # nixvim = {
@@ -16,10 +16,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    polymc.url = "github:PolyMC/PolyMC";
+    # polymc.url = "github:PolyMC/PolyMC";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -28,7 +28,7 @@
     # nixos - system hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
+        pkgs-stable = import nixpkgs-stable {
           inherit system;
           config.allowUnfree = true;
         };
@@ -42,7 +42,7 @@
 
     homeConfigurations.james = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-    #   modules = [ ./home-manager/home.nix ];
+      modules = [ ./home-manager/home.nix ];
     };
   };
 }
