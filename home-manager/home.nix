@@ -5,7 +5,8 @@
     # ./modules/bundle.nix
     ./apps.nix
     ./git.nix
-    ./qt.nix # originally added to try and make vivaldi run
+    # QT added for vivaldi support...
+    ./qt.nix
   ];
 
   home = {
