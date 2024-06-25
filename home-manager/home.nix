@@ -5,6 +5,7 @@
     # ./modules/bundle.nix
     ./apps.nix
     ./git.nix
+    ./qt.nix
   ];
 
   home = {
