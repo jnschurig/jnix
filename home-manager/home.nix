@@ -7,6 +7,8 @@
     # ./git.nix moved
   ];
 
+  home-manager.backupFileExtension = "hm-backup";
+
   home = {
     username = "james";
     homeDirectory = "/home/james";
