@@ -1,7 +1,8 @@
 {
   imports = [
-    # ./cursor.nix
     ./git.nix
+    ./zsh.nix
+    # ./cursor.nix
     # ./htop.nix
     # ./alacritty.nix
 
