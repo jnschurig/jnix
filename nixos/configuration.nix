@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
+      ./modules/user.nix
     ];
 
   # Bootloader.
@@ -79,15 +80,15 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.james = {
-    isNormalUser = true;
-    description = "James Schurig";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
-  };
+  # users.users.james = {
+  #   isNormalUser = true;
+  #   description = "James Schurig";
+  #   extraGroups = [ "networkmanager" "wheel" ];
+  #   packages = with pkgs; [
+  #     kdePackages.kate
+  #   #  thunderbird
+  #   ];
+  # };
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes

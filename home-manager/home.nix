@@ -2,9 +2,9 @@
 
   imports = [
     # ./zsh.nix
-    # ./modules/bundle.nix
+    ./modules/bundle.nix
     ./apps.nix
-    ./git.nix
+    # ./git.nix moved
   ];
 
   home = {
