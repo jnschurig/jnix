@@ -2,6 +2,7 @@
   imports = [
     ./git.nix
     # ./kitty.nix moving to apps.nix
+    ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix
     # ./htop.nix
