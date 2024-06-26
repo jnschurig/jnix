@@ -12,4 +12,11 @@
     homeDirectory = "/home/james";
     stateVersion = "24.05";
   };
+
+    # Environment
+  home.sessionVariables = {
+    EDITOR = "code";
+    # BROWSER = "firefox";
+    TERMINAL = "kitty";
+  };
 }
