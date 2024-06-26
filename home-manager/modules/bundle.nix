@@ -1,6 +1,7 @@
 {
   imports = [
     ./git.nix
+    ./kitty.nix
     ./zsh.nix
     # ./cursor.nix
     # ./htop.nix
