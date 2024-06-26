@@ -1,7 +1,7 @@
 {
   imports = [
     ./git.nix
-    ./kitty.nix
+    # ./kitty.nix moving to apps.nix
     ./zsh.nix
     # ./cursor.nix
     # ./htop.nix
