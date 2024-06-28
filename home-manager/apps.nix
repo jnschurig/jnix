@@ -114,9 +114,7 @@
       inherit lib;
     };
 
-    {
-      steam.platformOptimizations.enable = true;
-    };
+    steam.enable = true;
 
     # mise = {
     #   enable = true;
