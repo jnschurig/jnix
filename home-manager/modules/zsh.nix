@@ -1,10 +1,16 @@
-{ config, pkgs, ... }: {
+{ lib
+, pkgs
+, ...
+}: { config, pkgs, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    # This one can be problematic
     # enableAutosuggestions = true;
     autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+   
+    # Trying out removing this.
+    # syntaxHighlighting.enable = true;
 
     # shellAliases =
     #   let
@@ -25,8 +31,21 @@
     #   ff = "fastfetch";
     # };
 
-    history.size = 10000;
-    # history.path = "${config.xdg.dataHome}/zsh/history";
+    history = {
+      size = 10000;
+      save = 10000;
+      share = true;
+      ignoreDups = true;
+      ignoreAllDups = true;
+      # path = "${config.xdg.dataHome}/zsh/history";
+    };
+
+    initExtraFirst = ''
+      # source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+    '';
+
+    shellAliases = import ./shell/aliases.nix;
 
     oh-my-zsh = {
       enable = true;
@@ -34,6 +53,7 @@
         "colored-man-pages"
         "colorize"
         "direnv"
+        "fzf"
         "git"
         "github"
         "pip"
@@ -59,6 +79,11 @@
         name = "powerlevel10k-config";
         src = ./p10k-config;
         file = "p10k.zsh";
+      }
+      {
+        name = "zsh-extra";
+        src = ./zsh;
+        file = "extra.zsh";
       }
     ];
 

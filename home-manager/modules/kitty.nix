@@ -3,10 +3,10 @@
 , ...
 }: {
   enable = true;
-  #font = {
+  # font = {
   #  name = pks.firacode;
-  #  size = 16;
-  #};
+  #  size = 10;
+  # };
   shellIntegration = {
     enableZshIntegration = true;
   };
