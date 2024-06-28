@@ -114,7 +114,7 @@
       inherit lib;
     };
 
-    steam.enable = true;
+    programs.steam.enable = true;
 
     # mise = {
     #   enable = true;
