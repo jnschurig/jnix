@@ -40,6 +40,7 @@
       modules = [
         ./nixos/configuration.nix
         # inputs.nixvim.nixosModules.nixvim
+        inputs.nix-gaming.nixosModules.pipewireLowLatency
       ];
     };
 
