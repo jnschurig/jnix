@@ -11,7 +11,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       # backupFileExtension = "hm-backup"; # This doesn't seem to work...
     };
-
+    
+    nix-gaming.url = "github:fufexan/nix-gaming";
+    
     # nixvim = {
     #   url = "github:nix-community/nixvim";
     #   inputs.nixpkgs.follows = "nixpkgs";
