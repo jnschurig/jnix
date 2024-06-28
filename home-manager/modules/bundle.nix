@@ -3,7 +3,7 @@
 , ...
 }: {
   imports = [
-    # ./fzf.nix
+    ./fzf.nix
     ./git.nix
     # moving to apps.nix
     # ./kitty.nix
