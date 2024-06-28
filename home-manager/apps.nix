@@ -8,15 +8,6 @@
 # in
 {
   home.file = {
-    # ".aerospace.toml".source = ./aerospace/aerospace.toml;
-    # ".config/borders/bordersrc".source = ./aerospace/bordersrc;
-    # ".taplo.toml".source = ./taplo/.taplo.toml;
-
-    # ".hammerspoon" = {
-    #   source = ./hammerspoon;
-    #   recursive = true;
-    # };
-
     # ".config/nvim/lua" = {
     #   source = ./neovim/lua;
     #   recursive = true;
@@ -38,7 +29,7 @@
     # nmap
     # yq-go # yaml processor
     fzf # fuzzy finder
-    # fd # fuzzy rust-based find replacement
+    fd # fuzzy rust-based find replacement
     fzf-git-sh # fuzzy git search and tools
     shellcheck
     # hadolint

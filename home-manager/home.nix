@@ -4,7 +4,6 @@
     # ./zsh.nix
     ./modules/bundle.nix
     ./apps.nix
-    # ./git.nix moved
   ];
 
   home = {
