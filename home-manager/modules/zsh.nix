@@ -24,7 +24,7 @@
     # '';
 
     # Aliases
-    shellAliases = import ./shell/aliases.nix;
+    # shellAliases = import ./shell/aliases.nix;
 
     oh-my-zsh = {
       enable = true;
