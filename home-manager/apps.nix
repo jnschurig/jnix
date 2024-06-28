@@ -37,10 +37,10 @@
     # coreutils
     # nmap
     # yq-go # yaml processor
-    # fzf # fuzzy finder
+    fzf # fuzzy finder
     # fd # fuzzy rust-based find replacement
-    # fzf-git-sh # fuzzy git search and tools
-    # shellcheck
+    fzf-git-sh # fuzzy git search and tools
+    shellcheck
     # hadolint
     # yamllint
     # lazydocker
@@ -65,9 +65,9 @@
     # zsh-autocomplete
     # TODO: maybe i can use some cool nix magic to only let this be installed if
     # TODO: enableCompletion is set to false
-    # zsh-fast-syntax-highlighting
-    # zsh-completions
-    # zsh-autoenv
+    zsh-fast-syntax-highlighting
+    zsh-completions
+    zsh-autoenv
 
     # productivity
     # glow # markdown previewer in terminal
@@ -82,7 +82,7 @@
     # postgresql_14
 
     # Python build dependencies
-    # openssl
+    openssl
     # readline
     # xz
     # zlib
