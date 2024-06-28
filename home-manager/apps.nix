@@ -114,10 +114,6 @@
       inherit lib;
     };
 
-    steam = {
-      enable = true;
-    };
-
     # mise = {
     #   enable = true;
     #   enableZshIntegration = true;
