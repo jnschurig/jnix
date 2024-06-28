@@ -41,6 +41,7 @@
         ./nixos/configuration.nix
         # inputs.nixvim.nixosModules.nixvim
         inputs.nix-gaming.nixosModules.pipewireLowLatency
+        inputs.nix-gaming.nixosModules.steamCompat
       ];
     };
 

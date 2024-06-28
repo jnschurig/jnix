@@ -114,6 +114,10 @@
       inherit lib;
     };
 
+    {
+      steam.platformOptimizations.enable = true;
+    };
+
     # mise = {
     #   enable = true;
     #   enableZshIntegration = true;
