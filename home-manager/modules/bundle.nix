@@ -1,5 +1,6 @@
 {
   imports = [
+    ./fzf.nix
     ./git.nix
     # ./kitty.nix moving to apps.nix
     ./zoxide.nix
