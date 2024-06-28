@@ -20,6 +20,7 @@
         "colored-man-pages"
         "colorize"
         "direnv"
+        "fzf"
         "git"
         "github"
         "pip"
