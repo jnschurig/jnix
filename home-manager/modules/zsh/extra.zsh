@@ -9,9 +9,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
-source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
-source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
+# source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
+# source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
+# source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
 path+=$HOME/.local/bin
 # path+="/opt/homebrew/opt/libiodbc/bin"
 export PATH
