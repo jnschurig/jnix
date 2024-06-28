@@ -6,7 +6,7 @@
     ./fzf.nix
     ./git.nix
     # moving to apps.nix
-    ./kitty.nix
+    # ./kitty.nix
     ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix

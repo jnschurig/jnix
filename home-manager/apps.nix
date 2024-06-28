@@ -118,10 +118,10 @@
 
     # tmux = import ./tmux/tmux.nix { inherit pkgs; };
 
-    # kitty = import ./modules/kitty.nix {
-    #   inherit pkgs;
-    #   inherit lib;
-    # };
+    kitty = import ./modules/kitty.nix {
+      inherit pkgs;
+      inherit lib;
+    };
 
     # mise = {
     #   enable = true;
