@@ -91,7 +91,11 @@
   # };
 
   # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
+    substituters = ["https://nix-gaming.cachix.org"];
+    trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
+  };
   # Auto upgrade nix package and the daemon service.
 
   # Install firefox.
