@@ -33,6 +33,7 @@
 
     # Gaming
     steam
+    wine
 
     # Wayland
     xwayland
