@@ -8,15 +8,16 @@
     # This one can be problematic
     # enableAutosuggestions = true;
     autosuggestion.enable = true;
-   
-    history = {
-      size = 10000;
-      save = 10000;
-      share = true;
-      ignoreDups = true;
-      ignoreAllDups = true;
-      # path = "${config.xdg.dataHome}/zsh/history";
-    };
+
+    history.size = 10000;   
+    # history = {
+    #   size = 10000;
+    #   save = 10000;
+    #   share = true;
+    #   ignoreDups = true;
+    #   ignoreAllDups = true;
+    #   # path = "${config.xdg.dataHome}/zsh/history";
+    # };
 
     # initExtraFirst = ''
     #   # source ${pkgs.zsh-autocomplete}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
