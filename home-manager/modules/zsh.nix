@@ -45,6 +45,7 @@
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
     '';
 
+    # Aliases
     shellAliases = import ./shell/aliases.nix;
 
     oh-my-zsh = {
@@ -80,11 +81,11 @@
         src = ./p10k-config;
         file = "p10k.zsh";
       }
-      {
-        name = "zsh-extra";
-        src = ./zsh;
-        file = "extra.zsh";
-      }
+      # {
+      #   name = "zsh-extra";
+      #   src = ./zsh;
+      #   file = "extra.zsh";
+      # }
     ];
 
     localVariables = {
