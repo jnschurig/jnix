@@ -1,8 +1,12 @@
-{
+{ pkgs
+, lib
+, ...
+}: {
   imports = [
     ./fzf.nix
     ./git.nix
-    # ./kitty.nix moving to apps.nix
+    # moving to apps.nix
+    ./kitty.nix
     ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix
