@@ -102,7 +102,7 @@
 
   programs = {
 
-    # neovim = import ./neovim/neovim.nix {
+    # neovim = import .modules/neovim/neovim.nix {
     #   inherit pkgs;
     #   inherit lib;
     # };

@@ -17,10 +17,11 @@
 
     # CLI utils
     git
-    wget
+    lazygit
     neofetch
-    zip
     unzip
+    wget
+    zip
 
     # Desktop Apps
     audacity
