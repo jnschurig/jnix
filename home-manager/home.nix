@@ -15,5 +15,6 @@
       # BROWSER = "firefox";
       TERMINAL = "kitty";
     };
+
   };
 }

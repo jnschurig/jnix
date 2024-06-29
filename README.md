@@ -1,27 +1,10 @@
 # jnix
 
-For now my config needs a symlink to /etc/nixos to work properly.
-
+1. Clone the repo or copy all the files to ${dir}
+2. From the terminal run
 ```bash
-cd ~
-mkdir git
-cd git
-
-git clone git@github.com:jnschurig/jnix.git
-
-sudo mv /etc/nixos /etc/nixos_bak
-sudo ln -s /home/james/git/jnix/nixos /etc/nixos
-
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch --flake ${dir}
+sudo reboot
+home-manager switch --flake {dir}
 ```
-
-Do not use `flake.nix` just yet. Coming soon hopefully.
-
-
-```bash
-git clone https://github.com/Andrey0189/nixos-config
-mv nixos-config $HOME/nix # Config is supposed to be in the ~/nix directory
-cd $HOME/nix
-sudo nixos-rebuild switch --flake .
-home-manager switch --flake .
-```
+3. Enjoy!

@@ -31,6 +31,7 @@
     fzf # fuzzy finder
     fd # fuzzy rust-based find replacement
     fzf-git-sh # fuzzy git search and tools
+    jq
     shellcheck
     # hadolint
     # yamllint
@@ -169,20 +170,6 @@
 
     # };
 
-    # lazygit = {
-    #   enable = true;
-    #   settings = {
-    #     gui = {
-    #       nerdFontsVersion = 3;
-    #     };
-    #     git = {
-    #       paging = {
-    #         pager = "delta --syntax-theme gruvbox-dark --paging=never";
-    #       };
-    #     };
-    #   };
-    # };
-
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
 
@@ -193,7 +180,7 @@
 
     # pyenv.enable = true;
 
-    # jq.enable = true;
+    jq.enable = true;
 
     nix-index.enable = true;
 
