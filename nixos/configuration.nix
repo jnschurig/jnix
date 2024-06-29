@@ -9,7 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
-      ./modules/user.nix
+      ./modules/bundle.nix
+      # ./modules/user.nix # moved to bundle.nix
       # inputs.nix-gaming.nixosModules.<module name>
     ];
 
