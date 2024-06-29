@@ -15,5 +15,10 @@
       # BROWSER = "firefox";
       TERMINAL = "kitty";
     };
+
+    # Symlink my git jnix to the preferred home of nix
+    file = {
+      "~/nix/".source = /home/git/jnix;
+    };
   };
 }
