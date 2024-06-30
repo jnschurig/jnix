@@ -19,10 +19,9 @@ in {
       ];
     };
 
-    nix.settings.trusted-users = [username];
-
   };
 
+  nix.settings.trusted-users = [username];
 
   # Enable automatic login for the user.
   # services.getty.autologinUser = "${username}";
