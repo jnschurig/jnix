@@ -31,7 +31,7 @@ in
       recursive = true;
       executable = true;
     };
-    file.".nixos" = {
+    file."./nix/nixos" = {
       source = ../nixos;
       recursive = true;
       executable = true;
