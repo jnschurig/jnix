@@ -26,5 +26,15 @@ in
     file.".profile".text = "${profile_text}";
     file.".zprofile".text = "${profile_text}";
 
+    file.".config/home-manager" = {
+      source = ../home-manager;
+      recursive = true;
+      executable = true;
+    };
+    file.".nixos" = {
+      source = ../nixos;
+      recursive = true;
+      executable = true;
+    };
   };
 }

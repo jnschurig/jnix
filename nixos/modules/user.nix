@@ -1,11 +1,15 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: 
+
+let
+  username = "james";
+in {
   programs.zsh.enable = true;
 
   users = {
     defaultUserShell = pkgs.zsh;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.james = {
+    users."${username}" = {
       isNormalUser = true;
       description = "James Schurig";
       extraGroups = [ "networkmanager" "wheel" ];
@@ -14,9 +18,11 @@
       #  thunderbird
       ];
     };
+
   };
 
+  nix.settings.trusted-users = [username];
 
   # Enable automatic login for the user.
-  # services.getty.autologinUser = "james";
+  # services.getty.autologinUser = "${username}";
 }

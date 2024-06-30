@@ -30,7 +30,6 @@
     discord
     # firefox # already enabled in configuration.nix?
     obsidian
-    # ulauncher
     vivaldi # Run using this command until further noticevivaldi --disable-features=AllowQt
 
     # Gaming

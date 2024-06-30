@@ -75,10 +75,15 @@
     # postgresql_14
 
     # Python build dependencies
+    python3
+
+    # Removing GCC and gnumake for now
+    # gcc
+    # gnumake
     openssl
-    # readline
-    # xz
-    # zlib
+    readline
+    xz
+    zlib
     # not in nix, but still needed, moved to brew
     # sqlite3
     # tcl-tk
