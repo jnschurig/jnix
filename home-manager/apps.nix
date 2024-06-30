@@ -75,10 +75,11 @@
     # postgresql_14
 
     # Python build dependencies
+    python
     openssl
-    # readline
-    # xz
-    # zlib
+    readline
+    xz
+    zlib
     # not in nix, but still needed, moved to brew
     # sqlite3
     # tcl-tk

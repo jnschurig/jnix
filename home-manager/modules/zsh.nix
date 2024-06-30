@@ -22,6 +22,10 @@
       v = "nvim";
       se = "sudoedit";
       ff = "fastfetch";
+
+      # python
+      py = "python3";
+      pip = "py -m pip";
     };
 
     history = {

@@ -5,7 +5,7 @@
   imports = [
     ./fzf.nix
     ./git.nix
-    ./pyenv.nix
+    ./python.nix
     ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix
