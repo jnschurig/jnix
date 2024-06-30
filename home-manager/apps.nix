@@ -75,7 +75,11 @@
     # postgresql_14
 
     # Python build dependencies
-    python
+    python3
+
+    # Removing GCC and gnumake for now
+    # gcc
+    # gnumake
     openssl
     readline
     xz
