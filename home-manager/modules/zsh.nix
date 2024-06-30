@@ -33,6 +33,13 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
+    initExtra =
+      ''
+        export PYENV_ROOT="$HOME/.pyenv"
+        export PATH="$PYENV_ROOT/bin:$PATH"
+        eval "$(pyenv init --path)"
+      '';
+
     oh-my-zsh = {
       enable = true;
       plugins = [
