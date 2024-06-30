@@ -1,3 +1,10 @@
+let 
+  profile_text = ''
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+  '';
+in
 {
 
   imports = [
@@ -16,11 +23,8 @@
       TERMINAL = "kitty";
     };
 
-    file.".profile".text = ''
-      export PYENV_ROOT="$HOME/.pyenv"
-      export PATH="$PYENV_ROOT/bin:$PATH"
-      eval "$(pyenv init --path)"
-    '';
+    file.".profile".text = "${profile_text}";
+    file.".zprofile".text = "${profile_text}";
 
   };
 }
