@@ -33,6 +33,7 @@
     fzf-git-sh # fuzzy git search and tools
     jq
     shellcheck
+    virtualenv
     # hadolint
     # yamllint
     # lazydocker
@@ -177,8 +178,6 @@
     #   enable = true;
     #   enableZshIntegration = true;
     # };
-
-    # pyenv.enable = true;
 
     jq.enable = true;
 

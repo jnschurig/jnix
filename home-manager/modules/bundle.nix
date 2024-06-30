@@ -7,6 +7,7 @@
     ./git.nix
     # moving to apps.nix
     # ./kitty.nix
+    ./pyenv.nix
     ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix
