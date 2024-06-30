@@ -3,6 +3,7 @@
 , ...
 }: {
   imports = [
+    ./devenv.nix
     ./fzf.nix
     ./git.nix
     # moving to apps.nix

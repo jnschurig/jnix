@@ -9,11 +9,12 @@
   environment.systemPackages = with pkgs; [
   
     # Coding
-    neovim
-    vscode
+    devenv
+    github-desktop
     kitty
     openssl
-    github-desktop
+    neovim
+    vscode
 
     # CLI utils
     git
