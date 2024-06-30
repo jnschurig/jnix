@@ -35,6 +35,7 @@
     # Gaming
     steam
     wine
+    protontricks
 
     # Wayland
     xwayland
