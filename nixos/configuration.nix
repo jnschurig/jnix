@@ -103,9 +103,6 @@
     trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
   };
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -134,6 +131,10 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Auto upgrade nix package and the daemon service.
+  # Not working right now...
+  # services.nix-daemon.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
