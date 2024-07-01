@@ -1,4 +1,4 @@
 
 {
-  home.file.".config/retroarch/retroarch.cfg".source = "./modules/retroarch/retroarch.cfg";
+  home.file.".config/retroarch/retroarch.cfg".source = ./retroarch/retroarch.cfg;
 }
