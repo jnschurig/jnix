@@ -46,7 +46,7 @@
 
         layout = "dwindle";
 
-        no_cursor_warps = false;
+        # no_cursor_warps = false; # option DNE
       };
 
       decoration = {
