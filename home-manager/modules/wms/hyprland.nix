@@ -68,19 +68,19 @@
       animations = {
         enabled = true;
 
-        # bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
         # this one was already commented out to begin with.
         # bezier = "myBezier, 0.33, 0.82, 0.9, -0.08";
 
-        # animation = [
-        #   "windows,     1, 7,  myBezier"
-        #   "windowsOut,  1, 7,  default, popin 80%"
-        #   "border,      1, 10, default"
-        #   "borderangle, 1, 8,  default"
-        #   "fade,        1, 7,  default"
-        #   "workspaces,  1, 6,  default"
-        # ];
+        animation = [
+          "windows,     1, 7,  myBezier"
+          "windowsOut,  1, 7,  default, popin 80%"
+          "border,      1, 10, default"
+          "borderangle, 1, 8,  default"
+          "fade,        1, 7,  default"
+          "workspaces,  1, 6,  default"
+        ];
       };
 
       dwindle = {
@@ -108,18 +108,18 @@
         disable_hyprland_logo = true;
       };
 
-      # windowrule = [
-      #   "float, ^(imv)$"
-      #   "float, ^(mpv)$"
-      # ];
+      windowrule = [
+        "float, ^(imv)$"
+        "float, ^(mpv)$"
+      ];
 
-      # exec-once = [
-      #   "swww init"
-      #   "swww img ~/Downloads/nixos-chan.png"
+      exec-once = [
+        "swww init"
+        "swww img ~/Pictures/wallpaper/JQX6q2g - Imgur.png"
       #   "waybar"
       #   "wl-paste --type text --watch cliphist store"
       #   "wl-paste --type image --watch cliphist store"
-      # ];
+      ];
 
       # bind = [
       #   "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"

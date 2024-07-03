@@ -20,6 +20,7 @@
     git
     lazygit
     neofetch
+    swww
     unzip
     wget
     zip
