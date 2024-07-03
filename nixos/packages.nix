@@ -59,7 +59,11 @@
 
     # Window Management
     hyprland
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
     # wmctrl
+    xdg-desktop-portal-hyprland
+
 
     # Other
     home-manager

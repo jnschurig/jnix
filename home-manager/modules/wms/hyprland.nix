@@ -9,14 +9,14 @@
       # monitor = ",1920x1080@90,auto,1";
       # monitor = ",2560x1600@165,auto,1";
 
-      # env = [
-      #   "XDG_CURRENT_DESKTOP,Hyprland"
-      #   "XDG_SESSION_TYPE,wayland"
-      #   "XDG_SESSION_DESKTOP,Hyprland"
-      #   "XCURSOR_SIZE,36"
-      #   "QT_QPA_PLATFORM,wayland"
-      #   "XDG_SCREENSHOTS_DIR,~/screens"
-      # ];
+      env = [
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+        "XCURSOR_SIZE,36"
+        "QT_QPA_PLATFORM,wayland"
+        "XDG_SCREENSHOTS_DIR,~/screens"
+      ];
 
       debug = {
         disable_logs = false;
