@@ -57,6 +57,7 @@
     vulkan-tools
 
     # Window Management
+    hyprland
     # wmctrl
 
     # Other
