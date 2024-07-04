@@ -13,7 +13,7 @@
     # ./cursor.nix
     # ./htop.nix
 
-    ./wms/hyprland.nix
+    # ./wms/hyprland.nix
     # ./wms/waybar.nix
   ];
 }

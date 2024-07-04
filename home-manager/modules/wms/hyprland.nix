@@ -121,35 +121,35 @@
       #   "wl-paste --type image --watch cliphist store"
       ];
 
-      # bind = [
+      bind = [
       #   "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
-      #   "$mainMod, Return, exec, kitty"
-      #   "$mainMod, Q, killactive,"
+        "$mainMod, Return, exec, kitty"
+        "$mainMod, Q, killactive,"
       #   "$mainMod, M, exit,"
-      #   "$mainMod, E, exec, dolphin"
-      #   "$mainMod, F, togglefloating,"
+        "$mainMod, E, exec, dolphin"
+        "$mainMod, F, togglefloating,"
       #   "$mainMod, D, exec, wofi --show drun"
       #   "$mainMod, P, pseudo, # dwindle"
       #   "$mainMod, J, togglesplit, # dwindle"
 
-      #   # Move focus with mainMod + arrow keys
-      #   "$mainMod, left,  movefocus, l"
-      #   "$mainMod, right, movefocus, r"
-      #   "$mainMod, up,    movefocus, u"
-      #   "$mainMod, down,  movefocus, d"
+        # Move focus with mainMod + arrow keys
+        "$mainMod, left,  movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up,    movefocus, u"
+        "$mainMod, down,  movefocus, d"
 
-      #   # Moving windows
-      #   "$mainMod SHIFT, left,  swapwindow, l"
-      #   "$mainMod SHIFT, right, swapwindow, r"
-      #   "$mainMod SHIFT, up,    swapwindow, u"
-      #   "$mainMod SHIFT, down,  swapwindow, d"
+        # Moving windows
+        "$mainMod SHIFT, left,  swapwindow, l"
+        "$mainMod SHIFT, right, swapwindow, r"
+        "$mainMod SHIFT, up,    swapwindow, u"
+        "$mainMod SHIFT, down,  swapwindow, d"
 
-      #   # Window resizing                     X  Y
-      #   "$mainMod CTRL, left,  resizeactive, -60 0"
-      #   "$mainMod CTRL, right, resizeactive,  60 0"
-      #   "$mainMod CTRL, up,    resizeactive,  0 -60"
-      #   "$mainMod CTRL, down,  resizeactive,  0  60"
+        # Window resizing                     X  Y
+        "$mainMod CTRL, left,  resizeactive, -60 0"
+        "$mainMod CTRL, right, resizeactive,  60 0"
+        "$mainMod CTRL, up,    resizeactive,  0 -60"
+        "$mainMod CTRL, down,  resizeactive,  0  60"
 
       #   # Switch workspaces with mainMod + [0-9]
       #   "$mainMod, 1, workspace, 1"
@@ -175,9 +175,9 @@
       #   "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
       #   "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
 
-      #   # Scroll through existing workspaces with mainMod + scroll
-      #   "$mainMod, mouse_down, workspace, e+1"
-      #   "$mainMod, mouse_up, workspace, e-1"
+        # Scroll through existing workspaces with mainMod + scroll
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
 
       #   # Keyboard backlight
       #   "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
@@ -204,15 +204,32 @@
       #   "$mainMod, B, exec, pkill -SIGUSR1 waybar"
       #   "$mainMod, W, exec, pkill -SIGUSR2 waybar"
 
-      #   # Disable all effects
-      #   "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
-      # ];
+        # Disable all effects
+        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
+      ]
+      # Fancy script I found
+      ++ (
+        # workspaces
+        # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
+        builtins.concatLists (builtins.genList (
+            x: let
+              ws = let
+                c = (x + 1) / 10;
+              in
+                builtins.toString (x + 1 - (c * 10));
+            in [
+              "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
+              "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+            ]
+          )
+          10)
+      );
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
-      # bindm = [
-      #   "$mainMod, mouse:272, movewindow"
-      #   "$mainMod, mouse:273, resizewindow"
-      # ];
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
     };
   };
 }
