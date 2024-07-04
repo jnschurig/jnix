@@ -7,6 +7,8 @@
 #   isDarwin = builtins.elem pkgs.system [ "aarch64-darwin" ];
 # in
 {
+  nixpkgs.config.allowUnfree = true;
+
   home.file = {
     # ".config/nvim/lua" = {
     #   source = ./neovim/lua;
