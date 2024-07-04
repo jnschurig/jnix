@@ -33,8 +33,17 @@
     vivaldi # Run using this command until further noticevivaldi --disable-features=AllowQt
 
     # Gaming
-    libretro-core-info
-    retroarch
+    # libretro
+    # libretro-core-info
+    # retroarch
+    (retroarch.override {
+      cores = with libretro; [
+        # genesis-plus-gx
+        snes9x
+        # beetle-psx-hw
+      ];
+    })
+
     steam
     wine
     winetricks

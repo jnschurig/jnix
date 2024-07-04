@@ -4,7 +4,7 @@
     # ./sound.nix
     # ./zram.nix
     # ./env.nix
-    ./retroarch.nix
+    # ./retroarch.nix
     ./user.nix
     # ./xserver.nix
     # ./nm.nix

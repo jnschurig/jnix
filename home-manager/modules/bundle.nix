@@ -6,7 +6,6 @@
     ./fzf.nix
     ./git.nix
     ./python.nix
-    ./retroarch.nix
     ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix

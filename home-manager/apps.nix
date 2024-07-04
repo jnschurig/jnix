@@ -42,8 +42,6 @@
     # taplo
 
     # hobbies
-    # retroarch
-    # libretro-core-info
 
     # Git
     pre-commit
