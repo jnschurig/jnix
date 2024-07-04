@@ -92,13 +92,13 @@
         new_is_master = true;
       };
 
-      # gestures = {
-      #   workspace_swipe = true;
-      #   workspace_swipe_fingers = 3;
-      #   workspace_swipe_invert = false;
-      #   workspace_swipe_distance = 200;
-      #   workspace_swipe_forever = true;
-      # };
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_invert = false;
+        workspace_swipe_distance = 200;
+        workspace_swipe_forever = true;
+      };
 
       misc = {
         animate_manual_resizes = true;
@@ -122,6 +122,13 @@
       ];
 
       bind = [
+        # Regular F1
+        #         [14:     wl_keyboard] key: serial: 2786; time: 1470850; key: 67; state: 1 (pressed)
+        #                       sym: F1           (65470), utf8: ''
+        # Fn + F1
+        #         [14:     wl_keyboard] key: serial: 2787; time: 1470959; key: 67; state: 0 (released)
+        #                       sym: F1           (65470), utf8: ''
+
       #   "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
         "$mainMod, Return, exec, kitty"

@@ -50,6 +50,7 @@
     protontricks
 
     # Wayland
+    # wev # Event viewer. Very helpful for figuring out key mapping
     xwayland
 
     # GPU
@@ -71,7 +72,6 @@
     libgcc
     # gcc-unwrapped
     # libsForQt5.qtstyleplugin-kvantum
-    # libsForQt5.qt5ct
   ];
 
   fonts.packages = with pkgs; [
