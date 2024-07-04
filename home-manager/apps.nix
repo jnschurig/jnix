@@ -7,6 +7,8 @@
 #   isDarwin = builtins.elem pkgs.system [ "aarch64-darwin" ];
 # in
 {
+  nixpkgs.config.allowUnfree = true;
+
   home.file = {
     # ".config/nvim/lua" = {
     #   source = ./neovim/lua;
@@ -40,8 +42,8 @@
     # taplo
 
     # hobbies
-    retroarch
-    libretro-core-info
+    # retroarch
+    # libretro-core-info
 
     # Git
     pre-commit
