@@ -115,7 +115,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/Pictures/wallpaper/JQX6q2g - Imgur.png"
+        "swww img ~/Pictures/wallpaper/""JQX6q2g - Imgur.png"""
       #   "waybar"
       #   "wl-paste --type text --watch cliphist store"
       #   "wl-paste --type image --watch cliphist store"
