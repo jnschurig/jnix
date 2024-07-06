@@ -1,6 +1,3 @@
 {
-  programs.shipwright = {
-    enable = true;
-    file."shipofharkinian.json".src = ./modules/soh/shipofharkinian.json
-  };
+  home.file."./.local/soh/shipofharkinian.json".source = ./soh/shipofharkinian.json;
 }

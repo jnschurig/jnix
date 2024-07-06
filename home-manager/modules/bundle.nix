@@ -6,7 +6,8 @@
     ./fzf.nix
     ./git.nix
     ./python.nix
-    ./shipwright.nix
+    # ./_2ship2harkinian.nix
+    # ./shipwright.nix
     ./zoxide.nix
     ./zsh.nix
     # ./cursor.nix

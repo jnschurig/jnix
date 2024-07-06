@@ -455,7 +455,7 @@
         "AudioBackend": "pulse",
         "Backend": {
             "Id": 3,
-            "Name": "Vulkan"
+            "Name": "vulkan"
         },
         "Fullscreen": {
             "Enabled": false
