@@ -42,6 +42,7 @@
     # taplo
 
     # hobbies
+    shipwright
 
     # Git
     pre-commit

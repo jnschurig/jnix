@@ -28,13 +28,10 @@
     audacity
     chromium
     discord
-    # firefox # already enabled in configuration.nix?
     obsidian
-    vivaldi # Run using this command until further noticevivaldi --disable-features=AllowQt
+    vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # Gaming
-    # libretro
-    # libretro-core-info
     # retroarch
     (retroarch.override {
       cores = with libretro; [
@@ -43,7 +40,8 @@
         # beetle-psx-hw
       ];
     })
-    shipwright
+    # shipwright
+    _2ship2harkinian
 
     steam
     wine
@@ -55,6 +53,8 @@
 
     # GPU
     amdvlk
+    gpu-viewer
+    vulkan-tools
 
     # Window Management
     # wmctrl

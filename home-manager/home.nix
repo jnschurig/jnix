@@ -26,11 +26,14 @@ in
     file.".profile".text = "${profile_text}";
     file.".zprofile".text = "${profile_text}";
 
+    # Put JNIX home manager in preferred location for full functionality.
     file.".config/home-manager" = {
       source = ../home-manager;
       recursive = true;
       executable = true;
     };
+
+    # Associate JNIX nixos config with a "standard" home directory location.
     file."./nix/nixos" = {
       source = ../nixos;
       recursive = true;
