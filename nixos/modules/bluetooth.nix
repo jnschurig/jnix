@@ -10,5 +10,6 @@
     };
   };
 
-  services.blueman.enable = true;
+  # Seems redundant on plasma
+  # services.blueman.enable = true;
 }
