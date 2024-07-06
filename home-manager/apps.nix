@@ -130,10 +130,10 @@
     #   enableZshIntegration = true;
     # };
 
-    # direnv = {
-    #   enable = true;
-    #   enableZshIntegration = true;
-    # };
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
     # ruff = {
     #   enable = true;
