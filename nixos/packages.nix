@@ -43,6 +43,7 @@
         # beetle-psx-hw
       ];
     })
+    shipwright
 
     steam
     wine
