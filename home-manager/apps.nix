@@ -42,6 +42,8 @@
     # taplo
 
     # hobbies
+    shipwright
+    _2ship2harkinian
 
     # Git
     pre-commit
