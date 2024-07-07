@@ -65,6 +65,7 @@
     zsh-fast-syntax-highlighting
     zsh-completions
     zsh-autoenv
+    zsh-prezto
 
     # productivity
     # glow # markdown previewer in terminal
@@ -79,6 +80,9 @@
     # postgresql_14
 
     # Python build dependencies
+    libgcc
+    gcc-unwrapped
+    poetry
     python3
 
     # Removing GCC and gnumake for now
@@ -197,6 +201,8 @@
     #   enableZshIntegration = true;
     #   settings = builtins.readFile ./ohmyposh/modern-gruvbox.omp.json;
     # };
+
+    poetry.enable = true;
 
   };
 }
