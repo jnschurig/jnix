@@ -5,8 +5,12 @@ let
     eval "$(pyenv init --path)"
   '';
 in
-{
-
+{pkgs, ...}: {
+  # shellHook = ''
+  #   export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [
+  #     pkgs.stdenv.cc.cc
+  #   ]}
+  # ''
   imports = [
     # ./zsh.nix
     ./modules/bundle.nix
@@ -21,6 +25,7 @@ in
       EDITOR = "code";
       # BROWSER = "firefox";
       TERMINAL = "kitty";
+      LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
     };
 
     file.".profile".text = "${profile_text}";

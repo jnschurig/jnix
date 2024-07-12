@@ -62,6 +62,8 @@
     # Other
     home-manager
     samba
+    libgcc
+    # gcc-unwrapped
     # libsForQt5.qtstyleplugin-kvantum
     # libsForQt5.qt5ct
   ];

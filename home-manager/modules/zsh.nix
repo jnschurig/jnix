@@ -27,6 +27,9 @@
       # python
       py = "python3";
       pip = "py -m pip";
+
+      # Other
+      fresh = "exec $SHELL";
     };
 
     history = {
@@ -38,12 +41,11 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
-    initExtra =
-      ''
-        export PYENV_ROOT="$HOME/.pyenv"
-        export PATH="$PYENV_ROOT/bin:$PATH"
-        eval "$(pyenv init --path)"
-      '';
+    # initExtra = ''
+    #     source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
+    #     source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
+    #     source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
+    # '';
 
     oh-my-zsh = {
       enable = true;
@@ -66,6 +68,14 @@
       # theme = "agnoster"; # blinks is also really nice
     };
 
+    prezto = {
+      enable = true;
+      python = {
+        virtualenvInitialize = true;
+        virtualenvAutoSwitch = true;
+      };
+    };
+
     plugins = [
       # not in nix
       {
@@ -78,11 +88,20 @@
         src = ./p10k-config;
         file = "p10k.zsh";
       }
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.8.0";
+          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+        };
+      }
     ];
 
     localVariables = {
       POWERLEVEL9K_CONFIG_FILE = [
-        # ./p10k-config/zsh-theme-gruvbox-material-dark.zsh
         ./p10k-config/p10k.zsh
       ];
       POWERLEVEL9K_INSTANT_PROMPT = "quiet";
