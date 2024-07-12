@@ -49,9 +49,9 @@
     pre-commit
 
     # Base deps
-    # file
-    # which
-    # tree
+    file
+    which
+    tree
     # gnused # linux sed
 
     # i can never get this to work
@@ -80,40 +80,21 @@
     # postgresql_14
 
     # Python build dependencies
-    libgcc
-    gcc-unwrapped
+    gcc
+    gnumake
+    # gcc-unwrapped
+    # libgcc
+    # cython
+    # distlib?
+    # isPyPy?
     poetry
     python3
 
-    # Removing GCC and gnumake for now
-    # gcc
-    # gnumake
     openssl
     readline
     xz
     zlib
-    # not in nix, but still needed, moved to brew
-    # sqlite3
-    # tcl-tk
-    ####################
-
-    ## Had some issues with poetry install locally so manually installed instead
-    # poetry
-  ]
-  # MAC ONLY
-  # ++ lib.optionals isDarwin [
-  #   monitorcontrol # manage lg monitor volume and display
-  #   # work
-  #   vault
-  # ]
-  # ++ lib.optionals (!isDarwin) [
-  #   ripgrep # rust grep (installed system-wide)
-  #   jq # json processor (installed system-wide)
-  #   unzip # unzip not included in ubuntu and needed for stylua
-  #   go # sqls
-  #   docker # containers for home server (pi)
-  # ]
-  ;
+  ];
 
   programs = {
 
@@ -155,17 +136,6 @@
     #   # enableAliases = true;
     #   git = true;
     #   icons = true;
-    # };
-
-    # vscode = lib.optionalAttrs (isDarwin) {
-    #   enable = true;
-    #   package = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs (oldAttrs: rec {
-    #     src = builtins.fetchTarball {
-    #       url = "https://update.code.visualstudio.com/latest/darwin-arm64/insider";
-    #       sha256 = "0jkcvn2xmb5wqdc3wd9kwyvwkqkaqv4x5ln44smbxkcyi9b0sf4g";
-    #     };
-    #     version = "latest";
-    #   });
     # };
 
     # bat = {

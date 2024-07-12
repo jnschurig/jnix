@@ -27,6 +27,9 @@
       # python
       py = "python3";
       pip = "py -m pip";
+
+      # Other
+      fresh = "exec $SHELL";
     };
 
     history = {
@@ -100,7 +103,6 @@
 
     localVariables = {
       POWERLEVEL9K_CONFIG_FILE = [
-        # ./p10k-config/zsh-theme-gruvbox-material-dark.zsh
         ./p10k-config/p10k.zsh
       ];
       POWERLEVEL9K_INSTANT_PROMPT = "quiet";
