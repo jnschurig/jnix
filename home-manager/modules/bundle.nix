@@ -5,6 +5,7 @@
   imports = [
     ./fzf.nix
     ./git.nix
+    ./homebrew.nix
     ./python.nix
     # ./_2ship2harkinian.nix
     # ./shipwright.nix
