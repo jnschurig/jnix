@@ -62,6 +62,15 @@
     hyprland
     kdePackages.qt6ct
     libsForQt5.qt5ct
+    libnotify
+    mako # notifications
+    networkmanagerapplet
+    rofi-wayland
+    waybar
+    (waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
+      })
+    )
     # wmctrl
     xdg-desktop-portal-hyprland
 
