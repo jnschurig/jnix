@@ -50,7 +50,7 @@
     protontricks
 
     # Wayland
-    # wev # Event viewer. Very helpful for figuring out key mapping
+    wev # Event viewer. Very helpful for figuring out key mapping
     xwayland
 
     # GPU

@@ -14,6 +14,6 @@
     # ./htop.nix
 
     ./wms/hyprland.nix
-    # ./wms/waybar.nix
+    ./wms/waybar.nix
   ];
 }

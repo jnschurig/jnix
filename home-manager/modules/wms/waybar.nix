@@ -7,9 +7,11 @@
         position = "top";
         margin = "9 13 -10 18";
 
-        modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
-        modules-center = ["clock" "custom/weather"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
+        # modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
+        # Not sure what "hyprland/submap" is. Documentation is sparse. Removing it for now.
+        modules-left = ["hyprland/workspaces" "keyboard-state"];
+        # modules-center = ["clock" "custom/weather"];
+        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "clock" "tray"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -37,17 +39,17 @@
         format = "{:%a; %d %b, %I:%M %p}";
     };
 
-    "custom/weather" = {
-        format = "{}";
-        tooltip = true;
-        interval = 1800;
-        exec = "$HOME/.config/waybar/scripts/wttr.py";
-        return-type = "json";
-    };
+    # "custom/weather" = {
+    #     format = "{}";
+    #     tooltip = true;
+    #     interval = 1800;
+    #     exec = "$HOME/.config/waybar/scripts/wttr.py";
+    #     return-type = "json";
+    # };
 
     "pulseaudio" = {
         # scroll-step = 1; # %, can be a float
-        reverse-scrolling = 1;
+        reverse-scrolling = 0;
         format = "{volume}% {icon} {format_source}";
         format-bluetooth = "{volume}% {icon} {format_source}";
         format-bluetooth-muted = " {icon} {format_source}";
@@ -219,9 +221,10 @@ window#waybar.hidden {
 }
 
 #clock {
+    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px;
     transition: none;
     color: #ffffff;
     background: #383c4a;
