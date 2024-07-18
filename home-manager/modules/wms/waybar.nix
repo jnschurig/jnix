@@ -92,12 +92,12 @@
         tooltip = false;
     };
 
-    # "backlight" = {
-    #     device = "intel_backlight";
-    #     format = "{percent}% {icon}";
-    #     format-icons = [""];
-    #     min-length = 7;
-    # };
+    "backlight" = {
+        device = "intel_backlight";
+        format = "{percent}% {icon}";
+        format-icons = [""];
+        min-length = 7;
+    };
 
     battery = {
         states = {
@@ -254,6 +254,17 @@ window#waybar.hidden {
 }
 
 #custom-mem {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#custom-mem_old {
     margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
@@ -264,6 +275,16 @@ window#waybar.hidden {
 }
 
 #cpu {
+    margin-right: 8px;
+    margin-left: 0px;
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#cpu_old {
     margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;

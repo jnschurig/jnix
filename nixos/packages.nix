@@ -17,10 +17,12 @@
     vscode
 
     # CLI utils
+    brightnessctl # Screen Brightness Control
     git
     lazygit
     neofetch
-    swww
+    pamixer # Audio control
+    swww # Desktop image
     unzip
     wget
     zip

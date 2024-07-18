@@ -5,6 +5,7 @@
 
     settings = {
       "$mainMod" = "SUPER";
+      # "$mainMod" = "hyper";
 
       # monitor = ",1920x1080@90,auto,1";
       monitor = "WL-1,2560x1600@165,auto,1";
@@ -27,6 +28,9 @@
         # kb_layout = "us,ru";
         # kb_variant = "lang";
         # kb_options = "grp:caps_toggle";
+        kb_options = [
+          "caps:hyper"
+        ];
 
         follow_mouse = 1;
 
@@ -120,23 +124,19 @@
         "nm-applet --indicator"
         "waybar"
         "mako"
+        "[workspace special; size 75% 20%;move 12.5% 40] kitty"
       #   "wl-paste --type text --watch cliphist store"
       #   "wl-paste --type image --watch cliphist store"
       ];
 
       bind = [
-        # Regular F1
-        #         [14:     wl_keyboard] key: serial: 2786; time: 1470850; key: 67; state: 1 (pressed)
-        #                       sym: F1           (65470), utf8: ''
-        # Fn + F1
-        #         [14:     wl_keyboard] key: serial: 2787; time: 1470959; key: 67; state: 0 (released)
-        #                       sym: F1           (65470), utf8: ''
 
       #   "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-        "$mainMod, S, exec, rofi -show drun -show-icons"
-        "$mainMod, Return, exec, kitty"
+        # "$mainMod, S, exec, rofi -show drun -show-icons"
+        "$mainMod, space, exec, rofi -show drun -show-icons"
+        "alt, space, exec, rofi -show drun -show-icons"
+        "$mainMod, T, exec, kitty"
         "$mainMod, Q, killactive,"
-      #   "$mainMod, M, exit,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
       #   "$mainMod, D, exec, wofi --show drun"
@@ -169,15 +169,21 @@
       #   "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
       #   "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
 
-        # Volume and Media Control
-        # ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-        # ", XF86AudioLowerVolume, exec, pamixer -d 5 "
-        # ", XF86AudioMute, exec, pamixer -t"
-        # ", XF86AudioMicMute, exec, pamixer --default-source -m"
+        ## Volume and Media Control ##
+        # Speakers
+        ", XF86AudioMute, exec, pamixer -t"
+        ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
+        ", XF86AudioLowerVolume, exec, pamixer -d 5 "
+        # Mic
+        "Shift, XF86AudioMute, exec, pamixer --default-source -t"
+        "Shift, XF86AudioRaiseVolume, exec, pamixer --default-source -i 5 "
+        "Shift, XF86AudioLowerVolume, exec, pamixer --default-source -d 5 "
+        # Media
+        # TODO: do this sometime...
         
-      #   # Brightness control
-      #   ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-      #   ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
+        # Brightness control
+        ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
+        ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
 
       #   # Configuration files
       #   ''$mainMod SHIFT, N, exec, kitty -e sh -c "rb"''
@@ -192,6 +198,11 @@
 
         # Disable all effects
         "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
+
+        "Alt, Tab, workspace, previous"
+        "Shift Alt, Tab, workspace, next"
+        
+        "$mainMod, Return, togglespecialworkspace"
       ]
       # Fancy script I found
       # Switch workspaces with mainMod + [0-9]
