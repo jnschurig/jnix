@@ -6,6 +6,7 @@
     ./cursor.nix
     ./fzf.nix
     ./git.nix
+    ./mako.nix
     ./python.nix
     # ./_2ship2harkinian.nix
     # ./shipwright.nix

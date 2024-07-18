@@ -19,6 +19,9 @@
         "XDG_SCREENSHOTS_DIR,~/screens"
       ];
 
+      # decoration.active_opacity
+      # decoration.inactive_opacity
+
       debug = {
         disable_logs = false;
         enable_stdout_logs = true;
@@ -67,6 +70,9 @@
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
+
+        active_opacity = "1.0";    # Fully opaque active windows
+        inactive_opacity = "0.8";  # Slightly transparent inactive windows
       };
 
       animations = {
@@ -115,6 +121,10 @@
       windowrule = [
         "float, ^(imv)$"
         "float, ^(mpv)$"
+
+        "opacity 0.8 override 0.6 override,kitty"
+        "opacity 1.0 override 1.0 override,firefox"
+        "opacity 1.0 override 1.0 override,vivaldi"
       ];
 
       exec-once = [
