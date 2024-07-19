@@ -72,7 +72,7 @@
         "col.shadow" = "rgba(1a1a1aee)";
 
         active_opacity = "1.0";    # Fully opaque active windows
-        inactive_opacity = "0.8";  # Slightly transparent inactive windows
+        inactive_opacity = "0.75";  # Slightly transparent inactive windows
       };
 
       animations = {
@@ -175,9 +175,9 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-      #   # Keyboard backlight
-      #   "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-      #   "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
+        # Keyboard backlight
+        # "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
+        # "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
 
         ## Volume and Media Control ##
         # Speakers
@@ -195,16 +195,9 @@
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
 
-      #   # Configuration files
-      #   ''$mainMod SHIFT, N, exec, kitty -e sh -c "rb"''
-      #   ''$mainMod SHIFT, C, exec, kitty -e sh -c "conf"''
-      #   ''$mainMod SHIFT, H, exec, kitty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-      #   ''$mainMod SHIFT, W, exec, kitty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
-      #   '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
-
-      #   # Waybar
-      #   "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-      #   "$mainMod, W, exec, pkill -SIGUSR2 waybar"
+        # Waybar
+        # "$mainMod, B, exec, pkill -SIGUSR1 waybar"
+        # "$mainMod, W, exec, pkill -SIGUSR2 waybar"
 
         # Disable all effects
         "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "

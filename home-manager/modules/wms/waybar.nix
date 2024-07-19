@@ -197,6 +197,16 @@ window#waybar.hidden {
     border-radius: inherit;
 }
 
+#custom-poweroff {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
 #language {
     padding-left: 16px;
     padding-right: 8px;
@@ -244,6 +254,7 @@ window#waybar.hidden {
 
 #clock {
     margin-right: 8px;
+    margin-left: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;

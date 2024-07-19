@@ -14,5 +14,10 @@
       source = ./scripts/check_battery.sh;
       executable = true;
     };
+
+    ".config/waybar/scripts/rofi-power-menu.sh" = {
+      source = ./scripts/rofi-power-menu.sh;
+      executable = true;
+    };
   };
 }
