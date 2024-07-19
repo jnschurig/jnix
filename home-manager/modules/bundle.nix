@@ -16,5 +16,6 @@
 
     ./wms/hyprland.nix
     ./wms/waybar.nix
+    ./wms/wms_scripts.nix
   ];
 }
