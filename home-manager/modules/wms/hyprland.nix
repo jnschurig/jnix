@@ -212,6 +212,9 @@
         "Alt, Tab, workspace, previous"
         "Shift Alt, Tab, workspace, next"
         
+        "$mainMod, comma, workspace, -1"
+        "$mainMod, period, workspace, +1"
+        
         "$mainMod, Return, togglespecialworkspace"
       ]
       # Fancy script I found
