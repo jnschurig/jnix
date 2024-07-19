@@ -4,7 +4,7 @@
 2. From the terminal run
 ```bash
 sudo nixos-rebuild switch --flake ${dir}
-sudo reboot
+reboot
 home-manager switch --flake {dir}
 ```
 3. Enjoy!
