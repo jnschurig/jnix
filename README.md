@@ -5,6 +5,6 @@
 ```bash
 sudo nixos-rebuild switch --flake ${dir}
 reboot
-home-manager switch --flake {dir}
+home-manager switch --flake ${dir}
 ```
 3. Enjoy!
