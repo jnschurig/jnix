@@ -4,7 +4,6 @@
 bat=/sys/class/power_supply/BAT1
 CRIT=${1:-15}
 
-mkdir -p ~/.config/waybar/scripts
 FILE=~/.config/waybar/scripts/notified
 
 stat=$(cat $bat/status)

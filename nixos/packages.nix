@@ -22,6 +22,7 @@
     lazygit
     neofetch
     pamixer # Audio control
+    sway
     swww # Desktop image
     unzip
     wget

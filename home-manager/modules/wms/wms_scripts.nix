@@ -5,7 +5,12 @@
       executable = true;
     };
     
-    ".config/waybar/check_battery.sh" = {
+    ".config/waybar/scripts/check_battery.sh" = {
+      source = ./scripts/check_battery.sh;
+      executable = true;
+    };
+
+    ".config/waybar/scripts/poweroff.sh" = {
       source = ./scripts/check_battery.sh;
       executable = true;
     };
