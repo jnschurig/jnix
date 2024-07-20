@@ -6,6 +6,9 @@
 # let
 #   isDarwin = builtins.elem pkgs.system [ "aarch64-darwin" ];
 # in
+let
+  homebrew = import ./modules/homebrew.nix { inherit pkgs lib; };
+in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -27,6 +30,8 @@
   };
 
   home.packages = with pkgs; [
+    homebrew
+
     # coreutils
     # nmap
     # yq-go # yaml processor
