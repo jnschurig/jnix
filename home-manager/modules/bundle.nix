@@ -15,6 +15,7 @@
     # ./htop.nix
 
     ./wms/hyprland.nix
+    ./wms/hyprlock.nix
     ./wms/waybar.nix
     ./wms/wms_scripts.nix
   ];
