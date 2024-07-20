@@ -5,7 +5,7 @@
 
     settings = {
       "$mainMod" = "SUPER";
-      # "$mainMod" = "hyper";
+      "$hyperMod" = "Ctrl+Shift+Alt+Super";
 
       # monitor = ",1920x1080@90,auto,1";
       monitor = "WL-1,2560x1600@165,auto,1";
@@ -17,6 +17,7 @@
         "XCURSOR_SIZE,20"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
+        # "QT_QPA_PLATFORMTHEME,qt6ct"
       ];
 
       # decoration.active_opacity
@@ -141,7 +142,7 @@
 
       bind = [
 
-      #   "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+        # "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
         # "$mainMod, S, exec, rofi -show drun -show-icons"
         "$mainMod, space, exec, rofi -show drun -show-icons"
         "alt, space, exec, rofi -show drun -show-icons"
@@ -149,9 +150,9 @@
         "$mainMod, Q, killactive,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
-      #   "$mainMod, D, exec, wofi --show drun"
-      #   "$mainMod, P, pseudo, # dwindle"
-      #   "$mainMod, J, togglesplit, # dwindle"
+        # "$mainMod, D, exec, wofi --show drun"
+        # "$mainMod, P, pseudo, # dwindle"
+        # "$mainMod, J, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
@@ -190,7 +191,13 @@
         "Shift, XF86AudioLowerVolume, exec, pamixer --default-source -d 5 "
         # Media
         # TODO: do this sometime...
-        
+        # ", XF86AudioPrev, exec, somethingorother"
+        # ", XF86AudioPlay, exec, somethingorother"
+        # ", XF86AudioNext, exec, somethingorother"
+
+        # F12 alternate
+        # "$mainMod, XF86Tools, exec, ~/.config/waybar/scripts/poweroff.sh"
+
         # Brightness control
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
@@ -200,15 +207,17 @@
         # "$mainMod, W, exec, pkill -SIGUSR2 waybar"
 
         # Disable all effects
-        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
+        "$mainMod Shift, G, exec, ~/.config/hypr/scripts/gamemode.sh"
 
+        "$mainMod, Tab, workspace, previous"
         "Alt, Tab, workspace, previous"
-        "Shift Alt, Tab, workspace, next"
-        
+
         "$mainMod, comma, workspace, -1"
         "$mainMod, period, workspace, +1"
-        
+
+        # For some reason, this one doesn't work unless the mainmod one is also there? so weird...
         "$mainMod, Return, togglespecialworkspace"
+        "$hyperMod, Return, togglespecialworkspace"
       ]
       # Fancy script I found
       # Switch workspaces with mainMod + [0-9]

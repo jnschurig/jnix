@@ -63,6 +63,7 @@
 
     # Window Management
     hyprland
+    hyprlock
     kdePackages.qt6ct
     libsForQt5.qt5ct
     libnotify

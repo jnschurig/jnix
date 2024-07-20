@@ -1,6 +1,6 @@
 {
   home.file = {
-    ".config/hypr/gamemode.sh" = {
+    ".config/hypr/scripts/gamemode.sh" = {
       source = ./scripts/gamemode.sh;
       executable = true;
     };
@@ -11,7 +11,7 @@
     };
 
     ".config/waybar/scripts/poweroff.sh" = {
-      source = ./scripts/check_battery.sh;
+      source = ./scripts/poweroff.sh;
       executable = true;
     };
 

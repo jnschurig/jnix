@@ -8,6 +8,7 @@
 #   rofi -show powermenu -modi powermenu:./rofi-power-menu
 #
 # See README.md for more information.
+# https://github.com/jluttine/rofi-power-menu
 
 set -e
 set -u
