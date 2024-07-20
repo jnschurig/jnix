@@ -1,37 +1,67 @@
+let
+  text_color = "rgba(C9D3F5D9)";
+  entry_border_color = "rgba(181926D9)";
+  entry_background_color = "rgba(5B6078D9)";
+  entry_color = "rgba(C9D3F5D9)";
+  font_family = "Rubik Light";
+  font_family_clock = "Rubik Light";
+  font_material_symbols = "Material Symbols Rounded";
+in
 {
   programs.hyprlock = {
     enable = true;
     settings = {
       general = {
         disable_loading_bar = true;
-        grace = 300;
+        grace = 30;
         hide_cursor = true;
         no_fade_in = false;
       };
 
       background = [
         {
-          path = "screenshot";
-          blur_passes = 3;
-          blur_size = 8;
+          # path = "screenshot";
+          # blur_passes = 3;
+          # blur_size = 8;
+          path = "~/Pictures/wallpaper/lock_screen/BxUZU2f.jpg";
         }
       ];
 
       input-field = [
         {
           size = "200, 50";
-          position = "0, -80";
+          position = "600, -80";
           monitor = "";
           dots_center = true;
           fade_on_empty = false;
-          font_color = "rgb(202, 211, 245)";
-          inner_color = "rgb(91, 96, 120)";
-          outer_color = "rgb(24, 25, 38)";
+          font_color = "${entry_color}";
+          inner_color = "${entry_background_color}";
+          outer_color = "${entry_border_color}";
+          # font_color = "rgb(202, 211, 245)";
+          # inner_color = "rgb(91, 96, 120)";
+          # outer_color = "rgb(24, 25, 38)";
           outline_thickness = 5;
-          placeholder_text = "'\'Password...'\'";
+          placeholder_text = "$USER";
           shadow_passes = 2;
         }
       ];
+
+      label = [
+        { # Clock
+          # monitor = "";
+          text = "$TIME";
+          shadow_passes = 1;
+          shadow_boost = 0.5;
+          color = "${text_color}";
+          font_size = 65;
+          # font_family = $font_family_clock
+
+          position = "600, 300";
+          halign = "center";
+          valign = "center";
+        }
+      ];
+
     };
   };
 }

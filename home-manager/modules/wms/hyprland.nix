@@ -5,10 +5,17 @@
 
     settings = {
       "$mainMod" = "SUPER";
-      "$hyperMod" = "Ctrl+Shift+Alt+Super";
+      # "$hyperMod" = "Ctrl+Shift+Alt+Super";
+      "$hyperMod" = "Ctrl&Shift&Alt&Super";
 
-      # monitor = ",1920x1080@90,auto,1";
-      monitor = "WL-1,2560x1600@165,auto,1";
+      # Use: `hyprctl monitors all` to get information about monitors.
+      # monitor = "name,resolution@frequency,position,scale"
+      # monitor = ",preferred,auto,1";
+      monitor = [
+        ",preferred,auto,1"
+        "eDP-2,2560x1600@165,auto,1.25"
+        "DP-3,2560x1440@144,auto,1.25"
+      ];
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -29,7 +36,7 @@
       };
 
       input = {
-        # kb_layout = "us,ru";
+        # kb_layout = "us,jp";
         # kb_variant = "lang";
         # kb_options = "grp:caps_toggle";
         kb_options = [
@@ -61,7 +68,7 @@
         rounding = 10;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 16;
           passes = 2;
           new_optimizations = true;
@@ -135,9 +142,10 @@
         "nm-applet --indicator"
         "waybar"
         "mako"
-        "[workspace special; size 75% 20%;move 12.5% 40] kitty"
-      #   "wl-paste --type text --watch cliphist store"
-      #   "wl-paste --type image --watch cliphist store"
+        "[workspace special silent; size 75% 20%;move 12.5% 40] kitty"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        # "wl-paste --type text --watch cliphist store"
+        # "wl-paste --type image --watch cliphist store"
       ];
 
       bind = [
@@ -150,7 +158,6 @@
         "$mainMod, Q, killactive,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
-        # "$mainMod, D, exec, wofi --show drun"
         # "$mainMod, P, pseudo, # dwindle"
         # "$mainMod, J, togglesplit, # dwindle"
 
@@ -196,7 +203,7 @@
         # ", XF86AudioNext, exec, somethingorother"
 
         # F12 alternate
-        # "$mainMod, XF86Tools, exec, ~/.config/waybar/scripts/poweroff.sh"
+        "$mainMod Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
 
         # Brightness control
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
@@ -218,6 +225,9 @@
         # For some reason, this one doesn't work unless the mainmod one is also there? so weird...
         "$mainMod, Return, togglespecialworkspace"
         "$hyperMod, Return, togglespecialworkspace"
+
+        # ", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+        ", Print, exec, grim -g \"$(slurp -d)\" -" # Saves to to the screenshot folder `~/Pictures/screenshots/`
       ]
       # Fancy script I found
       # Switch workspaces with mainMod + [0-9]

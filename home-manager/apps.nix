@@ -16,7 +16,7 @@
     # };
 
     ".ssh/config" = {
-      # source = if isDarwin then ./ssh/recharge_mac.config else ./ssh/personal.config;
+      # source = if isDarwin then ./ssh/mac.config else ./ssh/personal.config;
       source = ./ssh/personal.config;
       target = ".ssh/config_source";
       onChange = ''
@@ -34,6 +34,8 @@
     fd # fuzzy rust-based find replacement
     fzf-git-sh # fuzzy git search and tools
     jq
+    ripgrep
+    ripgrep-all
     shellcheck
     virtualenv
     # hadolint
@@ -42,6 +44,7 @@
     # taplo
 
     # hobbies
+    obs-studio
     shipwright
     _2ship2harkinian
 
@@ -156,11 +159,6 @@
 
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
-
-    # zoxide = {
-    #   enable = true;
-    #   enableZshIntegration = true;
-    # };
 
     jq.enable = true;
 

@@ -23,16 +23,18 @@
     neofetch
     pamixer # Audio control
     sway
+    swayimg
     swww # Desktop image
     unzip
     wget
     zip
 
     # Desktop Apps
-    audacity
+    # audacity # Don't need this for now.
     audacious
     chromium
     discord
+    discord-ptb
     obsidian
     vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
@@ -63,6 +65,7 @@
     vulkan-tools
 
     # Window Management
+    grim
     hyprland
     hyprlock
     kdePackages.qt6ct
@@ -71,11 +74,14 @@
     mako # notifications
     networkmanagerapplet
     rofi-wayland
+    slurp
     waybar
     (waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
       })
     )
+    wireplumber
+    wl-clipboard-rs
     # wmctrl
     xdg-desktop-portal-hyprland
 
