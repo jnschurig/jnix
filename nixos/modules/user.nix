@@ -12,7 +12,7 @@ in {
     users."${username}" = {
       isNormalUser = true;
       description = "James Schurig";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "users"];
       packages = with pkgs; [
         kdePackages.kate
       #  thunderbird

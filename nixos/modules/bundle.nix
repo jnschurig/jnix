@@ -9,7 +9,7 @@
     # ./xserver.nix
     # ./nm.nix
     # ./virtmanager.nix
-    # ./hyprland.nix
+    ./hyprland.nix
     # ./trim.nix
     ./bluetooth.nix
     ./nixvim/nixvim.nix

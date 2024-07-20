@@ -17,9 +17,13 @@
     vscode
 
     # CLI utils
+    brightnessctl # Screen Brightness Control
     git
     lazygit
     neofetch
+    pamixer # Audio control
+    sway
+    swww # Desktop image
     unzip
     wget
     zip
@@ -49,6 +53,7 @@
     protontricks
 
     # Wayland
+    wev # Event viewer. Very helpful for figuring out key mapping
     xwayland
 
     # GPU
@@ -57,7 +62,22 @@
     vulkan-tools
 
     # Window Management
+    hyprland
+    hyprlock
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
+    libnotify
+    mako # notifications
+    networkmanagerapplet
+    rofi-wayland
+    waybar
+    (waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
+      })
+    )
     # wmctrl
+    xdg-desktop-portal-hyprland
+
 
     # Other
     home-manager
@@ -65,7 +85,6 @@
     libgcc
     # gcc-unwrapped
     # libsForQt5.qtstyleplugin-kvantum
-    # libsForQt5.qt5ct
   ];
 
   fonts.packages = with pkgs; [

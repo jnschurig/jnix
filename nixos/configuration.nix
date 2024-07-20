@@ -89,6 +89,9 @@
   # make pipewire realtime-capable
   security.rtkit.enable = true;
 
+  # Allow hyprlock to authenticate the user.
+  security.pam.services.hyprlock = {};
+
   # Boot config garbage collection
   # Not working for some reason...
   # nix.gc = {
