@@ -30,6 +30,7 @@
 
     # Desktop Apps
     audacity
+    audacious
     chromium
     discord
     obsidian
