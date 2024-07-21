@@ -110,7 +110,7 @@ window#waybar.hidden {
 
 #clock {
     margin-right: 8px;
-    /* margin-left: 8px; */
+    margin-left: 0px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -248,7 +248,7 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
-#bluetooth {
+/* #bluetooth {
     margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
@@ -256,7 +256,7 @@ window#waybar.hidden {
     transition: none;
     color: #ffffff;
     background: #383c4a;
-}
+} */
 
 @keyframes blink {
     to {

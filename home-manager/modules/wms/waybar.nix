@@ -11,7 +11,7 @@
         # Not sure what "hyprland/submap" is. Documentation is sparse. Removing it for now.
         modules-left = ["hyprland/workspaces" "keyboard-state"];
         # modules-center = ["clock" "custom/weather"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "bluetooth" "tray" "clock" "custom/poweroff"];
+        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray" "clock" "custom/poweroff"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -23,19 +23,19 @@
             on-click = "bash ~/.config/waybar/scripts/poweroff.sh";
         };
      
-        "bluetooth" = {
-            # controller = "controller1"; # specify the alias of the controller if there are more than 1 on the system
-            # format = "󰂯 {status}";
-            # format-* handles every state, so default format is not necessary.
-            format-on = "󰂯";
-            format-off = "󰂲";
-            format-disabled = ""; # an empty format will hide the module;
-            format-connected = "󰂱 {num_connections}";
-            # tooltip-format = "{controller_alias}\t{controller_address}";
-            # tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
-            tooltip-format-connected = "{device_enumerate}";
-            tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
-        };
+        # "bluetooth" = {
+        #     # controller = "controller1"; # specify the alias of the controller if there are more than 1 on the system
+        #     # format = "󰂯 {status}";
+        #     # format-* handles every state, so default format is not necessary.
+        #     format-on = "󰂯";
+        #     format-off = "󰂲";
+        #     format-disabled = ""; # an empty format will hide the module;
+        #     format-connected = "󰂱 {num_connections}";
+        #     # tooltip-format = "{controller_alias}\t{controller_address}";
+        #     # tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+        #     tooltip-format-connected = "{device_enumerate}";
+        #     tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+        # };
 
         "hyprland/language" = {
             format-en = "US";
@@ -150,7 +150,7 @@
         };
         tray = {
             icon-size = 16;
-            spacing = 2;
+            spacing = 4;
         };
 
       };
