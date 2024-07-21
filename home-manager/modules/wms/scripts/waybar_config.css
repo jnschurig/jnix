@@ -62,6 +62,7 @@ window#waybar.hidden {
 }
 
 #language {
+    margin-right: 8px;
     padding-left: 16px;
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
@@ -79,14 +80,14 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
-#custom-pacman {
+/* #custom-pacman {
     padding-left: 16px;
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
     color: #ffffff;
     background: #383c4a;
-}
+} */
 
 #custom-mail {
     margin-right: 8px;
@@ -98,6 +99,7 @@ window#waybar.hidden {
 }
 
 #submap {
+    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -108,7 +110,7 @@ window#waybar.hidden {
 
 #clock {
     margin-right: 8px;
-    margin-left: 8px;
+    /* margin-left: 8px; */
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -118,6 +120,7 @@ window#waybar.hidden {
 }
 
 #custom-weather {
+    margin-right: 8px;
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
@@ -151,16 +154,6 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
-#custom-mem_old {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
 #cpu {
     margin-right: 8px;
     margin-left: 0px;
@@ -171,7 +164,7 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
-#cpu_old {
+/* #custom-mem_old {
     margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
@@ -179,7 +172,17 @@ window#waybar.hidden {
     transition: none;
     color: #ffffff;
     background: #383c4a;
-}
+} */
+
+/* #cpu_old {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+} */
 
 #temperature {
     margin-right: 8px;
@@ -236,6 +239,17 @@ window#waybar.hidden {
 }
 
 #tray {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#bluetooth {
+    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
