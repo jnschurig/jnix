@@ -23,8 +23,9 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_SIZE,20"
         "QT_QPA_PLATFORM,wayland"
+        # "QT_QPA_PLATFORMTHEME,qt5ct"
+        "QT_QPA_PLATFORMTHEME,qt6ct"
         "XDG_SCREENSHOTS_DIR,~/screens"
-        # "QT_QPA_PLATFORMTHEME,qt6ct"
       ];
 
       # decoration.active_opacity
