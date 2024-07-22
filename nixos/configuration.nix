@@ -48,6 +48,7 @@
   # Enable the login screen.
   services.displayManager.sddm.enable = true;
 
+  # Config for the sugar candy. It's just a bit too heavy, and doesn't work as well as the plasma one.
   # services.displayManager.sddm = {
   #   enable = true; # Enable SDDM.
   #   sugarCandyNix = {

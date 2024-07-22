@@ -143,7 +143,7 @@
         "nm-applet --indicator"
         "waybar"
         "mako"
-        "[workspace special silent; size 75% 20%;move 12.5% 40] kitty"
+        "[workspace special silent; size 75% 20%;move 12.5% 40] kitty" # Have the drop down start up with kitty.
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "blueman-applet"
         # "wl-paste --type text --watch cliphist store"

@@ -19,11 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    sddm-sugar-candy-nix = {
-      url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
-      # Optional, by default this flake follows nixpkgs-unstable.
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # sddm-sugar-candy-nix = {
+    #   url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
+    #   # Optional, by default this flake follows nixpkgs-unstable.
+    #   # inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
 
     # polymc.url = "github:PolyMC/PolyMC";
@@ -48,14 +48,14 @@
         ./nixos/configuration.nix
         inputs.nixvim.nixosModules.nixvim
         inputs.nix-gaming.nixosModules.pipewireLowLatency
-        inputs.sddm-sugar-candy-nix.nixosModules.default
-        {
-          nixpkgs = {
-            overlays = [
-              inputs.sddm-sugar-candy-nix.overlays.default
-            ];
-          };
-        }
+        # inputs.sddm-sugar-candy-nix.nixosModules.default
+        # {
+        #   nixpkgs = {
+        #     overlays = [
+        #       inputs.sddm-sugar-candy-nix.overlays.default
+        #     ];
+        #   };
+        # }
       ];
     };
 
