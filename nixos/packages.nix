@@ -24,7 +24,6 @@
     pamixer # Audio control
     sway
     swayimg
-    swww # Desktop image
     unzip
     wget
     zip
@@ -47,9 +46,6 @@
         # beetle-psx-hw
       ];
     })
-    # shipwright
-    # _2ship2harkinian
-
     steam
     wine
     winetricks

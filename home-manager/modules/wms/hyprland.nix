@@ -138,9 +138,6 @@
 
       exec-once = [
         # If these don't work, try adding & to the end of each line.
-        # "swww init"
-        # "swww img ~/Pictures/wallpaper/background/""JQX6q2g - Imgur.png"""
-        # "swww img ~/Pictures/wallpaper/background/dark_tree.png"
         "nm-applet --indicator"
         "waybar"
         "mako"
@@ -154,7 +151,6 @@
       bind = [
 
         # "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-        # "$mainMod, S, exec, rofi -show drun -show-icons"
         "$mainMod, space, exec, rofi -show drun -show-icons"
         "alt, space, exec, rofi -show drun -show-icons"
         "$mainMod, T, exec, kitty"
