@@ -138,8 +138,8 @@
 
       exec-once = [
         # If these don't work, try adding & to the end of each line.
-        "swww init"
-        "swww img ~/Pictures/wallpaper/background/""JQX6q2g - Imgur.png"""
+        # "swww init"
+        # "swww img ~/Pictures/wallpaper/background/""JQX6q2g - Imgur.png"""
         "nm-applet --indicator"
         "waybar"
         "mako"
