@@ -5,8 +5,8 @@
 
     settings = {
       "$mainMod" = "SUPER";
-      # "$hyperMod" = "Ctrl+Shift+Alt+Super";
-      "$hyperMod" = "Ctrl&Shift&Alt&Super";
+      "$hyperMod" = "Ctrl+Shift+Alt+Super";
+      # "$hyperMod" = "Ctrl&Shift&Alt";
 
       # Use: `hyprctl monitors all` to get information about monitors.
       # monitor = "name,resolution@frequency,position,scale"
