@@ -68,7 +68,7 @@
     grim
     hyprland
     hyprlock
-    hyprpaper
+    # hyprpaper
     kdePackages.qt6ct
     # kdePackages.qtsvg
     libsForQt5.qt5ct

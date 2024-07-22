@@ -43,6 +43,9 @@
     # lazydocker
     # taplo
 
+    # Other
+    hyprpaper
+
     # hobbies
     obs-studio
     shipwright

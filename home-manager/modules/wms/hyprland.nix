@@ -39,8 +39,8 @@
       input = {
         # kb_layout = "us,jp";
         # kb_variant = "lang";
-        # kb_options = "grp:caps_toggle";
         kb_options = [
+          # "grp:caps_toggle"
           "caps:hyper"
         ];
 
@@ -140,6 +140,7 @@
         # If these don't work, try adding & to the end of each line.
         # "swww init"
         # "swww img ~/Pictures/wallpaper/background/""JQX6q2g - Imgur.png"""
+        # "swww img ~/Pictures/wallpaper/background/dark_tree.png"
         "nm-applet --indicator"
         "waybar"
         "mako"

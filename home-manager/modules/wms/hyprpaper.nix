@@ -6,19 +6,19 @@ in
   services.hyprpaper = {
     enable = true;
     settings = {
-      ipc = "on";
+      ipc = "off";
       splash = false;
       splash_offset = 2.0;
 
       preload =
         [
-          ${image_1}
-          ${image_2}
+          "${image_1}"
+          # "${image_2}"
         ];
 
       wallpaper = [
-        ${image_1}
-        ${image_2}
+          ",${image_1}"
+          ",${image_2}"
       ];
     };
   };
