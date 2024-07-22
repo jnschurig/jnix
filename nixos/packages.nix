@@ -69,8 +69,10 @@
     hyprland
     hyprlock
     kdePackages.qt6ct
+    # kdePackages.qtsvg
     libsForQt5.qt5ct
     libnotify
+    # nwg-look
     mako # notifications
     networkmanagerapplet
     rofi-wayland

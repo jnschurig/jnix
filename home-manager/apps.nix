@@ -55,6 +55,7 @@
     file
     which
     tree
+    yazi # rust file manager
     # gnused # linux sed
 
     # i can never get this to work

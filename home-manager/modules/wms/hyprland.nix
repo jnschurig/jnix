@@ -12,9 +12,9 @@
       # monitor = "name,resolution@frequency,position,scale"
       # monitor = ",preferred,auto,1";
       monitor = [
-        ",preferred,auto,1"
-        "eDP-2,2560x1600@165,auto,1.25"
-        "DP-3,2560x1440@144,auto,1.25"
+        "eDP-2,2560x1600@165,auto,1.25" # Built-in screen
+        "DP-3,2560x1440@144,auto,1.25" # My normal second monitor
+        ",preferred,auto,1" # A catch-all monitor setting.
       ];
 
       env = [
@@ -23,8 +23,9 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_SIZE,20"
         "QT_QPA_PLATFORM,wayland"
+        # "QT_QPA_PLATFORMTHEME,qt5ct"
+        "QT_QPA_PLATFORMTHEME,qt6ct"
         "XDG_SCREENSHOTS_DIR,~/screens"
-        # "QT_QPA_PLATFORMTHEME,qt6ct"
       ];
 
       # decoration.active_opacity
@@ -142,8 +143,9 @@
         "nm-applet --indicator"
         "waybar"
         "mako"
-        "[workspace special silent; size 75% 20%;move 12.5% 40] kitty"
+        "[workspace special silent; size 75% 20%;move 12.5% 40] kitty" # Have the drop down start up with kitty.
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "blueman-applet"
         # "wl-paste --type text --watch cliphist store"
         # "wl-paste --type image --watch cliphist store"
       ];
@@ -196,13 +198,13 @@
         "Shift, XF86AudioMute, exec, pamixer --default-source -t"
         "Shift, XF86AudioRaiseVolume, exec, pamixer --default-source -i 5 "
         "Shift, XF86AudioLowerVolume, exec, pamixer --default-source -d 5 "
-        # Media
+        # Playback Control
         # TODO: do this sometime...
         # ", XF86AudioPrev, exec, somethingorother"
         # ", XF86AudioPlay, exec, somethingorother"
         # ", XF86AudioNext, exec, somethingorother"
 
-        # F12 alternate
+        # I wish this one would work. I don't know why it doesn't...
         "$mainMod Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
 
         # Brightness control

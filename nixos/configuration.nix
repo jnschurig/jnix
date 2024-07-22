@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -45,9 +45,31 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
+  # Enable the login screen.
   services.displayManager.sddm.enable = true;
+
+  # Config for the sugar candy. It's just a bit too heavy, and doesn't work as well as the plasma one.
+  # services.displayManager.sddm = {
+  #   enable = true; # Enable SDDM.
+  #   sugarCandyNix = {
+  #     enable = true; # This set SDDM's theme to "sddm-sugar-candy-nix".
+  #     settings = {
+  #       # Set your configuration options here.
+  #       # Here is a simple example:
+  #       Background = lib.cleanSource ../assets/cubic.png;
+  #       ScreenWidth = 2560;
+  #       ScreenHeight = 1600;
+  #       FormPosition = "right";
+  #       HaveFormBackground = true;
+  #       PartialBlur = true;
+  #       # ...
+  #     };
+  #   };
+  # };
+
+  # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
+
 
   # Configure keymap in X11
   services.xserver = {
@@ -61,6 +83,13 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  # Network printing discovery
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;

@@ -23,12 +23,20 @@
             on-click = "bash ~/.config/waybar/scripts/poweroff.sh";
         };
      
-        # Ugly and terrible, but it works, I think.
-        # "custom/power" = {
-        #     format = " ";
-        #     on-click = "swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Restart' 'shutdown -r now' -b 'Shutdown'  'shutdown -h now' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33";
-	    # };
-        
+        # "bluetooth" = {
+        #     # controller = "controller1"; # specify the alias of the controller if there are more than 1 on the system
+        #     # format = "󰂯 {status}";
+        #     # format-* handles every state, so default format is not necessary.
+        #     format-on = "󰂯";
+        #     format-off = "󰂲";
+        #     format-disabled = ""; # an empty format will hide the module;
+        #     format-connected = "󰂱 {num_connections}";
+        #     # tooltip-format = "{controller_alias}\t{controller_address}";
+        #     # tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+        #     tooltip-format-connected = "{device_enumerate}";
+        #     tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+        # };
+
         "hyprland/language" = {
             format-en = "US";
             min-length = 5;
@@ -142,13 +150,13 @@
         };
         tray = {
             icon-size = 16;
-            spacing = 0;
+            spacing = 4;
         };
 
       };
     };
 
-    style = builtins.readFile ./scripts/waybar_config;
+    style = builtins.readFile ./scripts/waybar_config.css;
 
   };
 }
