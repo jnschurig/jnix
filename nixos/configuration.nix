@@ -46,25 +46,25 @@
   services.xserver.enable = true;
 
   # Enable the login screen.
-  # services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
 
-  services.displayManager.sddm = {
-    enable = true; # Enable SDDM.
-    sugarCandyNix = {
-      enable = true; # This set SDDM's theme to "sddm-sugar-candy-nix".
-      settings = {
-        # Set your configuration options here.
-        # Here is a simple example:
-        Background = lib.cleanSource ../assets/cubic.png;
-        ScreenWidth = 2560;
-        ScreenHeight = 1600;
-        FormPosition = "right";
-        HaveFormBackground = true;
-        PartialBlur = true;
-        # ...
-      };
-    };
-  };
+  # services.displayManager.sddm = {
+  #   enable = true; # Enable SDDM.
+  #   sugarCandyNix = {
+  #     enable = true; # This set SDDM's theme to "sddm-sugar-candy-nix".
+  #     settings = {
+  #       # Set your configuration options here.
+  #       # Here is a simple example:
+  #       Background = lib.cleanSource ../assets/cubic.png;
+  #       ScreenWidth = 2560;
+  #       ScreenHeight = 1600;
+  #       FormPosition = "right";
+  #       HaveFormBackground = true;
+  #       PartialBlur = true;
+  #       # ...
+  #     };
+  #   };
+  # };
 
   # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
