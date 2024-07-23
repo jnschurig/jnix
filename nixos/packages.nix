@@ -18,6 +18,7 @@
 
     # CLI utils
     brightnessctl # Screen Brightness Control
+    playerctl # Media player controls
     git
     lazygit
     neofetch
