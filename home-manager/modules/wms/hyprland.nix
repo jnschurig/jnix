@@ -9,13 +9,8 @@
     systemd.variables = ["--all"];
 
     settings = {
-      # "$mainMod" = "SUPER";
-      # "$hyperMod" = "Ctrl+Shift+Alt+Super";
-      # "$hyperMod" = "Ctrl&Shift&Alt";
-
       # Use: `hyprctl monitors all` to get information about monitors.
       # monitor = "name,resolution@frequency,position,scale"
-      # monitor = ",preferred,auto,1";
       monitor = [
         "eDP-2,2560x1600@165,auto,1.25" # Built-in screen
         "DP-3,2560x1440@144,auto,1.25" # My normal second monitor
@@ -33,9 +28,7 @@
         "XDG_SCREENSHOTS_DIR,~/screens"
       ];
 
-      # decoration.active_opacity
-      # decoration.inactive_opacity
-
+      # Optionally enable/disable debugging.
       debug = {
         disable_logs = false;
         enable_stdout_logs = true;
@@ -47,6 +40,7 @@
         kb_options = [
           # "grp:caps_toggle"
           "caps:hyper"
+          # "caps:escape"
         ];
 
         follow_mouse = 1;
@@ -153,111 +147,8 @@
         # "wl-paste --type image --watch cliphist store"
       ];
 
-      # bind = [
+      # For bind = [] and others, see ./hyprbind.nix
 
-      #   # "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-      #   "$mainMod, space, exec, rofi -show drun -show-icons"
-      #   "alt, space, exec, rofi -show drun -show-icons"
-      #   "$mainMod, T, exec, kitty"
-      #   "$mainMod, Q, killactive,"
-      #   "$mainMod, E, exec, dolphin"
-      #   "$mainMod, F, togglefloating,"
-      #   # "$mainMod, P, pseudo, # dwindle"
-      #   # "$mainMod, J, togglesplit, # dwindle"
-
-      #   # Move focus with mainMod + arrow keys
-      #   "$mainMod, left,  movefocus, l"
-      #   "$mainMod, right, movefocus, r"
-      #   "$mainMod, up,    movefocus, u"
-      #   "$mainMod, down,  movefocus, d"
-
-      #   # Moving windows
-      #   "$mainMod SHIFT, left,  swapwindow, l"
-      #   "$mainMod SHIFT, right, swapwindow, r"
-      #   "$mainMod SHIFT, up,    swapwindow, u"
-      #   "$mainMod SHIFT, down,  swapwindow, d"
-
-      #   # Window resizing                     X  Y
-      #   "$mainMod CTRL, left,  resizeactive, -60 0"
-      #   "$mainMod CTRL, right, resizeactive,  60 0"
-      #   "$mainMod CTRL, up,    resizeactive,  0 -60"
-      #   "$mainMod CTRL, down,  resizeactive,  0  60"
-
-      #   # Scroll through existing workspaces with mainMod + scroll
-      #   "$mainMod, mouse_down, workspace, e+1"
-      #   "$mainMod, mouse_up, workspace, e-1"
-
-      #   # Keyboard backlight
-      #   # "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-      #   # "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
-
-      #   ## Volume and Media Control ##
-      #   # Speakers
-      #   ", XF86AudioMute, exec, pamixer -t"
-      #   ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-      #   ", XF86AudioLowerVolume, exec, pamixer -d 5 "
-      #   # Mic
-      #   "Shift, XF86AudioMute, exec, pamixer --default-source -t"
-      #   "Shift, XF86AudioRaiseVolume, exec, pamixer --default-source -i 5 "
-      #   "Shift, XF86AudioLowerVolume, exec, pamixer --default-source -d 5 "
-      #   # Playback Control
-      #   # TODO: do this sometime...
-      #   # ", XF86AudioPrev, exec, somethingorother"
-      #   # ", XF86AudioPlay, exec, somethingorother"
-      #   # ", XF86AudioNext, exec, somethingorother"
-
-      #   # I wish this one would work. I don't know why it doesn't...
-      #   "$mainMod Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
-
-      #   # Brightness control
-      #   ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-      #   ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
-
-      #   # Waybar
-      #   # "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-      #   # "$mainMod, W, exec, pkill -SIGUSR2 waybar"
-
-      #   # Disable all effects
-      #   "$mainMod Shift, G, exec, ~/.config/hypr/scripts/gamemode.sh"
-
-      #   "$mainMod, Tab, workspace, previous"
-      #   "Alt, Tab, workspace, previous"
-
-      #   "$mainMod, comma, workspace, -1"
-      #   "$mainMod, period, workspace, +1"
-
-      #   # For some reason, this one doesn't work unless the mainmod one is also there? so weird...
-      #   "$mainMod, Return, togglespecialworkspace"
-      #   "$hyperMod, Return, togglespecialworkspace"
-
-      #   # ", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
-      #   ", Print, exec, grim -g \"$(slurp -d)\" -" # Saves to to the screenshot folder `~/Pictures/screenshots/`
-      # ]
-      # # Fancy script I found
-      # # Switch workspaces with mainMod + [0-9]
-      # # Move active window to a workspace with mainMod + SHIFT + [0-9]
-      # ++ (
-      #   # workspaces
-      #   # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
-      #   builtins.concatLists (builtins.genList (
-      #       x: let
-      #         ws = let
-      #           c = (x + 1) / 10;
-      #         in
-      #           builtins.toString (x + 1 - (c * 10));
-      #       in [
-      #         "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
-      #         "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-      #       ]
-      #     )
-      #     10)
-      # );
-
-      # # Move/resize windows with mainMod + LMB/RMB and dragging
-      # bindm = [
-      #   "$mainMod, mouse:272, movewindow"
-      #   "$mainMod, mouse:273, resizewindow"
-      # ];
     };
   };
 }

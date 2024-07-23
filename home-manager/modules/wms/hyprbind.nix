@@ -1,7 +1,7 @@
 let
   ## Standard Mod Keys ##
   main_mod = "SUPER";
-  hyper_mod = "Ctrl&Shift&Alt&Super_l";
+  hyper_mod = "Ctrl&Shift&Alt&Super"; # Only for use with "binds" ie keysym bindings
 
   ## Special Workspaces ##
   terminal_workspace_key = "Return";
@@ -61,16 +61,15 @@ in
     # i -> ignore mods, will ignore modifiers.
     # s -> separate, will arbitrarily combine keys between each mod/key, see [Keysym combos](#keysym-combos) above.
     # d -> has description, will allow you to write a description for your bind.
-    
-    # Key variables
-    "$mainMod" = "${main_mod}";
-    # "$hyperMod" = "Ctrl+Shift+Alt+Super";
-    "$hyperMod" = "${hyper_mod}";
-    
+        
     bindr = [ # Release, trigger on release of a key
       # Rofi application launcher
-      "$mainMod, ${rofikey}, exec, ${rofi_cmd}"
+      # Kind of wanted two versions of this because I always get them mixed up when going between systems.
+      "${main_mod}, ${rofikey}, exec, ${rofi_cmd}"
       "alt, ${rofikey}, exec, ${rofi_cmd}"
+
+      # Poweroff script.
+      "${main_mod} Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
     ];
 
     bindle = [ # Repeat while held, works on lock screen
@@ -96,75 +95,76 @@ in
     ];
 
     bindm = [
-      "$mainMod, mouse:272, movewindow"
-      "$mainMod, Control_L, movewindow" # Touchpad dragging stinks
+      "${main_mod}, mouse:272, movewindow"
+      "${main_mod}, Control_L, movewindow" # Touchpad dragging stinks
 
-      "$mainMod, mouse:273, resizewindow"
-      "$mainMod, ALT_L, resizewindow" # Touchpad dragging stinks
+      "${main_mod}, mouse:273, resizewindow"
+      "${main_mod}, ALT_L, resizewindow" # Touchpad dragging stinks
     ];
 
     binds = [ # Keysym combos. Arbitrary keys by reference.
-      "$hyperMod, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
+      # A duplicate of the regular combo, but with hyper instead.
+      "${hyper_mod}, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
     ];
 
     bind = [
 
-      # "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-      "$mainMod, T, exec, kitty"
-      "$mainMod, Q, killactive,"
-      "$mainMod, E, exec, dolphin"
-      # "$mainMod, F, togglefloating," # Not a recommended key
-      # "$mainMod, P, pseudo, # dwindle"
-      # "$mainMod, J, togglesplit, # dwindle"
+      # "${main_mod}, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+      "${main_mod}, T, exec, kitty"
+      "${main_mod}, Q, killactive,"
+      "${main_mod}, E, exec, dolphin"
+      # "${main_mod}, F, togglefloating," # Not a recommended key
+      # "${main_mod}, P, pseudo, # dwindle"
+      # "${main_mod}, J, togglesplit, # dwindle"
 
       # Move focus with mainMod + arrow keys
-      "$mainMod, left,  movefocus, l"
-      "$mainMod, right, movefocus, r"
-      "$mainMod, up,    movefocus, u"
-      "$mainMod, down,  movefocus, d"
+      "${main_mod}, left,  movefocus, l"
+      "${main_mod}, right, movefocus, r"
+      "${main_mod}, up,    movefocus, u"
+      "${main_mod}, down,  movefocus, d"
 
-      "$mainMod, J, movefocus, l" # left
-      "$mainMod, K, movefocus, d" # down
-      "$mainMod, L, movefocus, r" # up
-      "$mainMod, ;, movefocus, u" # right
+      "${main_mod}, J, movefocus, l" # left
+      "${main_mod}, K, movefocus, d" # down
+      "${main_mod}, L, movefocus, u" # up
+      "${main_mod}, semicolon, movefocus, r" # right
 
       # Moving windows
-      "$mainMod SHIFT, left,  swapwindow, l"
-      "$mainMod SHIFT, right, swapwindow, r"
-      "$mainMod SHIFT, up,    swapwindow, u"
-      "$mainMod SHIFT, down,  swapwindow, d"
+      "${main_mod} SHIFT, left,  swapwindow, l"
+      "${main_mod} SHIFT, right, swapwindow, r"
+      "${main_mod} SHIFT, up,    swapwindow, u"
+      "${main_mod} SHIFT, down,  swapwindow, d"
 
-      "$mainMod SHIFT, J, swapwindow, l" # left
-      "$mainMod SHIFT, K, swapwindow, d" # down
-      "$mainMod SHIFT, L, swapwindow, u" # up
-      "$mainMod SHIFT, ;, swapwindow, r" # right
+      "${main_mod} SHIFT, J, swapwindow, l" # left
+      "${main_mod} SHIFT, K, swapwindow, d" # down
+      "${main_mod} SHIFT, L, swapwindow, u" # up
+      "${main_mod} SHIFT, semicolon, swapwindow, r" # right
 
-      # Window resizing                     X  Y
-      "$mainMod CTRL, left,  resizeactive, -60 0"
-      "$mainMod CTRL, right, resizeactive,  60 0"
-      "$mainMod CTRL, up,    resizeactive,  0 -60"
-      "$mainMod CTRL, down,  resizeactive,  0  60"
+      # Window resizing                        X  Y
+      "${main_mod} CTRL, left,  resizeactive, -60 0"
+      "${main_mod} CTRL, right, resizeactive,  60 0"
+      "${main_mod} CTRL, up,    resizeactive,  0 -60"
+      "${main_mod} CTRL, down,  resizeactive,  0  60"
 
-      "$mainMod CTRL, J, resizeactive, -60 0"  # left
-      "$mainMod CTRL, K, resizeactive,  0  60" # down
-      "$mainMod CTRL, L, resizeactive,  0 -60" # up
-      "$mainMod CTRL, ;, resizeactive,  60 0"  # right
+      "${main_mod} CTRL, J, resizeactive, -60 0"  # left
+      "${main_mod} CTRL, K, resizeactive,  0  60" # down
+      "${main_mod} CTRL, L, resizeactive,  0 -60" # up
+      "${main_mod} CTRL, semicolon, resizeactive,  60 0"  # right
 
       # Modify Windows
       # Not yet implemented
-      # "$mainMod f, toggle fullscreen"
-      # "$mainMod v, split a window vertically"
-      # "$mainMod h, split a window horizontally"
-      # "$mainMod r, resize mode"
+      # "${main_mod} f, toggle fullscreen"
+      # "${main_mod} v, split a window vertically"
+      # "${main_mod} h, split a window horizontally"
+      # "${main_mod} r, resize mode"
 
       # Change Container Layout
       # Not yet implemented
-      # "$mainMod e, default"
-      # "$mainMod s, stacking"
-      # "$mainMod w, tabbed"
+      # "${main_mod} e, default"
+      # "${main_mod} s, stacking"
+      # "${main_mod} w, tabbed"
 
       # Floating
-      "$mainMod Shift, Space, togglefloating,"
+      "${main_mod} Shift, Space, togglefloating,"
 
       # Brightness control
       "${monitor_brightness_mod}, ${brightness_down_key}, exec, ${monitor_brightness_down_cmd}"
@@ -174,33 +174,45 @@ in
       "${keyboard_brightness_mod}, ${brightness_down_key}, exec, ${keyboard_brightness_down_cmd}"
       "${keyboard_brightness_mod}, ${brightness_up_key}, exec, ${keyboard_brightness_up_cmd}"
 
-      # I wish this one would work. I don't know why it doesn't...
-      "$mainMod Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
-
       # Waybar
-      # "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-      # "$mainMod, W, exec, pkill -SIGUSR2 waybar"
+      # "${main_mod}, B, exec, pkill -SIGUSR1 waybar"
+      # "${main_mod}, W, exec, pkill -SIGUSR2 waybar"
 
       # Disable all effects
-      "$mainMod Shift, G, exec, ~/.config/hypr/scripts/gamemode.sh"
+      "${main_mod} Shift, G, exec, ~/.config/hypr/scripts/gamemode.sh"
 
-      "$mainMod, Tab, workspace, previous"
+      "${main_mod}, Tab, workspace, previous"
       "Alt, Tab, workspace, previous"
 
       # Scroll through existing workspaces with mainMod + scroll
-      "$mainMod, mouse_down, workspace, e+1"
-      "$mainMod, mouse_up, workspace, e-1"
+      "${main_mod}, mouse_down, workspace, e+1"
+      "${main_mod}, mouse_up, workspace, e-1"
 
-      "$mainMod, comma, workspace, -1"
-      "$mainMod, period, workspace, +1"
+      "${main_mod}, comma, workspace, -1"
+      "${main_mod}, period, workspace, +1"
 
       # For some reason, this one doesn't work unless the main_mod one is also there? so weird...
       # hyper_mod contains the super button, so it's triggering the main_mod one. Need to use binds (not bind)
       # and use hyper_l rather than 
-      "$mainMod, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
+      "${main_mod}, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
 
       # ", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
       ", Print, exec, grim -g \"$(slurp -d)\" -" # Saves to to the screenshot folder `~/Pictures/screenshots/`
-    ];
+    ] ++ (
+      # workspaces
+      # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
+      builtins.concatLists (builtins.genList (
+          x: let
+            ws = let
+              c = (x + 1) / 10;
+            in
+              builtins.toString (x + 1 - (c * 10));
+          in [
+            "${main_mod}, ${ws}, workspace, ${toString (x + 1)}"
+            "${main_mod} SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+          ]
+        )
+        10)
+    );
   };
 }
