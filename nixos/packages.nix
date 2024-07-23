@@ -18,13 +18,13 @@
 
     # CLI utils
     brightnessctl # Screen Brightness Control
+    playerctl # Media player controls
     git
     lazygit
     neofetch
     pamixer # Audio control
     sway
     swayimg
-    swww # Desktop image
     unzip
     wget
     zip
@@ -47,9 +47,6 @@
         # beetle-psx-hw
       ];
     })
-    # shipwright
-    # _2ship2harkinian
-
     steam
     wine
     winetricks
@@ -68,6 +65,7 @@
     grim
     hyprland
     hyprlock
+    # hyprpaper
     kdePackages.qt6ct
     # kdePackages.qtsvg
     libsForQt5.qt5ct
