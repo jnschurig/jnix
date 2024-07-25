@@ -47,9 +47,12 @@
     hyprpaper
 
     # hobbies
+    ffmpeg_7
     obs-studio
     shipwright
     _2ship2harkinian
+    tartube-yt-dlp
+    yt-dlp
 
     # Git
     pre-commit

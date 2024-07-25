@@ -22,7 +22,7 @@ let
   speaker_up_cmd = "pamixer -i 5";
   speaker_down_cmd = "pamixer -d 5";
 
-  # Mic commands are the same as speaker, just with Shift.
+  # Mic commands are the same as speaker, just with Shift as the mod.
   mic_mod = "Shift";
   mic_mute_toggle_command = "pamixer --default-source -t";
   mic_up_cmd = "pamixer --default-source -i 5";
@@ -62,16 +62,6 @@ in
     # s -> separate, will arbitrarily combine keys between each mod/key, see [Keysym combos](#keysym-combos) above.
     # d -> has description, will allow you to write a description for your bind.
         
-    bindr = [ # Release, trigger on release of a key
-      # Rofi application launcher
-      # Kind of wanted two versions of this because I always get them mixed up when going between systems.
-      "${main_mod}, ${rofikey}, exec, ${rofi_cmd}"
-      "alt, ${rofikey}, exec, ${rofi_cmd}"
-
-      # Poweroff script.
-      "${main_mod} Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
-    ];
-
     bindle = [ # Repeat while held, works on lock screen
       ## Volume and Media Control ##
       # Speakers
@@ -104,10 +94,18 @@ in
 
     binds = [ # Keysym combos. Arbitrary keys by reference.
       # A duplicate of the regular combo, but with hyper instead.
+      # For some reason hyper key also gets recognized as regular super, and doesn't work on its own.
       "${hyper_mod}, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
     ];
 
     bind = [
+      # Rofi application launcher
+      # Kind of wanted two versions of this because I always get them mixed up when going between systems.
+      "${main_mod}, ${rofikey}, exec, ${rofi_cmd}"
+      "alt, ${rofikey}, exec, ${rofi_cmd}"
+
+      # Poweroff script.
+      "${main_mod} Shift, P, exec, ~/.config/waybar/scripts/poweroff.sh"
 
       # "${main_mod}, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
       "${main_mod}, T, exec, kitty"
@@ -191,9 +189,7 @@ in
       "${main_mod}, comma, workspace, -1"
       "${main_mod}, period, workspace, +1"
 
-      # For some reason, this one doesn't work unless the main_mod one is also there? so weird...
-      # hyper_mod contains the super button, so it's triggering the main_mod one. Need to use binds (not bind)
-      # and use hyper_l rather than 
+      # Toggle Special Terminal workspace
       "${main_mod}, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
 
       # ", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
