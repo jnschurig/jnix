@@ -23,8 +23,8 @@
     lazygit
     neofetch
     pamixer # Audio control
-    sway
-    swayimg
+    # sway
+    # swayimg
     unzip
     wget
     zip
