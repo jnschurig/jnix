@@ -48,10 +48,13 @@
 
     # hobbies
     ffmpeg_7
+    mpv
+    mpvc
     obs-studio
     shipwright
     _2ship2harkinian
     tartube-yt-dlp
+    vlc
     yt-dlp
 
     # Git

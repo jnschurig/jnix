@@ -5,18 +5,24 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 13 -10 18";
+        margin = "4 4 4 4";
 
         # modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
         # Not sure what "hyprland/submap" is. Documentation is sparse. Removing it for now.
         modules-left = ["hyprland/workspaces" "keyboard-state"];
         # modules-center = ["clock" "custom/weather"];
+        # modules-center = ["sway/window"];
         modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray" "clock" "custom/poweroff"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
         };
 
+        # "sway/window" = {
+        #     max-length = 80;
+        #     tooltip = false;
+        # };
+    
         "custom/poweroff" = {
             tooltip = false;
             format = "";

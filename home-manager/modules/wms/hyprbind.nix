@@ -113,7 +113,7 @@ in
       "${main_mod}, E, exec, dolphin"
       # "${main_mod}, F, togglefloating," # Not a recommended key
       # "${main_mod}, P, pseudo, # dwindle"
-      # "${main_mod}, J, togglesplit, # dwindle"
+      # "${main_mod}, O, togglesplit, # dwindle"
 
       # Move focus with mainMod + arrow keys
       "${main_mod}, left,  movefocus, l"
