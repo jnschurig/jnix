@@ -23,7 +23,7 @@ in
           # path = "screenshot";
           # blur_passes = 3;
           # blur_size = 8;
-          path = "~/Pictures/wallpaper/lock_screen/BxUZU2f.jpg";
+          path = "~/Pictures/wallpaper/lock_screen/i_see_u_cat.jpg";
         }
       ];
 

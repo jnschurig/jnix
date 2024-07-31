@@ -110,6 +110,7 @@
       # QMK_HOME = "${lib.makeBinPath pkgs.qmk_firmware}/..";
       ZSH_AUTOSUGGEST_USE_ASYNC = true;
       # ZSH_AUTOSUGGEST_STRATEGY = "(history match_prev_cmd)";
+      LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
     };
 
   };

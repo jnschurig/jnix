@@ -1,1 +1,1 @@
-rofi -show power-menu -modi power-menu:~/.config/waybar/scripts/rofi-power-menu.sh -theme-str 'window {width: 10em;} listview {lines: 6;}'
+rofi -show power-menu -modi power-menu:~/.config/waybar/scripts/rofi-power-menu.sh -theme-str 'window {location: northeast; anchor: north; width: 10em;} listview {lines: 6;}'

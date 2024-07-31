@@ -7,6 +7,34 @@
     min-height: 20px;
 }
 
+/* Custom Color Definitions */
+/* extracolors {
+    --red-light: #ED7D49;
+    --red-dark: #AA404E;  
+
+    --yellow-light: #FCE99C;
+    --yellow-dark: #FBD04B;
+
+    --green-light: #B4D445;
+    --green-dark: #3AD846;
+
+    --blue-light: #66A2E8;
+    --blue-dark: #2B7DE1;
+
+    --purple-light: #805487;
+    --purple-dark: #4B1F5A;
+
+    --darkest-blue: #100C2F;
+
+    --white: #FFFFFF;
+    --light: #A6A6A6;
+    --somewhat-black: #404040;
+    --very_black: #1E1E1E;
+
+    --light-gradient: linear-gradient(0deg, #ED7D49, #FCE99C, #B4D445, #66A2E8, #805487);
+    --light-gradient: linear-gradient(0deg, #AA404E, #FBD04B, #3AD846, #2B7DE1, #4B1F5A);
+} */
+
 window#waybar {
     background: transparent;
     color: white;
@@ -59,7 +87,7 @@ window#waybar.hidden {
     border-radius: 10px;
     transition: none;
     color: #ffffff;
-    background: #383c4a;
+    background: #AA404E;
 }
 
 #language {
@@ -131,8 +159,8 @@ window#waybar.hidden {
 
 #pulseaudio {
     margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
     transition: none;
     color: #ffffff;
@@ -164,26 +192,6 @@ window#waybar.hidden {
     color: #ffffff;
     background: #383c4a;
 }
-
-/* #custom-mem_old {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-} */
-
-/* #cpu_old {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-} */
 
 #temperature {
     margin-right: 8px;

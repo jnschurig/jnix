@@ -125,20 +125,6 @@
             min-length = 7;
         };
 
-        # This battery format has such weird icons for some reason...
-        # battery = {
-        #     states = {
-        #         warning = 30;
-        #         critical = 15;
-        #     };
-        #     format = "{capacity}% {icon}";
-        #     format-charging = "{capacity}% ";
-        #     format-plugged = "{capacity}% ";
-        #     format-alt = "{time} {icon}";
-        #     format-icons = ["" "" "" "" "" "" "" "" "" ""];
-        # on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
-        # };
-
         battery = {
             states = {
                 good = 95;

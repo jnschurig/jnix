@@ -1,5 +1,6 @@
 let
-  image_1 = "~/Pictures/wallpaper/background/dark_tree.png";
+  # image_1 = "~/Pictures/wallpaper/background/dark_tree.png";
+  image_1 = "~/Pictures/wallpaper/lock_screen/prismatic_eevee.jpeg";
   image_2 = "~/Pictures/wallpaper/background/shell_frieze.jpeg";
 in
 {
