@@ -1,16 +1,17 @@
 {
   imports = [
-    # ./bootloader.nix
-    # ./sound.nix
-    # ./zram.nix
-    # ./env.nix
-    ./user.nix
-    # ./xserver.nix
-    # ./nm.nix
-    # ./virtmanager.nix
-    ./hyprland.nix
-    # ./trim.nix
     ./bluetooth.nix
+    # ./bootloader.nix
+    # ./env.nix
+    ./hyprland.nix
     ./nixvim/nixvim.nix
+    # ./nm.nix
+    ./python.nix
+    # ./sound.nix
+    # ./trim.nix
+    ./user.nix
+    # ./virtmanager.nix
+    # ./xserver.nix
+    # ./zram.nix
   ];
 }

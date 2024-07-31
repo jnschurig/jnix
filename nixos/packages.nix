@@ -85,6 +85,19 @@
     # wmctrl
     xdg-desktop-portal-hyprland
 
+    # Python build dependencies
+    python3
+
+    bzip2
+    gcc
+    gnumake
+    libffi
+    # ncurses
+    openssl
+    poetry
+    readline
+    xz
+    zlib
 
     # Other
     home-manager

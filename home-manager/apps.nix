@@ -92,21 +92,6 @@
     # helmfile
     # postgresql_14
 
-    # Python build dependencies
-    gcc
-    gnumake
-    # gcc-unwrapped
-    # libgcc
-    # cython
-    # distlib?
-    # isPyPy?
-    poetry
-    python3
-
-    openssl
-    readline
-    xz
-    zlib
   ];
 
   programs = {
