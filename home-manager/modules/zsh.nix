@@ -41,11 +41,14 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
-    # initExtra = ''
-    #     source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
-    #     source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
-    #     source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
-    # '';
+    initExtra = ''
+      # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+      export PATH="$PYENV_ROOT/bin:$PATH"
+      # eval "$(pyenv init -)"
+      # source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
+      # source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
+      # source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
+    '';
 
     oh-my-zsh = {
       enable = true;
