@@ -39,6 +39,7 @@
     vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # Gaming
+    lutris
     # retroarch
     (retroarch.override {
       cores = with libretro; [
@@ -49,6 +50,8 @@
     })
     steam
     wine
+    wine-staging
+    # wine-discord-ipc-bridge # Comes with nix gaming
     winetricks
     protontricks
 
