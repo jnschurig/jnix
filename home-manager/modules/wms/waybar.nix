@@ -12,7 +12,7 @@
         modules-left = ["hyprland/workspaces" "keyboard-state"];
         # modules-center = ["clock" "custom/weather"];
         # modules-center = ["sway/window"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray" "clock" "custom/poweroff"];
+        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "power-profiles-daemon" "tray" "clock" "custom/poweroff"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -44,102 +44,115 @@
         # };
 
         "hyprland/language" = {
-            format-en = "US";
-            min-length = 5;
-            tooltip = false;
+          format-en = "US";
+          min-length = 5;
+          tooltip = false;
         };
 
         "keyboard-state" = {
-            #numlock = true;
-            capslock = true;
-            format = "{icon} ";
-            format-icons = {
-                locked = " ";
-                unlocked = "";
-            };
+          #numlock = true;
+          capslock = true;
+          format = "{icon} ";
+          format-icons = {
+            locked = " ";
+            unlocked = "";
+          };
         };
 
         "clock" = {
-            # timezone = "America/New_York";
-            tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-            format = "{:%a; %d %b, %I:%M %p}";
+          # timezone = "America/New_York";
+          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          format = "{:%a; %d %b, %I:%M %p}";
         };
 
         # "custom/weather" = {
-        #     format = "{}";
-        #     tooltip = true;
-        #     interval = 1800;
-        #     exec = "$HOME/.config/waybar/scripts/wttr.py";
-        #     return-type = "json";
+        #   format = "{}";
+        #   tooltip = true;
+        #   interval = 1800;
+        #   exec = "$HOME/.config/waybar/scripts/wttr.py";
+        #   return-type = "json";
         # };
 
         "pulseaudio" = {
-            # scroll-step = 1; # %, can be a float
-            reverse-scrolling = 0;
-            format = "{volume}% {icon} {format_source}";
-            format-bluetooth = "{volume}% {icon} {format_source}";
-            format-bluetooth-muted = " {icon} {format_source}";
-            format-muted = " {format_source}";
-            format-source = "{volume}% ";
-            format-source-muted = "";
-            format-icons = {
-                headphone = "";
-                hands-free = "";
-                headset = "";
-                phone = "";
-                portable = "";
-                car = "";
-                default = ["" "" ""];
-            };
-            on-click = "pavucontrol";
-            min-length = 13;
+          # scroll-step = 1; # %, can be a float
+          reverse-scrolling = 0;
+          format = "{volume}% {icon} {format_source}";
+          format-bluetooth = "{volume}% {icon} {format_source}";
+          format-bluetooth-muted = " {icon} {format_source}";
+          format-muted = " {format_source}";
+          format-source = "{volume}% ";
+          format-source-muted = "";
+          format-icons = {
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            portable = "";
+            car = "";
+            default = ["" "" ""];
+          };
+          on-click = "pavucontrol";
+          min-length = 13;
         };
 
         "custom/mem" = {
-            format = "{} ";
-            interval = 3;
-            exec = "free -h | awk '/Mem:/{printf $3}'";
-            tooltip = false;
+          format = "{} ";
+          interval = 3;
+          exec = "free -h | awk '/Mem:/{printf $3}'";
+          tooltip = false;
         };
 
         "cpu" = {
-        interval = 2;
-        format = "{usage}% ";
-        min-length = 6;
+          interval = 2;
+          format = "{usage}% ";
+          min-length = 6;
         };
 
-        "temperature" = {
-            # thermal-zone = 2;
-            # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-            critical-threshold = 80;
-            # format-critical = "{temperatureC}°C {icon}";
-            format = "{temperatureC}°C {icon}";
-            format-icons = ["" "" "" "" ""];
-            tooltip = false;
-        };
+        # "temperature" = {
+        #   # thermal-zone = 2;
+        #   # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
+        #   critical-threshold = 80;
+        #   # format-critical = "{temperatureC}°C {icon}";
+        #   format = "{temperatureC}°C {icon}";
+        #   format-icons = ["" "" "" "" ""];
+        #   tooltip = false;
+        # };
 
         "backlight" = {
-            device = "intel_backlight";
-            format = "{percent}% {icon}";
-            format-icons = [""];
-            min-length = 7;
+          device = "intel_backlight";
+          format = "{percent}% {icon}";
+          format-icons = [""];
+          min-length = 7;
         };
 
         battery = {
-            states = {
-                good = 95;
-                warning = 30;
-                critical = 15;
-            };
-            format = "{capacity}% {icon}";
-            # format-charging = "{capacity}% ";
-            # format-plugged = "{capacity}% ";
-            # format-good: ""; # An empty format will hide the module
-            # format-full: "";
-            # format-icons = ["" "" "" "" ""];
-            format-icons = ["" "" "" "" ""];
-            on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
+          states = {
+            good = 95;
+            warning = 30;
+            critical = 15;
+          };
+          format = "{capacity}% {icon}";
+          # format-charging = "{capacity}% ";
+          # format-plugged = "{capacity}% ";
+          # format-good = ""; # An empty format will hide the module
+          # format-full = "";
+          # format-icons = ["" "" "" "" ""];
+          format-icons = ["" "" "" "" ""];
+          on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
         };
+
+        "power-profiles-daemon" = {
+          format = "{icon}";
+          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+          tooltip = true;
+          format-icons = {
+            default = "";
+            performance = "";
+            balanced = "";
+            power-saver = "";
+          };
+        };
+
         tray = {
             icon-size = 16;
             spacing = 4;

@@ -3,9 +3,6 @@
 , ...
 }:
 
-# let
-#   isDarwin = builtins.elem pkgs.system [ "aarch64-darwin" ];
-# in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -48,12 +45,14 @@
 
     # hobbies
     ffmpeg_7
+    lumafly
     mpv
     mpvc
     obs-studio
     shipwright
     _2ship2harkinian
     tartube-yt-dlp
+    transmission-gtk
     vlc
     yt-dlp
 
@@ -67,14 +66,6 @@
     yazi # rust file manager
     # gnused # linux sed
 
-    # i can never get this to work
-    # any time i enable it, it completely blocks me from being able to type in the terminal
-    # I figured it out, you have to remove all compinit calls from your zshrc
-    # ! MAKE SURE programs.zsh.enableCompletion IS SET TO FALSE BEFORE ENABLING THIS
-    # ! YOU WILL NOT BE ABLE TO TYPE ANYTHING IN THE SHELL IF YOU DON'T
-    # zsh-autocomplete
-    # TODO: maybe i can use some cool nix magic to only let this be installed if
-    # TODO: enableCompletion is set to false
     zsh-fast-syntax-highlighting
     zsh-completions
     zsh-autoenv
@@ -82,16 +73,6 @@
 
     # productivity
     # glow # markdown previewer in terminal
-
-    # work
-    # kubectl
-    # kubectx
-    # krew # i cant really tell whether this works, then command `krew` works but `kubectl krew` doesn't
-    # google-cloud-sdk # can't install in nix because it blocks `gcloud components install`
-    # helm # only supported on linux, installing through homebrew
-    # helmfile
-    # postgresql_14
-
   ];
 
   programs = {

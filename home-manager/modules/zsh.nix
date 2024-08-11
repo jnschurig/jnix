@@ -30,6 +30,8 @@
 
       # Other
       fresh = "exec $SHELL";
+
+      watts = "echo $(($(cat /sys/class/power_supply/BAT1/current_now) * $(cat /sys/class/power_supply/BAT1/voltage_now) / 1000000000000))W";
     };
 
     history = {

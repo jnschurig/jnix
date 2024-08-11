@@ -18,11 +18,13 @@
 
     # CLI utils
     brightnessctl # Screen Brightness Control
-    playerctl # Media player controls
+    # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
+    # fw-ectool
     git
     lazygit
     neofetch
     pamixer # Audio control
+    playerctl # Media player controls
     # sway
     # swayimg
     unzip
