@@ -1,11 +1,5 @@
-let 
-  profile_text = ''
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
-  '';
-in
-{pkgs, ...}: {
+{pkgs, ...}: 
+{
   imports = [
     # ./zsh.nix
     ./modules/bundle.nix
@@ -22,9 +16,6 @@ in
       TERMINAL = "kitty";
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
     };
-
-    file.".profile".text = "${profile_text}";
-    file.".zprofile".text = "${profile_text}";
 
     # Put JNIX home manager in preferred location for full functionality.
     file.".config/home-manager" = {

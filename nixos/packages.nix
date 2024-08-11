@@ -18,11 +18,13 @@
 
     # CLI utils
     brightnessctl # Screen Brightness Control
-    playerctl # Media player controls
+    # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
+    # fw-ectool
     git
     lazygit
     neofetch
     pamixer # Audio control
+    playerctl # Media player controls
     # sway
     # swayimg
     unzip
@@ -39,6 +41,7 @@
     vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # Gaming
+    lutris
     # retroarch
     (retroarch.override {
       cores = with libretro; [
@@ -49,6 +52,8 @@
     })
     steam
     wine
+    wine-staging
+    # wine-discord-ipc-bridge # Comes with nix gaming
     winetricks
     protontricks
 
@@ -84,7 +89,6 @@
     wl-clipboard-rs
     # wmctrl
     xdg-desktop-portal-hyprland
-
 
     # Other
     home-manager

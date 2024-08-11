@@ -118,6 +118,11 @@
   # make pipewire realtime-capable
   security.rtkit.enable = true;
 
+  # fingerprint reader
+  services.fprintd.enable = true;
+
+  services.power-profiles-daemon.enable = true;
+
   # Allow hyprlock to authenticate the user.
   security.pam.services.hyprlock = {};
 

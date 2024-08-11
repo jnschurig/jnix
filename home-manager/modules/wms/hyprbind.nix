@@ -111,9 +111,9 @@ in
       "${main_mod}, T, exec, kitty"
       "${main_mod}, Q, killactive,"
       "${main_mod}, E, exec, dolphin"
-      # "${main_mod}, F, togglefloating," # Not a recommended key
-      # "${main_mod}, P, pseudo, # dwindle"
-      # "${main_mod}, O, togglesplit, # dwindle"
+      "${main_mod}, F, exec, togglefloating" # Not a recommended key
+      # "${main_mod}, P, exec, pseudo" # dwindle"
+      # "${main_mod}, O, exec, togglesplit" # dwindle"
 
       # Move focus with mainMod + arrow keys
       "${main_mod}, left,  movefocus, l"
@@ -157,9 +157,9 @@ in
 
       # Change Container Layout
       # Not yet implemented
-      # "${main_mod} e, default"
-      # "${main_mod} s, stacking"
-      # "${main_mod} w, tabbed"
+      # "${main_mod}, E, default"
+      # "${main_mod}, S, stacking"
+      # "${main_mod}, W, tabbed"
 
       # Floating
       "${main_mod} Shift, Space, togglefloating,"
@@ -173,8 +173,8 @@ in
       "${keyboard_brightness_mod}, ${brightness_up_key}, exec, ${keyboard_brightness_up_cmd}"
 
       # Waybar
-      # "${main_mod}, B, exec, pkill -SIGUSR1 waybar"
-      # "${main_mod}, W, exec, pkill -SIGUSR2 waybar"
+      "${main_mod} Shift, B, exec, pkill -SIGUSR1 waybar"
+      "${main_mod} Shift, N, exec, pkill -SIGUSR2 waybar"
 
       # Disable all effects
       "${main_mod} Shift, G, exec, ~/.config/hypr/scripts/gamemode.sh"
