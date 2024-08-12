@@ -44,7 +44,9 @@
     hyprpaper
 
     # hobbies
+    bk # rust cli epub reader
     ffmpeg_7
+    koodo-reader
     lumafly
     mpv
     mpvc
