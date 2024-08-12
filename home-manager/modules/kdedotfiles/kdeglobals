@@ -106,7 +106,7 @@ ForegroundVisited=155,89,182
 
 [Colors:View]
 BackgroundAlternate=35,38,41
-BackgroundNormal=27,30,32
+; BackgroundNormal=27,30,32
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -134,7 +134,7 @@ ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
 DirSelectDialog Size=864,540
-History Items[$e]=file:$HOME/git/my-nix,file:$HOME/git/amper-nix/nixos-config,file:$HOME/git/amper-nix/nixos-config,file:$HOME/git/my-nix,file:$HOME/git/jnix
+History Items[$e]=file:$HOME/git/jnix
 
 [General]
 ColorSchemeHash=4a48bd34ba53d580d8594cb0216221e77518509f
@@ -153,12 +153,13 @@ Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
 Show Bookmarks=false
-Show Full Path=false
+Show Full Path=true
 Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
-Show hidden files=false
-Sort by=Name
+Show hidden files=true
+; Sort by=Name
+Sort by=Type
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false

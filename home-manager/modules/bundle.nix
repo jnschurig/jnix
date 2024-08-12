@@ -7,6 +7,7 @@
     ./fzf.nix
     ./git.nix
     ./mako.nix
+    ./qt.nix
     ./python.nix
     # ./_2ship2harkinian.nix
     # ./shipwright.nix
