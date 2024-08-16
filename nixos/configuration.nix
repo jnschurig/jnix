@@ -119,7 +119,8 @@
   security.rtkit.enable = true;
 
   # fingerprint reader
-  services.fprintd.enable = true;
+  # Used to have this enabled, but it made initial  login VERY slow.
+  # services.fprintd.enable = true;
 
   services.power-profiles-daemon.enable = true;
 
