@@ -53,6 +53,7 @@
     obs-studio
     shipwright
     _2ship2harkinian
+    snipes # Crazy that this exists as a package.
     tartube-yt-dlp
     transmission-gtk
     vlc

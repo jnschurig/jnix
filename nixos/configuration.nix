@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./modules/bundle.nix
+      # ./modules/sddm_eucalyptus_drop.nix # Not fully ready...
     ];
 
   # Bootloader.

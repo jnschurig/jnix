@@ -79,6 +79,7 @@
     mako # notifications
     networkmanagerapplet
     rofi-wayland
+    # sddm-kcm
     slurp
     waybar
     (waybar.overrideAttrs (oldAttrs: {
