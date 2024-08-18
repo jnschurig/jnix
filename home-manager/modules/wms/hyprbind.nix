@@ -192,8 +192,8 @@ in
       # Toggle Special Terminal workspace
       "${main_mod}, ${terminal_workspace_key}, ${terminal_workspace_cmd}"
 
-      # ", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
-      ", Print, exec, grim -g \"$(slurp -d)\" -" # Saves to to the screenshot folder `~/Pictures/screenshots/`
+      "shift, Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+      ", Print, exec, grim -g \"$(slurp)\"" # Saves to to the screenshot folder `~/Pictures/screenshots/`
     ] ++ (
       # workspaces
       # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}

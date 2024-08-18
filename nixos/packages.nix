@@ -21,9 +21,11 @@
     # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
     # fw-ectool
     git
+    inxi # Show devices
     lazygit
     neofetch
     pamixer # Audio control
+    pavucontrol # Audio control app
     playerctl # Media player controls
     # sway
     # swayimg
@@ -60,6 +62,7 @@
     # Wayland
     wev # Event viewer. Very helpful for figuring out key mapping
     xwayland
+    xwaylandvideobridge
 
     # GPU
     amdvlk
@@ -70,7 +73,7 @@
     grim
     hyprland
     hyprlock
-    # hyprpaper
+    # (callPackage ./modules/sddm_eucalyptus_drop.nix) # import a theme, but it's not working quite yet.
     kdePackages.qt6ct
     # kdePackages.qtsvg
     libsForQt5.qt5ct

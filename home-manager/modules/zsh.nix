@@ -18,6 +18,8 @@
 
       conf = "nvim ${flakeDir}/nixos/configuration.nix";
       pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+    
+      fc = "fzf | wl-copy";
 
       ll = "ls -l";
       v = "nvim";

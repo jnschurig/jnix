@@ -44,36 +44,9 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
-  # Enable the login screen.
-  services.displayManager.sddm.enable = true;
-
-  # Config for the sugar candy. It's just a bit too heavy, and doesn't work as well as the plasma one.
-  # services.displayManager.sddm = {
-  #   enable = true; # Enable SDDM.
-  #   sugarCandyNix = {
-  #     enable = true; # This set SDDM's theme to "sddm-sugar-candy-nix".
-  #     settings = {
-  #       # Set your configuration options here.
-  #       # Here is a simple example:
-  #       Background = lib.cleanSource ../assets/cubic.png;
-  #       ScreenWidth = 2560;
-  #       ScreenHeight = 1600;
-  #       FormPosition = "right";
-  #       HaveFormBackground = true;
-  #       PartialBlur = true;
-  #       # ...
-  #     };
-  #   };
-  # };
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.desktopManager.plasma6.enable = true;
-
-
-  # Configure keymap in X11
   services.xserver = {
+    enable = true;
+    # Configure keymap in X11
     xkb = {
       layout = "us";
       variant = "";
@@ -81,6 +54,39 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # libinput.enable = true;
   };
+
+  # Enable the login screen.
+  services.displayManager.sddm = {
+    # XServer SDDM
+    enable = true;
+
+    # Wayland SDDM (seems to break pretty hard right now)
+    # wayland.enable = true;
+
+    # Surgar Candy is a different theme.
+    # Works as long as plasma6 is not enabled...
+    # sugarCandyNix = {
+    #   enable = true; # This set SDDM's theme to "sddm-sugar-candy-nix".
+    #   settings = {
+    #     # Set your configuration options here.
+    #     # Here is a simple example:
+    #     # Background = lib.cleanSource ../assets/cubic.png;
+    #     Background = pkgs.fetchurl {
+    #       url = "https://i.imgur.com/CDvFcdy.jpeg";
+    #       sha256 = "0r6522x2hs1kfq6zin7if50niiwxi7yzbnl684hvfwi2b4bdxqy2";
+    #     };
+    #     ScreenWidth = 2560;
+    #     ScreenHeight = 1600;
+    #     FormPosition = "center";
+    #     HaveFormBackground = true;
+    #     PartialBlur = true;
+    #     # ...
+    #   };
+    # };
+  };
+
+  # Enable the KDE Plasma Desktop Environment.
+  services.desktopManager.plasma6.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
