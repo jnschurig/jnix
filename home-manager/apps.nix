@@ -44,16 +44,19 @@
     hyprpaper
 
     # hobbies
-    bk # rust cli epub reader
-    ffmpeg_7
-    koodo-reader
     lumafly
-    mpv
-    mpvc
-    obs-studio
     shipwright
     _2ship2harkinian
     snipes # Crazy that this exists as a package.
+
+    # Media
+    bk # rust cli epub reader
+    drawio
+    ffmpeg_7
+    koodo-reader
+    mpv # Media player
+    mpvc # Similar to MPV, but with controls
+    obs-studio
     tartube-yt-dlp
     transmission-gtk
     vlc

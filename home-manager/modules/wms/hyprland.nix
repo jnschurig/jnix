@@ -14,6 +14,8 @@
       monitor = [
         "eDP-2,2560x1600@165,auto,1.25" # Built-in screen
         "DP-3,2560x1440@144,auto,1.25" # My normal second monitor
+        "DP-5,2560x1440@144,auto,1.25" # My normal second monitor
+        "DP-8,2560x1440@144,auto,1.25" # My normal second monitor
         ",preferred,auto,1" # A catch-all monitor setting.
       ];
 
