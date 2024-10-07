@@ -34,14 +34,15 @@
     ripgrep
     ripgrep-all
     shellcheck
-    virtualenv
+    # virtualenv
     # hadolint
     # yamllint
     # lazydocker
     # taplo
 
     # Other
-    hyprpaper
+    pylyzer
+    uv
 
     # hobbies
     lumafly

@@ -22,13 +22,16 @@
       fc = "fzf | wl-copy";
 
       ll = "ls -l";
+      lh = "ls -lah";
+      lg = "lazygit";
       v = "nvim";
       se = "sudoedit";
       ff = "fastfetch";
 
       # python
       py = "python3";
-      pip = "py -m pip";
+      pip = "uv pip";
+      venv = "source .venv/bin/activate";
 
       # Other
       fresh = "exec $SHELL";
