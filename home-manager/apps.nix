@@ -40,9 +40,12 @@
     # lazydocker
     # taplo
 
-    # Other
+    # programming
     pylyzer
+    ruff
     uv
+    # With UV, you need to install python first, then it can use it.
+    python312
 
     # hobbies
     lumafly
