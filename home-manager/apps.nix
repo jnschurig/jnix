@@ -34,14 +34,18 @@
     ripgrep
     ripgrep-all
     shellcheck
-    virtualenv
+    # virtualenv
     # hadolint
     # yamllint
     # lazydocker
     # taplo
 
-    # Other
-    hyprpaper
+    # programming
+    pylyzer
+    ruff
+    uv
+    # With UV, you need to install python first, then it can use it.
+    python312
 
     # hobbies
     lumafly
