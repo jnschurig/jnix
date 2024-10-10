@@ -43,40 +43,12 @@
     which
     zip
 
-    # Git
-    git
-    lazygit
-    pre-commit
-
-    # CLI utils
-    brightnessctl
-    # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
-    # fw-ectool
-    home-manager
-    inxi # Show devices
-    lazygit
-    neofetch
-    pamixer # Audio control
-    pavucontrol # Audio control app
-    playerctl # Media player controls
-    samba
-
-    # Programming
+    # programming
     # pylyzer
-    # python312
     # ruff
     # uv
-    vscode
-
-    # Desktop Apps
-    # audacity # Don't need this for now.
-    audacious
-    # chromium
-    discord
-    # discord-ptb
-    obsidian
-    floorp
-    vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
+    # With UV, you need to install python first, then it can use it.
+    # python312
 
     # hobbies
     # lumafly
@@ -98,24 +70,11 @@
     yt-dlp
 
     # Base deps
-    grim
-    # hyprland
-    hyprlock
-    # kdePackages.qt6ct
-    libsForQt5.qt5ct
-    libnotify
-    mako # notifications
-    networkmanagerapplet
-    rofi-wayland
-    slurp
-    # waybar
-    # (waybar.overrideAttrs (oldAttrs: {
-    #     mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
-    #   })
-    # )
-    wireplumber
-    wl-clipboard-rs
-    xdg-desktop-portal-hyprland
+    file
+    which
+    tree
+    # yazi # rust file manager
+    # gnused # linux sed
 
     zsh-fast-syntax-highlighting
     zsh-completions
@@ -211,4 +170,3 @@
     powerline-symbols
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
-}
