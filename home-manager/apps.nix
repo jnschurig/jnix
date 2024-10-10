@@ -43,37 +43,12 @@
     which
     zip
 
-    # Git
-    git
-    # lazygit
-    pre-commit
-
-    # CLI utils
-    brightnessctl
-    # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
-    # fw-ectool
-    inxi # Show devices
-    lazygit
-    neofetch
-    pamixer # Audio control
-    pavucontrol # Audio control app
-    playerctl # Media player controls
-    samba
-
-    # Programming
+    # programming
     # pylyzer
     # ruff
     # uv
-
-    # Desktop Apps
-    # audacity # Don't need this for now.
-    # audacious
-    # chromium
-    # discord
-    # discord-ptb
-    # obsidian
-    # floorp
-    # vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
+    # With UV, you need to install python first, then it can use it.
+    # python312
 
     # hobbies
     # lumafly
