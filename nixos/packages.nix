@@ -10,11 +10,11 @@
   
     # Coding
     devenv
-    github-desktop
+    # github-desktop
     kitty
     openssl
     neovim
-    vscode
+    # vscode
 
     # CLI utils
     brightnessctl # Screen Brightness Control
@@ -35,29 +35,29 @@
 
     # Desktop Apps
     # audacity # Don't need this for now.
-    audacious
-    chromium
-    discord
-    discord-ptb
-    obsidian
-    vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
+    # audacious
+    # chromium
+    # discord
+    # discord-ptb
+    # obsidian
+    # vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # Gaming
     lutris
     # retroarch
-    (retroarch.override {
-      cores = with libretro; [
-        # genesis-plus-gx
-        snes9x
-        # beetle-psx-hw
-      ];
-    })
+    # (retroarch.override {
+    #   cores = with libretro; [
+    #     # genesis-plus-gx
+    #     snes9x
+    #     # beetle-psx-hw
+    #   ];
+    # })
     steam
-    wine
-    wine-staging
+    # wine
+    # wine-staging
     # wine-discord-ipc-bridge # Comes with nix gaming
-    winetricks
-    protontricks
+    # winetricks
+    # protontricks
 
     # Wayland
     wev # Event viewer. Very helpful for figuring out key mapping

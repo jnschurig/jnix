@@ -41,26 +41,26 @@
     # taplo
 
     # programming
-    pylyzer
-    ruff
-    uv
+    # pylyzer
+    # ruff
+    # uv
     # With UV, you need to install python first, then it can use it.
-    python312
+    # python312
 
     # hobbies
-    lumafly
-    shipwright
-    _2ship2harkinian
+    # lumafly
+    # shipwright
+    # _2ship2harkinian
     snipes # Crazy that this exists as a package.
 
     # Media
     bk # rust cli epub reader
-    drawio
+    # drawio
     ffmpeg_7
-    koodo-reader
+    # koodo-reader
     mpv # Media player
     mpvc # Similar to MPV, but with controls
-    obs-studio
+    # obs-studio
     tartube-yt-dlp
     transmission-gtk
     vlc
@@ -73,7 +73,7 @@
     file
     which
     tree
-    yazi # rust file manager
+    # yazi # rust file manager
     # gnused # linux sed
 
     zsh-fast-syntax-highlighting
@@ -156,7 +156,7 @@
     #   settings = builtins.readFile ./ohmyposh/modern-gruvbox.omp.json;
     # };
 
-    poetry.enable = true;
+    # poetry.enable = true;
 
   };
 }
