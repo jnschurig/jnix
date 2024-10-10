@@ -177,6 +177,10 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  users.users.james.extraGroups = [ "libvirtd" ];
+
   # Auto upgrade nix package and the daemon service.
   # Not working right now...
   # services.nix-daemon.enable = true;
