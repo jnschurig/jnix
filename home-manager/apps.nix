@@ -26,26 +26,57 @@
   home.packages = with pkgs; [
     # coreutils
     # nmap
-    # yq-go # yaml processor
+    file
     fzf # fuzzy finder
     fd # fuzzy rust-based find replacement
     fzf-git-sh # fuzzy git search and tools
     jq
+    kitty
+    # lazydocker
     ripgrep
     ripgrep-all
     shellcheck
-    # virtualenv
-    # hadolint
-    # yamllint
-    # lazydocker
     # taplo
+    tree
+    unzip
+    wget
+    which
+    zip
 
-    # programming
+    # Git
+    git
+    lazygit
+    pre-commit
+
+    # CLI utils
+    brightnessctl
+    # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
+    # fw-ectool
+    home-manager
+    inxi # Show devices
+    lazygit
+    neofetch
+    pamixer # Audio control
+    pavucontrol # Audio control app
+    playerctl # Media player controls
+    samba
+
+    # Programming
     # pylyzer
+    # python312
     # ruff
     # uv
-    # With UV, you need to install python first, then it can use it.
-    # python312
+    vscode
+
+    # Desktop Apps
+    # audacity # Don't need this for now.
+    audacious
+    # chromium
+    discord
+    # discord-ptb
+    obsidian
+    floorp
+    vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # hobbies
     # lumafly
@@ -66,15 +97,25 @@
     vlc
     yt-dlp
 
-    # Git
-    pre-commit
-
     # Base deps
-    file
-    which
-    tree
-    # yazi # rust file manager
-    # gnused # linux sed
+    grim
+    # hyprland
+    hyprlock
+    # kdePackages.qt6ct
+    libsForQt5.qt5ct
+    libnotify
+    mako # notifications
+    networkmanagerapplet
+    rofi-wayland
+    slurp
+    # waybar
+    # (waybar.overrideAttrs (oldAttrs: {
+    #     mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
+    #   })
+    # )
+    wireplumber
+    wl-clipboard-rs
+    xdg-desktop-portal-hyprland
 
     zsh-fast-syntax-highlighting
     zsh-completions
@@ -159,4 +200,15 @@
     # poetry.enable = true;
 
   };
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    noto-fonts
+    noto-fonts-emoji
+    twemoji-color-font
+    font-awesome
+    powerline-fonts
+    powerline-symbols
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+  ];
 }
