@@ -41,6 +41,7 @@
     discord-ptb
     obsidian
     vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
+    floorp
 
     # Gaming
     lutris
