@@ -43,12 +43,37 @@
     which
     zip
 
-    # programming
+    # Git
+    git
+    lazygit
+    pre-commit
+
+    # CLI utils
+    brightnessctl
+    # framework-tool # rust-based framework tooling. Doesn't seem to work for some reason...
+    # fw-ectool
+    inxi # Show devices
+    lazygit
+    neofetch
+    pamixer # Audio control
+    pavucontrol # Audio control app
+    playerctl # Media player controls
+    samba
+
+    # Programming
     # pylyzer
     # ruff
     # uv
-    # With UV, you need to install python first, then it can use it.
-    # python312
+
+    # Desktop Apps
+    # audacity # Don't need this for now.
+    audacious
+    # chromium
+    discord
+    # discord-ptb
+    obsidian
+    floorp
+    vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # hobbies
     # lumafly
@@ -160,13 +185,14 @@
 
   };
 
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-    noto-fonts
-    noto-fonts-emoji
-    twemoji-color-font
-    font-awesome
-    powerline-fonts
-    powerline-symbols
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-  ];
+  # fonts.packages = with pkgs; [
+  #   jetbrains-mono
+  #   noto-fonts
+  #   noto-fonts-emoji
+  #   twemoji-color-font
+  #   font-awesome
+  #   powerline-fonts
+  #   powerline-symbols
+  #   (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+  # ];
+}
