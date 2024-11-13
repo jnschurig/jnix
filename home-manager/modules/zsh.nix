@@ -16,8 +16,8 @@
       hms = "home-manager switch --flake ${flakeDir}";
       ncg = "sudo nix-collect-garbage -d";
 
-      conf = "nvim ${flakeDir}/nixos/configuration.nix";
-      pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+      # conf = "nvim ${flakeDir}/nixos/configuration.nix";
+      # pkgs = "nvim ${flakeDir}/nixos/packages.nix";
     
       fc = "fzf | wl-copy";
 

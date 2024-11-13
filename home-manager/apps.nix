@@ -45,7 +45,7 @@
 
     # Git
     git
-    lazygit
+    # lazygit
     pre-commit
 
     # CLI utils
@@ -67,37 +67,34 @@
 
     # Desktop Apps
     # audacity # Don't need this for now.
-    audacious
+    # audacious
     # chromium
-    discord
+    # discord
     # discord-ptb
-    obsidian
-    floorp
-    vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
+    # obsidian
+    # floorp
+    # vivaldi # Run using this command until further notice: vivaldi --disable-features=AllowQt
 
     # hobbies
     # lumafly
     # shipwright
     # _2ship2harkinian
-    snipes # Crazy that this exists as a package.
+    # snipes # Crazy that this exists as a package.
 
     # Media
-    bk # rust cli epub reader
+    # bk # rust cli epub reader
     # drawio
-    ffmpeg_7
+    # ffmpeg_7
     # koodo-reader
-    mpv # Media player
-    mpvc # Similar to MPV, but with controls
+    # mpv # Media player
+    # mpvc # Similar to MPV, but with controls
     # obs-studio
-    tartube-yt-dlp
-    transmission-gtk
-    vlc
-    yt-dlp
+    # tartube-yt-dlp
+    # transmission-gtk
+    # vlc
+    # yt-dlp
 
     # Base deps
-    file
-    which
-    tree
     # yazi # rust file manager
     # gnused # linux sed
 
