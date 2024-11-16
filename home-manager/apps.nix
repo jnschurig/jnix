@@ -31,7 +31,7 @@
     fd # fuzzy rust-based find replacement
     fzf-git-sh # fuzzy git search and tools
     jq
-    kitty
+    # kitty
     # lazydocker
     ripgrep
     ripgrep-all
@@ -91,10 +91,10 @@
 
     # tmux = import ./tmux/tmux.nix { inherit pkgs; };
 
-    kitty = import ./modules/kitty.nix {
-      inherit pkgs;
-      inherit lib;
-    };
+    # kitty = import ./modules/kitty.nix {
+    #   inherit pkgs;
+    #   inherit lib;
+    # };
 
     # mise = {
     #   enable = true;

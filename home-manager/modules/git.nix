@@ -24,15 +24,15 @@
     userName = "James Schurig";
     userEmail = "jnschurig@gmail.com";
 
-    includes = [
-      {
-        # use diffrent email & name for work
-        path = "~/recharge/.gitconfig";
-        # userName = "James Schurig";
-        # userEmail = "james.schurig@rechargeapps.com";
-        condition = "gitdir:~/recharge/";
-      }
-    ];
+    # includes = [
+    #   {
+    #     # use diffrent email & name for work
+    #     path = "~/recharge/.gitconfig";
+    #     userName = "James Schurig";
+    #     userEmail = "james.schurig@rechargeapps.com";
+    #     condition = "gitdir:~/recharge/";
+    #   }
+    # ];
 
     extraConfig = {
       # init.defaultBranch = "master";

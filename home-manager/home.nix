@@ -25,10 +25,10 @@
     };
 
     # Associate JNIX nixos config with a "standard" home directory location.
-    file."./nix/nixos" = {
-      source = ../nixos;
-      recursive = true;
-      executable = true;
-    };
+    # file."./nix/nixos" = {
+    #   source = ../nixos;
+    #   recursive = true;
+    #   executable = true;
+    # };
   };
 }
