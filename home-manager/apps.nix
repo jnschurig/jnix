@@ -6,22 +6,22 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-  home.file = {
+  # home.file = {
     # ".config/nvim/lua" = {
     #   source = ./neovim/lua;
     #   recursive = true;
     # };
 
-    ".ssh/config" = {
-      # source = if isDarwin then ./ssh/mac.config else ./ssh/personal.config;
-      source = ./ssh/personal.config;
-      target = ".ssh/config_source";
-      onChange = ''
-        cat ~/.ssh/config_source > ~/.ssh/config && chmod 400 ~/.ssh/config
-      '';
-    };
+  #   ".ssh/config" = {
+  #     # source = if isDarwin then ./ssh/mac.config else ./ssh/personal.config;
+  #     source = ./ssh/personal.config;
+  #     target = ".ssh/config_source";
+  #     onChange = ''
+  #       cat ~/.ssh/config_source > ~/.ssh/config && chmod 400 ~/.ssh/config
+  #     '';
+  #   };
 
-  };
+  # };
 
   home.packages = with pkgs; [
     # coreutils
@@ -33,6 +33,7 @@
     jq
     # kitty
     # lazydocker
+    neofetch
     ripgrep
     ripgrep-all
     shellcheck
