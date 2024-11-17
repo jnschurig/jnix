@@ -23,6 +23,8 @@
 
   # };
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     # coreutils
     # nmap
@@ -31,7 +33,6 @@
     fd # fuzzy rust-based find replacement
     fzf-git-sh # fuzzy git search and tools
     jq
-    # kitty
     # lazydocker
     neofetch
     ripgrep
@@ -44,36 +45,17 @@
     which
     zip
 
-    # programming
-    # pylyzer
-    # ruff
-    # uv
-    # With UV, you need to install python first, then it can use it.
-    # python312
+    # fonts
+    jetbrains-mono
+    noto-fonts
+    noto-fonts-emoji
+    twemoji-color-font
+    font-awesome
+    powerline-fonts
+    powerline-symbols
+    nerdfonts
 
-    # hobbies
-    # lumafly
-    # shipwright
-    # _2ship2harkinian
-    # snipes # Crazy that this exists as a package.
-
-    # Media
-    # bk # rust cli epub reader
-    # drawio
-    # ffmpeg_7
-    # koodo-reader
-    # mpv # Media player
-    # mpvc # Similar to MPV, but with controls
-    # obs-studio
-    # tartube-yt-dlp
-    # transmission-gtk
-    # vlc
-    # yt-dlp
-
-    # Base deps
-    # yazi # rust file manager
-    # gnused # linux sed
-
+    # zsh stuff.
     zsh-fast-syntax-highlighting
     zsh-completions
     zsh-autoenv
@@ -84,23 +66,8 @@
   ];
 
   programs = {
-
-    # neovim = import .modules/neovim/neovim.nix {
-    #   inherit pkgs;
-    #   inherit lib;
-    # };
-
-    # tmux = import ./tmux/tmux.nix { inherit pkgs; };
-
-    # kitty = import ./modules/kitty.nix {
-    #   inherit pkgs;
-    #   inherit lib;
-    # };
-
-    # mise = {
-    #   enable = true;
-    #   enableZshIntegration = true;
-    # };
+    # Let Home Manager install and manage itself.
+    home-manager.enable = true;
 
     direnv = {
       enable = true;
@@ -141,8 +108,6 @@
 
     # };
 
-    # Let Home Manager install and manage itself.
-    home-manager.enable = true;
 
     jq.enable = true;
 
@@ -154,18 +119,5 @@
     #   settings = builtins.readFile ./ohmyposh/modern-gruvbox.omp.json;
     # };
 
-    # poetry.enable = true;
-
   };
-
-  # fonts.packages = with pkgs; [
-  #   jetbrains-mono
-  #   noto-fonts
-  #   noto-fonts-emoji
-  #   twemoji-color-font
-  #   font-awesome
-  #   powerline-fonts
-  #   powerline-symbols
-  #   (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-  # ];
 }
