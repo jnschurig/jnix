@@ -55,6 +55,8 @@
       # source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
       # source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
       # source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      source $HOME/.local/bin/env
     '';
 
     oh-my-zsh = {

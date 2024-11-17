@@ -25,3 +25,8 @@ brew install lazygit
 
 sudo ln -sf $(which zsh) /bin/zsh
 
+# Install UV
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Change default terminal emulator (modifies a /bin file so needs sudo)
+sudo update-alternatives --config x-terminal-emulator
