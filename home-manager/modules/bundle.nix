@@ -3,19 +3,13 @@
 , ...
 }: {
   imports = [
-    # ./cursor.nix
     ./fzf.nix
     ./git.nix
     ./lazygit.nix
     ./kitty.nix
-    # ./mako.nix
-    # ./qt.nix
-    # ./python.nix
-    # ./_2ship2harkinian.nix
-    # ./shipwright.nix
+    ./nixvim.nix
     ./zoxide.nix
     ./zsh.nix
-    # ./htop.nix
 
     # ./wms/hypridle.nix
     # ./wms/hyprland.nix
