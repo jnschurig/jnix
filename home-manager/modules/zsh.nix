@@ -13,7 +13,8 @@
       # upd = "nix flake update ${flakeDir}";
       # upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
-      hms = "home-manager switch --flake ${flakeDir} --extra-experimental-features \"flakes nix-command\"";
+      # hms = "home-manager switch --flake ${flakeDir} --extra-experimental-features \"flakes nix-command\"";
+      hms = "home-manager switch --flake ${flakeDir}";
       ncg = "nix-collect-garbage -d";
 
       # conf = "nvim ${flakeDir}/nixos/configuration.nix";
