@@ -13,6 +13,7 @@
     sessionVariables = {
       EDITOR = "code";
       # BROWSER = "firefox";
+      # NIX_CONF_DIR = "$HOME/.config/nix";
       TERMINAL = "kitty";
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
     };
@@ -32,6 +33,10 @@
         onChange = ''
           cat ~/.ssh/config_source > ~/.ssh/config && chmod 400 ~/.ssh/config
         '';
+      };
+
+      ".config/nix/nix.conf" = {
+        source = ../nix.conf;
       };
     };
 

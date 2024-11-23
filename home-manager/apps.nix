@@ -6,27 +6,10 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-  # home.file = {
-    # ".config/nvim/lua" = {
-    #   source = ./neovim/lua;
-    #   recursive = true;
-    # };
-
-  #   ".ssh/config" = {
-  #     # source = if isDarwin then ./ssh/mac.config else ./ssh/personal.config;
-  #     source = ./ssh/personal.config;
-  #     target = ".ssh/config_source";
-  #     onChange = ''
-  #       cat ~/.ssh/config_source > ~/.ssh/config && chmod 400 ~/.ssh/config
-  #     '';
-  #   };
-
-  # };
-
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    # coreutils
+    coreutils
     # nmap
     file
     fzf # fuzzy finder
@@ -92,21 +75,21 @@
     #   icons = true;
     # };
 
-    # bat = {
-    #   enable = true;
-    #   extraPackages = with pkgs.bat-extras; [
-    #     batdiff
-    #     batgrep
-    #     batman
-    #     batwatch
-    #     prettybat
-    #   ];
-    #   config = {
-    #     theme = "gruvbox-dark";
-    #     style = "numbers,changes,header,grid";
-    #   };
+    bat = {
+      enable = true;
+      extraPackages = with pkgs.bat-extras; [
+        batdiff
+        batgrep
+        batman
+        batwatch
+        prettybat
+      ];
+      # config = {
+      #   theme = "gruvbox-dark";
+      #   style = "numbers,changes,header,grid";
+      # };
 
-    # };
+    };
 
 
     jq.enable = true;
@@ -116,7 +99,7 @@
     # oh-my-posh = {
     #   enable = true;
     #   enableZshIntegration = true;
-    #   settings = builtins.readFile ./ohmyposh/modern-gruvbox.omp.json;
+    #   # settings = builtins.readFile ./ohmyposh/modern-gruvbox.omp.json;
     # };
 
   };
