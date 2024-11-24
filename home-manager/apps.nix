@@ -46,6 +46,7 @@
 
     # productivity
     # glow # markdown previewer in terminal
+    rofi-wayland
   ];
 
   programs = {

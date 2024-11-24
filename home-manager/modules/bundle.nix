@@ -8,6 +8,7 @@
     ./lazygit.nix
     ./kitty.nix
     ./nixvim.nix
+    ./rofi.nix
     ./zoxide.nix
     ./zsh.nix
 
