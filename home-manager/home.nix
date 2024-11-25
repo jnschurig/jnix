@@ -11,11 +11,12 @@
     homeDirectory = "/home/james";
     stateVersion = "24.05";
     sessionVariables = {
-      EDITOR = "code";
       # BROWSER = "firefox";
-      # NIX_CONF_DIR = "$HOME/.config/nix";
-      TERMINAL = "kitty";
+      EDITOR = "code";
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
+      # NIX_CONF_DIR = "$HOME/.config/nix";
+      PATH = "${pkgs.stdenv.shell}:$HOME/.bashrc:$(${pkgs.stdenv.shell} -c '/home/linuxbrew/.linuxbrew/bin/brew shellenv' | grep PATH | cut -d\"'\" -f2):$PATH";
+      TERMINAL = "kitty";
     };
 
     # Put JNIX home manager in preferred location for full functionality.
