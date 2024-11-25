@@ -69,6 +69,9 @@ else
 fi
 # Do all the home-manager stuff (assume you will configure it later)
 
+# Set user's default shell to be zsh
+sudo sed -i "s|\($USER.*\)/bash|\1/zsh|" /etc/passwd
+
 sh ./boot_option.sh
 
 echo "Setup complete!"
