@@ -22,6 +22,7 @@
     ripgrep-all
     shellcheck
     # taplo
+    tmux
     tree
     unzip
     wget

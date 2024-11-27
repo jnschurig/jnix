@@ -9,6 +9,7 @@
     ./kitty.nix
     ./nixvim.nix
     ./rofi.nix
+    ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
 

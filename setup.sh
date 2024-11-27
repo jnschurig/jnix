@@ -41,6 +41,25 @@ sudo ln -sf $(which zsh) /bin/zsh
 # Change the shell in /etc/passwd (assuming the user is 'james')
 sudo usermod --shell /bin/zsh james
 
+# Find the path to zsh
+ZSH_PATH=$(which zsh)
+
+# Check if zsh is installed
+if [ -z "$ZSH_PATH" ]; then
+    echo "zsh is not installed."
+    exit 1
+fi
+
+# Check if the zsh path is already in /etc/shells
+if grep -Fxq "$ZSH_PATH" /etc/shells; then
+    echo "$ZSH_PATH is already in /etc/shells."
+else
+    # Append the zsh path to /etc/shells
+    echo "$ZSH_PATH" | sudo tee -a /etc/shells > /dev/null
+    echo "$ZSH_PATH has been added to /etc/shells."
+fi
+
+
 # Install UV
 
 # Check if UV is installed
