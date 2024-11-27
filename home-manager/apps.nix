@@ -30,14 +30,14 @@
     zip
 
     # fonts
+    font-awesome
     jetbrains-mono
+    nerdfonts
     noto-fonts
     noto-fonts-emoji
-    twemoji-color-font
-    font-awesome
     powerline-fonts
     powerline-symbols
-    nerdfonts
+    twemoji-color-font
 
     # zsh stuff.
     zsh-fast-syntax-highlighting
