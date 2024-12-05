@@ -27,6 +27,7 @@
     unzip
     wget
     which
+    wl-clipboard-rs
     zip
 
     # fonts
