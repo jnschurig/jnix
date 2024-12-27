@@ -8,9 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./packages.nix
-      ./modules/bundle.nix
-      # ./modules/sddm_eucalyptus_drop.nix # Not fully ready...
+      # ./packages.nix
+      # ./modules/bundle.nix
     ];
 
   # Bootloader.
@@ -18,8 +17,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.hostName = "jnix"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -62,27 +59,6 @@
 
     # Wayland SDDM (seems to break pretty hard right now)
     # wayland.enable = true;
-
-    # Surgar Candy is a different theme.
-    # Works as long as plasma6 is not enabled...
-    # sugarCandyNix = {
-    #   enable = true; # This set SDDM's theme to "sddm-sugar-candy-nix".
-    #   settings = {
-    #     # Set your configuration options here.
-    #     # Here is a simple example:
-    #     # Background = lib.cleanSource ../assets/cubic.png;
-    #     Background = pkgs.fetchurl {
-    #       url = "https://i.imgur.com/CDvFcdy.jpeg";
-    #       sha256 = "0r6522x2hs1kfq6zin7if50niiwxi7yzbnl684hvfwi2b4bdxqy2";
-    #     };
-    #     ScreenWidth = 2560;
-    #     ScreenHeight = 1600;
-    #     FormPosition = "center";
-    #     HaveFormBackground = true;
-    #     PartialBlur = true;
-    #     # ...
-    #   };
-    # };
   };
 
   # Enable the KDE Plasma Desktop Environment.

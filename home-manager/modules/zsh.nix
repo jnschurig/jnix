@@ -9,15 +9,16 @@
       let
         flakeDir = "~/git/jnix";
       in {
-      rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upd = "nix flake update ${flakeDir}";
-      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+      # rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
+      # upd = "nix flake update ${flakeDir}";
+      # upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
+      # hms = "home-manager switch --flake ${flakeDir} --extra-experimental-features \"flakes nix-command\"";
       hms = "home-manager switch --flake ${flakeDir}";
-      ncg = "sudo nix-collect-garbage -d";
+      ncg = "nix-collect-garbage -d";
 
-      conf = "nvim ${flakeDir}/nixos/configuration.nix";
-      pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+      # conf = "nvim ${flakeDir}/nixos/configuration.nix";
+      # pkgs = "nvim ${flakeDir}/nixos/packages.nix";
     
       fc = "fzf | wl-copy";
 
@@ -50,11 +51,13 @@
 
     initExtra = ''
       # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-      export PATH="$PYENV_ROOT/bin:$PATH"
+      # export PATH="$PYENV_ROOT/bin:$PATH"
       # eval "$(pyenv init -)"
       # source ${pkgs.pyenv}/share/zsh/site-functions/_pyenv
       # source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
       # source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      source $HOME/.local/bin/env
     '';
 
     oh-my-zsh = {
@@ -120,7 +123,7 @@
       # QMK_HOME = "${lib.makeBinPath pkgs.qmk_firmware}/..";
       ZSH_AUTOSUGGEST_USE_ASYNC = true;
       # ZSH_AUTOSUGGEST_STRATEGY = "(history match_prev_cmd)";
-      LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
+      # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
     };
 
   };
