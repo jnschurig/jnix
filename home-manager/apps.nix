@@ -30,6 +30,8 @@
     wl-clipboard
     zip
 
+    # ghostty
+
     # fonts
     font-awesome
     jetbrains-mono

@@ -1,4 +1,4 @@
-{pkgs, ...}: 
+{pkgs, ghosttyPackage, ...}: 
 {
   imports = [
     # ./zsh.nix
@@ -40,6 +40,11 @@
         source = ../nix.conf;
       };
     };
+
+    # ghostty uses gpu acceleration and nix is dumb
+    # packages = [
+    #   ighosttyPackage
+    # ];
 
     # Associate JNIX nixos config with a "standard" home directory location.
     # file."./nix/nixos" = {

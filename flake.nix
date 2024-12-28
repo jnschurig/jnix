@@ -12,6 +12,11 @@
       # backupFileExtension = "hm-backup"; # This doesn't seem to work...
     };
     
+    # ghostty = {
+    #   url = "github:ghostty-org/ghostty";
+    #   # inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +29,7 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
+    # ghostty,
     nixvim,
      ... 
   } @inputs:
@@ -43,6 +49,10 @@
         ./home-manager/home.nix
         nixvim.homeManagerModules.nixvim
       ];
+      # nix is dumb and hates gpu acceleration.
+      # extraSpecialArgs = {
+      #   ghosttyPackage = ghostty.packages.x86_64-linux.default;
+      # };
     };
   };
 }
