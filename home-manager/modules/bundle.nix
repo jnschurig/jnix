@@ -4,6 +4,7 @@
 }: {
   imports = [
     ./fzf.nix
+    ./ghostty.nix
     ./git.nix
     ./lazygit.nix
     ./kitty.nix

@@ -5,8 +5,8 @@ set -e
 sudo -v
 
 # Update the system
-echo "Updating the system..."
-sudo apt update && sudo apt upgrade -y
+# echo "Updating the system..."
+# sudo apt update && sudo apt upgrade -y
 
 # Install Homebrew
 echo "Installing Homebrew..."
@@ -24,12 +24,12 @@ echo "Installing GCC with Brew..."
 brew install gcc
 
 # Install Snap and other apps
-echo "Installing Snapd and other utilities..."
-sudo apt install -y snapd kitty xclip
+# echo "Installing Snapd and other utilities..."
+# sudo apt install -y snapd kitty xclip
 
 # Install VSCode via Snap
-echo "Installing VSCode..."
-sudo snap install --classic code
+# echo "Installing VSCode..."
+# sudo snap install --classic code
 
 # Install LazyGit with Brew
 echo "Installing LazyGit..."
@@ -91,6 +91,6 @@ fi
 # Set user's default shell to be zsh
 sudo sed -i "s|\($USER.*\)/bash|\1/zsh|" /etc/passwd
 
-sh ./boot_option.sh
+# sh ./boot_option.sh
 
 echo "Setup complete!"

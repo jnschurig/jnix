@@ -1,5 +1,5 @@
 # Update the system
-sudo apt install --upgrade
+# sudo apt install --upgrade
 
 # Install Nix Home Manager
 sh <(curl -L https://nixos.org/nix/install) --daemon
@@ -15,13 +15,13 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install gcc
 
 # Install Snap for flatpack apps
-sudo apt install snapd kitty xclip
+# sudo apt install snapd kitty xclip
 
 # Install some apps
 # VSCODE
-sudo snap install --classic code
+# sudo snap install --classic code
 
-brew install lazygit
+# brew install lazygit
 
 sudo ln -sf $(which zsh) /bin/zsh
 # Update the /etc/passwd file to change james user shell to /bin/zsh
