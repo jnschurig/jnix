@@ -1,0 +1,6 @@
+font-family             = JetBrainsMono NFM SemiBold
+font-family-bold        = JetBrainsMono NFM SemiBold
+font-family-italic      = JetBrainsMono NFM SemiBold Italic
+font-family-bold-italic = JetBrainsMono NFM ExtraBold Italic
+
+adjust-box-thickness = 1
