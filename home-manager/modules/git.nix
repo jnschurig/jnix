@@ -35,8 +35,7 @@
     # ];
 
     extraConfig = {
-      # init.defaultBranch = "master";
-      #push.autoSetupRemote = true;
+      # push.autoSetupRemote = true;
       pull.rebase = true;
       diff.colorMoved = "default";
     };

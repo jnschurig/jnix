@@ -17,9 +17,26 @@
     };
 
     file = {
-      ".config/hypr/scripts" = {
-        source = ./hyprland/scripts;
-        recursive = true;
+      ".config/hypr/scripts/gamemode.sh" = {
+        source = ./hyprland/scripts/gamemode.sh;
+        executable = true;
+      };
+    };
+    file = {
+      ".config/hypr/scripts/screenshot" = {
+        source = ./hyprland/scripts/screenshot;
+        executable = true;
+      };
+    };
+    file = {
+      ".config/hypr/scripts/screenshot_area" = {
+        source = ./hyprland/scripts/screenshot_area;
+        executable = true;
+      };
+    };
+    file = {
+      ".config/hypr/scripts/screenshot_full" = {
+        source = ./hyprland/scripts/screenshot_full;
         executable = true;
       };
     };

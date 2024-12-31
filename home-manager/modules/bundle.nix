@@ -9,10 +9,14 @@
     ./lazygit.nix
     ./kitty.nix
     ./nixvim.nix
-    ./rofi.nix
     ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
+
+    # WM/DE
+    ./hyprland.nix
+    ./rofi.nix
+    ./waybar.nix
 
     # ./wms/hypridle.nix
     # ./wms/hyprland.nix

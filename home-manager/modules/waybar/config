@@ -32,7 +32,7 @@
     ],
     "modules-right": [
         "backlight",
-        "custom/storage",
+        // "custom/storage",
         "memory",
         "cpu",
         "battery",
@@ -211,7 +211,8 @@
     "custom/power": {
         "format": " 󰐥 ",
         "tooltip": false,
-        "on-click": "wlogout"
+        // "on-click": "wlogout"
+        "on-click": "~/.config/rofi/poweroff.sh"
     },
 
     "clock": {
@@ -221,7 +222,7 @@
     },
 
     "clock#date": {
-        "format": "󰥔  {:%H:%M  %e %b}",
+        "format": "󰥔  {:%H:%M -  %e %b}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>"
     },

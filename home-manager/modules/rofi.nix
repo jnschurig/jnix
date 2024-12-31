@@ -4,13 +4,17 @@
 }: {
   home.file = {
     ".config/rofi/poweroff.sh" = {
-      source = ./wms/scripts/poweroff.sh;
+      source = ./rofi/poweroff.sh;
       executable = true;
     };
 
     ".config/rofi/rofi-power-menu.sh" = {
-      source = ./wms/scripts/rofi-power-menu.sh;
+      source = ./rofi/rofi-power-menu.sh;
       executable = true;
+    };
+
+    ".config/rofi/config.rasi" = {
+      source = ./rofi/config.rasi;
     };
   };
 
@@ -22,13 +26,14 @@
   #   };
   # };
 
-  dconf.settings = {
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>space";
-      command = "pkill rofi || rofi -show drun -show-icons";
-      name = "Rofi";
-    };
-  };
+  # A gnome setting. It didn't really work anyway...
+  # dconf.settings = {
+  #   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+  #     binding = "<Super>space";
+  #     command = "pkill rofi || rofi -show drun -show-icons";
+  #     name = "Rofi";
+  #   };
+  # };
 
 
 }

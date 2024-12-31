@@ -25,6 +25,7 @@
     tmux
     tree
     unzip
+    wev
     wget
     which
     wl-clipboard
@@ -33,6 +34,7 @@
     # ghostty
 
     # fonts
+    fira
     font-awesome
     jetbrains-mono
     nerdfonts
@@ -80,21 +82,20 @@
     #   icons = true;
     # };
 
-    bat = {
-      enable = true;
-      extraPackages = with pkgs.bat-extras; [
-        batdiff
-        batgrep
-        batman
-        batwatch
-        prettybat
-      ];
-      # config = {
-      #   theme = "gruvbox-dark";
-      #   style = "numbers,changes,header,grid";
-      # };
-
-    };
+    # bat = { # Needs to have themes installed before use.
+    #   enable = true;
+    #   extraPackages = with pkgs.bat-extras; [
+    #     batdiff
+    #     batgrep
+    #     batman
+    #     batwatch
+    #     prettybat
+    #   ];
+    #   config = {
+    #     theme = "gruvbox-dark";
+    #     style = "numbers,changes,header,grid";
+    #   };
+    # };
 
 
     jq.enable = true;

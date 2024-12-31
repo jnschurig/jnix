@@ -1,1 +1,1 @@
-rofi -show power-menu -modi "power-menu:~/.config/rofi/rofi-power-menu.sh --choices=shutdown/reboot/logout/suspend/lockscreen" -theme-str 'window {location: northeast; anchor: north; width: 10em;} listview {lines: 6;}'
+rofi -show power-menu -modi "power-menu:~/.config/rofi/rofi-power-menu.sh --choices=shutdown/reboot/logout/suspend/lockscreen" -theme-str 'window {location: northeast; anchor: north; width: 15em;} listview {lines: 6;}'
