@@ -119,7 +119,7 @@
       ];
       POWERLEVEL9K_INSTANT_PROMPT = "quiet";
       TERM = "xterm-256color";
-      BAT_THEME = "gruvbox-dark";
+      # BAT_THEME = "gruvbox-dark";
       # QMK_HOME = "${lib.makeBinPath pkgs.qmk_firmware}/..";
       ZSH_AUTOSUGGEST_USE_ASYNC = true;
       # ZSH_AUTOSUGGEST_STRATEGY = "(history match_prev_cmd)";
