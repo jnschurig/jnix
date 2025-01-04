@@ -6,7 +6,8 @@ font-family-italic      = JetBrainsMono NFM SemiBold Italic
 font-family-bold-italic = JetBrainsMono NFM ExtraBold Italic
 
 # appearance
-background-opacity = 0.7
+theme = MaterialDesignColors
+background-opacity = 0.8
 adjust-box-thickness = 1
 # window-decoration = false
 gtk-titlebar = false
