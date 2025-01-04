@@ -31,8 +31,6 @@
     wl-clipboard
     zip
 
-    # ghostty
-
     # fonts
     fira
     font-awesome
