@@ -30,6 +30,7 @@
     which
     wl-clipboard
     zip
+    yazi
 
     # fonts
     fira

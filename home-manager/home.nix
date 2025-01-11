@@ -11,6 +11,7 @@
     homeDirectory = "/home/james";
     stateVersion = "24.05";
     sessionVariables = {
+      # BACKGROUND_IMG = "$HOME/Pictures/wallpaper/background/shell_frieze.jpeg";
       # BROWSER = "firefox";
       EDITOR = "code";
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
