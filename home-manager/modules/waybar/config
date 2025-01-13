@@ -38,6 +38,7 @@
         "battery",
         //"pulseaudio",
         "wireplumber",
+        "power-profiles-daemon",
         "custom/screenshot_t",
         "tray",
         "custom/power"
@@ -368,6 +369,18 @@
             "portable": " ",
             "car": " ",
             "default": [" ", " ", " "]
+        },
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": "",
         },
     },
 
