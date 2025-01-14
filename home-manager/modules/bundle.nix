@@ -8,7 +8,8 @@
     ./git.nix
     ./lazygit.nix
     ./kitty.nix
-    ./nixvim.nix
+    ./neovim.nix
+    # ./nixvim.nix # DEPRECATED
     ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
@@ -19,6 +20,7 @@
     ./rofi.nix
     ./waybar.nix
 
+    # DEPRECATED
     # ./wms/hypridle.nix
     # ./wms/hyprland.nix
     # ./wms/hyprlock.nix

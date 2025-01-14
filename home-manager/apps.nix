@@ -17,7 +17,6 @@
     fzf-git-sh # fuzzy git search and tools
     jq
     # lazydocker
-    neofetch
     ripgrep
     ripgrep-all
     shellcheck

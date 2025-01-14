@@ -1,3 +1,4 @@
+# DEPRECATED
 { config
 , lib
 , pkgs

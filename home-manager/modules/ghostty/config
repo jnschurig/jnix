@@ -11,7 +11,8 @@ font-style-italic = "Bold Italic"
 font-style-bold-italic = "ExtraBold Italic"
 
 # appearance
-theme = rose-pine-moon-custom
+# theme = rose-pine-moon-custom
+theme = MaterialDesignColors
 background-opacity = 0.8
 adjust-box-thickness = 1
 # window-decoration = false
