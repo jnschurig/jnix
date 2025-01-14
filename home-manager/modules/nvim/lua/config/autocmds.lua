@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     -- vim.api.nvim_set_hl(0, "Status_LineNr", { fg = colors.overlay0 })
     -- vim.api.nvim_set_hl(0, "Status_DivLine", { bg = colors.base, fg = colors.surface2 })
 
-    -- Display the second status column
+    -- Display the second status column with absolute line numbers.
     vim.opt.statuscolumn = "%C%s%=%#Status_LineNr#%=%l %* %=%r%* %#Status_DivLine#⏐%*"
   end,
 })
