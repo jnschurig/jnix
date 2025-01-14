@@ -9,30 +9,26 @@
       let
         flakeDir = "~/git/jnix";
       in {
-      # rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      # upd = "nix flake update ${flakeDir}";
-      # upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+      rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
+      upd = "nix flake update ${flakeDir}";
+      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
-      # hms = "home-manager switch --flake ${flakeDir} --extra-experimental-features \"flakes nix-command\"";
       hms = "home-manager switch --flake ${flakeDir}";
       ncg = "nix-collect-garbage -d";
 
-      # conf = "nvim ${flakeDir}/nixos/configuration.nix";
-      # pkgs = "nvim ${flakeDir}/nixos/packages.nix";
-    
       fc = "fzf | wl-copy";
 
       ll = "ls -l";
       lh = "ls -lah";
       lg = "lazygit";
-      v = "nvim";
+      nv = "nvim ./";
       se = "sudoedit";
       ff = "fastfetch";
 
       # python
-      py = "python3";
+      py = "uv python3";
       pip = "uv pip";
-      venv = "source .venv/bin/activate";
+      venv = "uv source .venv/bin/activate";
 
       # Other
       fresh = "exec $SHELL";
@@ -77,7 +73,6 @@
         "virtualenv"
         "zoxide"
       ];
-      # theme = "agnoster"; # blinks is also really nice
     };
 
     prezto = {
