@@ -1,9 +1,6 @@
 # fonts
 font-size = 13
 font-family = "JetBrains Mono"
-# font-family-bold        = JetBrainsMono NFM SemiBold
-# font-family-italic      = JetBrainsMono NFM SemiBold Italic
-# font-family-bold-italic = JetBrainsMono NFM ExtraBold Italic
 
 font-style = "Bold"
 font-style-bold = "ExtraBold"
