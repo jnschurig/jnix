@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -S neovim discord ghostty kitty lutris steam nautilus dolphin popsicle vscode lazygit
+sudo pacman -S neovim discord ghostty kitty lutris steam nautilus dolphin popsicle vscode lazygit fwupd
