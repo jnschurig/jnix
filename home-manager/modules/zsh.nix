@@ -9,31 +9,33 @@
       let
         flakeDir = "~/git/jnix";
       in {
-      rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upd = "nix flake update ${flakeDir}";
-      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+        rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
+        upd = "nix flake update ${flakeDir}";
+        upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
-      hms = "home-manager switch --flake ${flakeDir}";
-      ncg = "nix-collect-garbage -d";
+        hms = "home-manager switch --flake ${flakeDir}";
+        ncg = "nix-collect-garbage -d";
 
-      fc = "fzf | wl-copy";
+        fc = "fzf | wl-copy";
 
-      ll = "ls -l";
-      lh = "ls -lah";
-      lg = "lazygit";
-      nv = "nvim ./";
-      se = "sudoedit";
-      ff = "fastfetch";
+        pacup = "sudo pacman -Syu";
 
-      # python
-      py = "uv python3";
-      pip = "uv pip";
-      venv = "uv source .venv/bin/activate";
+        ll = "ls -l";
+        lh = "ls -lah";
+        lg = "lazygit";
+        nv = "nvim ./";
+        se = "sudoedit";
+        ff = "fastfetch";
 
-      # Other
-      fresh = "exec $SHELL";
-      watts = "echo $(($(cat /sys/class/power_supply/BAT1/current_now) * $(cat /sys/class/power_supply/BAT1/voltage_now) / 1000000000000))W";
-    };
+        # python
+        py = "uv python3";
+        pip = "uv pip";
+        venv = "uv source .venv/bin/activate";
+
+        # Other
+        fresh = "exec $SHELL";
+        watts = "echo $(($(cat /sys/class/power_supply/BAT1/current_now) * $(cat /sys/class/power_supply/BAT1/voltage_now) / 1000000000000))W";
+      };
 
     history = {
       size = 10000;
