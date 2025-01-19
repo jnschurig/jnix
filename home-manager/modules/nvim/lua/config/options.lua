@@ -7,6 +7,7 @@ local o = vim.opt
 
 g.have_nerd_font = true
 g.lazyvim_python_lsp = "basedpyright"
+-- g.lazyvim_python_lsp = "ruff"
 
 o.number = true
 o.relativenumber = true

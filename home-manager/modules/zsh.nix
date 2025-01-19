@@ -28,9 +28,9 @@
         ff = "fastfetch";
 
         # python
-        py = "uv python3";
+        py = "python";
         pip = "uv pip";
-        venv = "uv source .venv/bin/activate";
+        uvenv = "source .venv/bin/activate";
 
         # Other
         fresh = "exec $SHELL";
