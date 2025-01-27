@@ -4,7 +4,7 @@
     # ./bootloader.nix
     # ./env.nix
     ./hyprland.nix
-    ./nixvim/nixvim.nix
+    # ./nixvim/nixvim.nix
     # ./nm.nix
     ./python.nix
     # ./sound.nix
