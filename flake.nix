@@ -17,10 +17,10 @@
     #   # inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
   };
 
@@ -30,7 +30,7 @@
     nixpkgs-stable,
     home-manager,
     # ghostty,
-    nixvim,
+    # nixvim,
      ... 
   } @inputs:
 
@@ -47,7 +47,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [
         ./home-manager/home.nix
-        nixvim.homeManagerModules.nixvim
+        # nixvim.homeManagerModules.nixvim
       ];
       # nix is dumb and hates gpu acceleration.
       # extraSpecialArgs = {
