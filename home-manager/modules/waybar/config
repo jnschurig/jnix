@@ -16,18 +16,18 @@
     "spacing": 5, // Gaps between modules (4px)
 
     "modules-left": [
-        //"custom/rofi",
+        "custom/rofi",
         "hyprland/workspaces",
         //"hyprland/submap",
         "temperature",
         //"idle_inhibitor",
         //"mpd"
-        "custom/spotify"
+        //"custom/spotify",
+        "hyprland/window"
     ],
     "modules-center": [
-        //"hyprland/window"
-        "clock#date",
-        "custom/weather"
+        "clock#date"
+        //"custom/weather"
         //"custom/gammastep"
     ],
     "modules-right": [
@@ -38,8 +38,8 @@
         "battery",
         //"pulseaudio",
         "wireplumber",
-        "power-profiles-daemon",
-        "custom/screenshot_t",
+        //"power-profiles-daemon",
+        //"custom/screenshot_t",
         "tray",
         "custom/power"
     ],
@@ -62,9 +62,11 @@
     "custom/rofi": {
         "format": "",
         "tooltip": false,
-        "on-click-right": "nwg-drawer",
-        "on-click": "wofi --show run",
-        "on-click-middle": "pkill -9 wofi"
+        //"on-click-right": "nwg-drawer",
+        "on-click": "rofi -show run -modi window,run,combi -combi-modi window,run",
+        "on-click-right": "pkill -9 rofi"
+        //"on-click": "rofi --show run",
+        //"on-click-middle": "pkill -9 wofi"
     },
     "custom/screenshot_t":{
         "format":" ",
