@@ -1,7 +1,6 @@
-{pkgs, ghosttyPackage, ...}: 
+{pkgs, ...}: 
 {
   imports = [
-    # ./zsh.nix
     ./modules/bundle.nix
     ./apps.nix
   ];
@@ -12,12 +11,12 @@
     stateVersion = "24.05";
     sessionVariables = {
       # BACKGROUND_IMG = "$HOME/Pictures/wallpaper/background/shell_frieze.jpeg";
-      # BROWSER = "firefox";
+      BROWSER = "firefox";
       EDITOR = "code";
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
       # NIX_CONF_DIR = "$HOME/.config/nix";
       PATH = "$PATH:${pkgs.stdenv.shell}:$HOME/.bashrc:$(${pkgs.stdenv.shell} -c '/home/linuxbrew/.linuxbrew/bin/brew shellenv' | grep PATH | cut -d\"'\" -f2):$HOME/local/Lumafly-Linux";
-      TERMINAL = "kitty";
+      TERMINAL = "ghostty";
     };
 
     # Put JNIX home manager in preferred location for full functionality.
@@ -41,11 +40,6 @@
         source = ../nix.conf;
       };
     };
-
-    # ghostty uses gpu acceleration and nix is dumb
-    # packages = [
-    #   ighosttyPackage
-    # ];
 
     # Associate JNIX nixos config with a "standard" home directory location.
     # file."./nix/nixos" = {
