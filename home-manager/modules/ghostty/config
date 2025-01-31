@@ -10,13 +10,32 @@ font-style-bold-italic = "ExtraBold Italic"
 # appearance
 # theme = rose-pine-moon-custom
 theme = MaterialDesignColors
-background-opacity = 0.8
+
+# General
 adjust-box-thickness = 1
-# window-decoration = false
+maximize = true
+window-padding-x = 6
+
+# Linux
 gtk-titlebar = false
 
+# Macos
+# font-thicken = true # I go back and forth on this...
+background-opacity = 0.8
+background-blur = false
+keybind = global:super+escape=toggle_quick_terminal
+
+# Quick terminal
+quick-terminal-space-behavior = remain
+quick-terminal-autohide = false
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0.1
+quit-after-last-window-closed = true
+app-notifications = true
+
 # keybinds
-keybind = global:super+grave_accent=toggle_quick_terminal
+keybind = performable:ctrl+c=copy_to_clipboard
+# keybind = ctrl+v=paste_from_clipboard # messes with vim
 
 keybind = ctrl+n=new_window
 keybind = ctrl+q=quit
@@ -29,21 +48,15 @@ keybind = alt+up=jump_to_prompt:-1
 keybind = ctrl+t=new_tab
 keybind = ctrl+tab=next_tab
 keybind = ctrl+shift+tab=previous_tab
-keybind = ctrl+w=close_surface
+keybind = super+w=close_surface
+
+keybind = alt+tab=goto_split:next
+keybind = alt+shift+tab=goto_split:previous
 
 keybind = ctrl+shift+j=new_split:down
 keybind = ctrl+shift+l=new_split:right
 keybind = ctrl+shift+down=new_split:down
 keybind = ctrl+shift+right=new_split:right
-
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:bottom
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+l=goto_split:right
-keybind = ctrl+left=goto_split:left
-keybind = ctrl+down=goto_split:bottom
-keybind = ctrl+up=goto_split:top
-keybind = ctrl+right=goto_split:right
 
 # "refresh" splits
 keybind = ctrl+shift+r=equalize_splits
