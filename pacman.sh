@@ -1,5 +1,6 @@
 #!/bin/bash
 
 paru
-sudo pacman -S neovim discord ghostty kitty lutris steam nautilus dolphin popsicle vscode lazygit fwupd strawberry
+sudo pacman -S swayidle ghostty nautilus popsicle vscode fwupd neovim lazygit
+sudo pacman -S discord lutris steam strawberry
 paru -S dolphin-emu-git dolphin-emu-primehack-git
