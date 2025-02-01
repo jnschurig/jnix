@@ -46,28 +46,27 @@ ZSH_PATH=$(which zsh)
 
 # Check if zsh is installed
 if [ -z "$ZSH_PATH" ]; then
-    echo "zsh is not installed."
-    exit 1
+  echo "zsh is not installed."
+  exit 1
 fi
 
 # Check if the zsh path is already in /etc/shells
 if grep -Fxq "$ZSH_PATH" /etc/shells; then
-    echo "$ZSH_PATH is already in /etc/shells."
+  echo "$ZSH_PATH is already in /etc/shells."
 else
-    # Append the zsh path to /etc/shells
-    echo "$ZSH_PATH" | sudo tee -a /etc/shells > /dev/null
-    echo "$ZSH_PATH has been added to /etc/shells."
+  # Append the zsh path to /etc/shells
+  echo "$ZSH_PATH" | sudo tee -a /etc/shells >/dev/null
+  echo "$ZSH_PATH has been added to /etc/shells."
 fi
-
 
 # Install UV
 
 # Check if UV is installed
-if ! command -v uv &> /dev/null; then
-    echo "UV is not installed. Installing UV..."
-    curl -LsSf https://astral.sh/uv/install.sh | sh
+if ! command -v uv &>/dev/null; then
+  echo "UV is not installed. Installing UV..."
+  curl -LsSf https://astral.sh/uv/install.sh | sh
 else
-    echo "UV is already installed."
+  echo "UV is already installed."
 fi
 
 # Change the default terminal emulator (requires sudo)
@@ -77,20 +76,20 @@ fi
 # Install Nix Home Manager
 
 # Check if Nix is installed
-if ! command -v nix &> /dev/null
-then
-    echo "Nix is not installed. Installing Nix Home Manager..."
-    
-    # Install Nix Home Manager
-    sh <(curl -L https://nixos.org/nix/install) --daemon
+if ! command -v nix &>/dev/null; then
+  echo "Nix is not installed. Installing Nix Home Manager..."
+
+  # Install Nix Home Manager
+  sh <(curl -L https://nixos.org/nix/install) --daemon
 else
-    echo "Nix is already installed."
+  echo "Nix is already installed."
 fi
 # Do all the home-manager stuff (assume you will configure it later)
 
 # Set user's default shell to be zsh
 sudo sed -i "s|\($USER.*\)/bash|\1/zsh|" /etc/passwd
 
-# sh ./boot_option.sh
+sh ./pacman.sh
+sh ./nix_profile.sh
 
 echo "Setup complete!"
