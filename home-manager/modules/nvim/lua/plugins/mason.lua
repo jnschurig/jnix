@@ -19,8 +19,8 @@ local langs = {
   -- "ruff",
   "shellcheck",
   "shfmt",
-  "sqlfluff",
-  "sqlls",
+  -- "sqlfluff",
+  -- "sqlls", -- This needs node or go to work right...
   "stylua",
   -- "taplo",
   -- "terraformls",
