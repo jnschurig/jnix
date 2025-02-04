@@ -38,6 +38,8 @@ keybind = performable:ctrl+c=copy_to_clipboard
 
 keybind = ctrl+n=new_window
 keybind = ctrl+q=quit
+keybind = super+n=new_window
+keybind = super+q=quit
 
 keybind = alt+j=jump_to_prompt:1
 keybind = alt+k=jump_to_prompt:-1
@@ -45,6 +47,7 @@ keybind = alt+down=jump_to_prompt:1
 keybind = alt+up=jump_to_prompt:-1
 
 keybind = ctrl+t=new_tab
+keybind = super+t=new_tab
 keybind = ctrl+tab=next_tab
 keybind = ctrl+shift+tab=previous_tab
 keybind = super+w=close_surface
