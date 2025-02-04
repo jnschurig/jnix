@@ -30,7 +30,6 @@ quick-terminal-space-behavior = remain
 quick-terminal-autohide = false
 quick-terminal-screen = main
 quick-terminal-animation-duration = 0.1
-quit-after-last-window-closed = true
 app-notifications = true
 
 # keybinds
