@@ -31,6 +31,10 @@
     zip
     yazi
 
+    # Programming
+    go
+    nodejs-slim
+
     # fonts
     fira
     font-awesome

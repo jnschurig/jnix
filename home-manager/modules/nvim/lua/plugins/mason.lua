@@ -1,12 +1,12 @@
 local langs = {
   "black",
-  "bashls",
+  -- "bashls", -- Needs nodejs
   -- "debugpy",
   -- "docker-compose-language-service",
   -- "dockerls",
   -- "hadolint",
   "isort",
-  "jsonls",
+  -- "jsonls",
   "lua_ls",
   -- "markdown-toc",
   -- "markdownlint",
@@ -14,18 +14,18 @@ local langs = {
   -- "marksman",
   -- "nil",
   "basedpyright",
-  -- "pylsp",
-  "rnix",
+  "pylsp",
+  -- "rnix",
   -- "ruff",
   "shellcheck",
   "shfmt",
   -- "sqlfluff",
-  -- "sqlls", -- This needs node or go to work right...
+  -- "sqlls", -- This needs nodejs to work right...
   "stylua",
   -- "taplo",
   -- "terraformls",
   -- "tflint",
-  "yamlls",
+  -- "yamlls",
   "yamllint",
 }
 
