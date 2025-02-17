@@ -13,12 +13,12 @@
     # nmap
     file
     fzf # fuzzy finder
-    fd # fuzzy rust-based find replacement
-    fzf-git-sh # fuzzy git search and tools
+    # fd # fuzzy rust-based find replacement
+    # fzf-git-sh # fuzzy git search and tools
     jq
     # lazydocker
-    ripgrep
-    ripgrep-all
+    # ripgrep
+    # ripgrep-all
     shellcheck
     # taplo
     tmux
