@@ -36,21 +36,18 @@ app-notifications = true
 keybind = performable:ctrl+c=copy_to_clipboard
 # keybind = ctrl+v=paste_from_clipboard # messes with vim
 
-keybind = ctrl+n=new_window
-keybind = ctrl+q=quit
-keybind = super+n=new_window
-keybind = super+q=quit
-
 keybind = alt+j=jump_to_prompt:1
 keybind = alt+k=jump_to_prompt:-1
 keybind = alt+down=jump_to_prompt:1
 keybind = alt+up=jump_to_prompt:-1
 
-keybind = ctrl+t=new_tab
+keybind = super+q=quit
+keybind = super+n=new_window
 keybind = super+t=new_tab
+keybind = super+w=close_surface
+
 keybind = ctrl+tab=next_tab
 keybind = ctrl+shift+tab=previous_tab
-keybind = super+w=close_surface
 
 keybind = alt+tab=goto_split:next
 keybind = alt+shift+tab=goto_split:previous
