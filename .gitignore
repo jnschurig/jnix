@@ -1,2 +1,3 @@
 
 *.bak
+home-manager/modules/nvim/lazy-lock.json
