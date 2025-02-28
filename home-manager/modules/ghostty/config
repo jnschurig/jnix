@@ -41,6 +41,7 @@ keybind = alt+k=jump_to_prompt:-1
 keybind = alt+down=jump_to_prompt:1
 keybind = alt+up=jump_to_prompt:-1
 
+# ctrl+n will mess with vim.
 keybind = super+q=quit
 keybind = super+n=new_window
 keybind = super+t=new_tab
