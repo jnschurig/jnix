@@ -21,7 +21,7 @@ gtk-titlebar = false
 
 # Macos
 # font-thicken = true # I go back and forth on this...
-background-opacity = 0.85
+background-opacity = 0.9
 background-blur = false
 keybind = global:super+escape=toggle_quick_terminal
 
