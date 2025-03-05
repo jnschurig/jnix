@@ -4,8 +4,12 @@ return {
   priority = 1000, -- Ensure it loads before other plugins
   config = function()
     -- vim.g.disable_background = true
-    vim.g.material_style = "darker" -- Change to "palenight", "oceanic", etc. if needed
-    require("material").setup({})
+    vim.g.material_style = "design colors" -- Change to "palenight", "oceanic", etc. if needed
+    require("material").setup({
+      -- disable = { -- totally works
+      --   background = true,
+      -- },
+    })
     vim.cmd.colorscheme("material")
   end,
 }
