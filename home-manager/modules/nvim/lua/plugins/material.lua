@@ -7,7 +7,7 @@ return {
     vim.g.material_style = "design colors" -- Change to "palenight", "oceanic", etc. if needed
     require("material").setup({
       disable = { -- This works, but causes the lualine text to be WHITE
-        background = true,
+        background = false,
       },
     })
     vim.cmd.colorscheme("material")
