@@ -4,10 +4,18 @@ return {
   priority = 1000, -- Ensure it loads before other plugins
   config = function()
     -- vim.g.disable_background = true
-    vim.g.material_style = "design colors" -- Change to "palenight", "oceanic", etc. if needed
+    vim.g.material_style = "design colors"
     require("material").setup({
       disable = { -- This works, but causes the lualine text to be WHITE
         background = false,
+      },
+      plugins = {
+        -- "neo-tree",
+      },
+      styles = {
+        comments = {},
+        functions = { bold = true },
+        strings = { italic = true },
       },
     })
     vim.cmd.colorscheme("material")
