@@ -209,7 +209,7 @@ window#waybar.hidden {
 }
 
 #battery {
-    color: #c0caf5;
+    /* color: #c0caf5; */
 }
 
 #battery.charging,
@@ -226,7 +226,8 @@ window#waybar.hidden {
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
+    /* color: #f53c3c; */
+    color: #fc3841;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
