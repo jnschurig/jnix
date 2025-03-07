@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   programs.tmux = {
-    enable = true;
+    enable = false;
     shortcut = "a";
     clock24 = false;
     newSession = true;

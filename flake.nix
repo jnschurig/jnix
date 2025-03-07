@@ -29,8 +29,6 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
-    # ghostty,
-    # nixvim,
      ... 
   } @inputs:
 
@@ -49,10 +47,6 @@
         ./home-manager/home.nix
         # nixvim.homeManagerModules.nixvim
       ];
-      # nix is dumb and hates gpu acceleration.
-      # extraSpecialArgs = {
-      #   ghosttyPackage = ghostty.packages.x86_64-linux.default;
-      # };
     };
   };
 }
