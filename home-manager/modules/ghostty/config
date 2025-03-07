@@ -24,6 +24,7 @@ gtk-titlebar = false
 background-opacity = 0.9
 background-blur = false
 keybind = global:super+escape=toggle_quick_terminal
+macos-option-as-alt = true
 
 # Quick terminal
 quick-terminal-space-behavior = remain
@@ -57,6 +58,12 @@ keybind = ctrl+shift+j=new_split:down
 keybind = ctrl+shift+l=new_split:right
 keybind = ctrl+shift+down=new_split:down
 keybind = ctrl+shift+right=new_split:right
+
+keybind = shift+right=adjust_selection:right
+keybind = shift+left=adjust_selection:left
+# I am not 100% these will work, but they could...
+# keybind = alt+l=adjust_selection:right
+# keybind = alt+h=adjust_selection:left
 
 # "refresh" splits
 keybind = ctrl+shift+r=equalize_splits
