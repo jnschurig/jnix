@@ -40,8 +40,8 @@
     font-awesome
     jetbrains-mono
     nerdfonts
-    noto-fonts
-    noto-fonts-emoji
+    # noto-fonts
+    # noto-fonts-emoji
     powerline-fonts
     powerline-symbols
     twemoji-color-font
