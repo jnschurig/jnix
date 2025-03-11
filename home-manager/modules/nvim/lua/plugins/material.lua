@@ -1,5 +1,6 @@
 return {
-  "jnschurig/material.nvim", -- Use your fork
+  "jnschurig/material.nvim",
+  -- branch = "color_tweak",
   lazy = false, -- Ensure it loads on startup
   priority = 1000, -- Ensure it loads before other plugins
   config = function()
