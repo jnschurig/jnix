@@ -9,9 +9,9 @@
 
     //"height": 20,
 
-    "margin-left": 10,
+    //"margin-left": 10,
     "margin-bottom": 0,
-    "margin-right": 10,
+    //"margin-right": 10,
 
     "spacing": 5, // Gaps between modules (4px)
 
@@ -33,7 +33,7 @@
     "modules-right": [
         "backlight",
         // "custom/storage",
-        "memory",
+        // "memory",
         "cpu",
         "battery",
         //"pulseaudio",
@@ -221,16 +221,23 @@
     },
 
     "clock": {
+        "tooltip": false,
         "format": "  {:%H:%M   %e %b}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<b>{}</b>"
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "today-format": "<b>{}</b>",
+        // "on-click": "gsimplecal"
+        "on-click": "gsimplecal & (sleep 0.2 && while hyprctl activewindow | grep -q gsimplecal; do sleep 0.1; done; pkill gsimplecal) &"
     },
 
     "clock#date": {
-        // "format": "󰥔  {:%H:%M -  %e %b}",
+        "tooltip": false,
         "format": "󰥔  {:%I:%M %p -  %e %b}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<b>{}</b>"
+        // "format": "󰥔  {:%H:%M -  %e %b}",
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "today-format": "<b>{}</b>",
+        // "on-click": "gsimplecal"
+        "on-click": "gsimplecal & (sleep 0.2 && while hyprctl activewindow | grep -q gsimplecal; do sleep 0.1; done; pkill gsimplecal) &"
+
     },
 
     "custom/gammastep": {
@@ -263,7 +270,8 @@
         //"format": " {}%", // Icon: microchip
         "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
         "max-length": 13,
-        "min-length": 13
+        "min-length": 13,
+        "on-click": "ghostty -e btop"
     },
 
     "mpd": {
