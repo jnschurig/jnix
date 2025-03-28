@@ -20,5 +20,6 @@ return {
       },
     })
     vim.cmd.colorscheme("material")
+    -- vim.api.nvim_set_hl(0, "NonText", { fg = "#a5bcca" })
   end,
 }

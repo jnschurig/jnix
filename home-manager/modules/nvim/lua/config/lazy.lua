@@ -54,7 +54,6 @@ require("lazy").setup({
         "mason",
         "mason-lspconfig",
         "mason-tool-installer",
-        "neo-tree",
         "rainbow_csv",
         "vim-visual-multi",
       },
