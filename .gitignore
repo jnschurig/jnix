@@ -1,3 +1,4 @@
 
 *.bak
 home-manager/modules/nvim/lazy-lock.json
+home-manager/modules/nvim/lazyvim.json
