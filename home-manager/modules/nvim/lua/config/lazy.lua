@@ -30,7 +30,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "material", "tokyonight" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
@@ -45,8 +45,18 @@ require("lazy").setup({
         -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
-        "tutor",
+        -- "tutor",
         "zipPlugin",
+
+        -- Review these ones
+        "nvim-lint",
+        "dbtpal",
+        "mason",
+        "mason-lspconfig",
+        "mason-tool-installer",
+        "neo-tree",
+        "rainbow_csv",
+        "vim-visual-multi",
       },
     },
   },
