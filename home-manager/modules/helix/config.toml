@@ -1,0 +1,35 @@
+
+theme = "onedark"
+
+[editor]
+scrolloff = 10
+mouse = true
+shell = ["zsh", "-c"]
+line-number = "absolute"
+cursorline = true
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+completion-replace = false # set to true to have completion replace entire word
+bufferline = "multiple"
+text-width = 120
+default-line-ending = "lf"
+insert-final-newline = true # the default.
+indent-heuristic = "hybrid"
+
+[editor.statusline]
+separator = ">"
+left = ["mode", "separator", "spacer", "version-control"]
+center = ["file-name"]
+right = ["spinner", "spacer", "workspace-diagnostics", "separator", "diagnostics", "spacer", "separator", "position", "spacer", "total-line-numbers", "spacer", "position-percentage", "spacer"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
