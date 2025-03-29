@@ -7,6 +7,7 @@
     ./ghostty.nix
     ./git.nix
     # ./lazygit.nix # DEPRECATED
+    ./helix.nix
     ./kitty.nix
     ./neovim.nix
     # ./nixvim.nix # DEPRECATED
