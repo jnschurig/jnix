@@ -11,6 +11,7 @@
     ./kitty.nix
     ./neovim.nix
     # ./nixvim.nix # DEPRECATED
+    ./pycodestyle.nix
     ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
