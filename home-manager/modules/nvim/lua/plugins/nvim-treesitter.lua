@@ -9,7 +9,7 @@ return {
         "html",
         "json",
         "json5",
-        "latex",
+        -- "latex",
         "lua",
         "luadoc",
         "markdown",
