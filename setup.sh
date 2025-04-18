@@ -90,7 +90,7 @@ fi
 sudo sed -i "s|\($USER.*\)/bash|\1/zsh|" /etc/passwd
 
 sh ./pacman.sh
-sh ./nix_profile.sh
+sh ./init_script.sh
 sh ./flatpak.sh
 
 echo "Setup complete!"
