@@ -1,13 +1,14 @@
-if true then
-  return {}
-end
+-- if true then
+--   return {}
+-- end
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
   lazy = false,
   priority = 1000,
   keys = {
-    { "<leader>e", "<cmd>Neotree toggle<CR>", desc = "Toggle Neo-tree Explorer" },
+    { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree Explorer" },
+    { "<leader>E", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree Explorer" },
   },
   opts = {
     filesystem = {
