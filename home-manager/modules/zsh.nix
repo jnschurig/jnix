@@ -24,6 +24,7 @@
         lh = "ls -lah";
         lg = "lazygit";
         nv = "nvim ./";
+        he = "helix ./";
         se = "sudoedit";
         ff = "fastfetch";
 
