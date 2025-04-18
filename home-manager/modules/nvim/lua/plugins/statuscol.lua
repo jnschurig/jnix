@@ -9,11 +9,11 @@ return {
     -- vim.api.nvim_set_hl(0, "Status_DivLine", { bg = "#1d2021", fg = "#292929" })
 
     local builtin = require("statuscol.builtin")
-    opts.ft_ignore = { "neo-tree", "grug-far", "Avante", "AvanteInput", "AvanteSelectedFiles" }
+    opts.ft_ignore = { "neo-tree", "grug-far", "Avante", "AvanteInput", "AvanteSelectedFiles", "snacks_picker_preview" }
     opts.setopt = true
     opts.segments = {
       { text = { "%s" }, click = "v:lua.ScSa" },
-      -- { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+      { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
       {
         text = { "%=", "%=", "%{v:lnum}", " " },
         --text = { "%=", "%=", " ", "%{v:lnum}", " " },
