@@ -11,6 +11,9 @@ return {
     { "<leader>E", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree Explorer" },
   },
   opts = {
+    update_focused_file = {
+      enable = true,
+    },
     filesystem = {
       filtered_items = {
         never_show = {
