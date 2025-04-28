@@ -6,10 +6,6 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   lazy = false,
   priority = 1000,
-  keys = {
-    { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree Explorer" },
-    { "<leader>E", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree Explorer" },
-  },
   opts = {
     update_focused_file = {
       enable = true,
