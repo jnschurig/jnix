@@ -12,10 +12,10 @@
     coreutils
     # nmap
     file
-    fzf # fuzzy finder
+    # fzf # fuzzy finder
     # fd # fuzzy rust-based find replacement
     # fzf-git-sh # fuzzy git search and tools
-    jq
+    # jq
     # lazydocker
     # ripgrep
     # ripgrep-all
@@ -54,7 +54,7 @@
 
     # productivity
     # glow # markdown previewer in terminal
-    rofi-wayland
+    # rofi-wayland
   ];
 
   programs = {
@@ -100,7 +100,7 @@
     # };
 
 
-    jq.enable = true;
+    # jq.enable = true;
 
     nix-index.enable = true;
 
