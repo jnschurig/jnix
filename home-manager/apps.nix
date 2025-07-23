@@ -32,7 +32,7 @@
     yazi
 
     # Programming
-    go
+    # go
     nodejs-slim
 
     # fonts
