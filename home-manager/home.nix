@@ -15,7 +15,7 @@
       EDITOR = "code";
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
       # NIX_CONF_DIR = "$HOME/.config/nix";
-      PATH = "$PATH:${pkgs.stdenv.shell}:$HOME/.bashrc:$(${pkgs.stdenv.shell} -c '/home/linuxbrew/.linuxbrew/bin/brew shellenv' | grep PATH | cut -d\"'\" -f2)";
+      PATH = "$PATH:${pkgs.stdenv.shell}:$HOME/.bashrc:$(${pkgs.stdenv.shell} -c '/home/linuxbrew/.linuxbrew/bin/brew shellenv' | grep PATH | cut -d\"'\" -f2):$HOME/go/bin";
       TERMINAL = "ghostty";
     };
 
