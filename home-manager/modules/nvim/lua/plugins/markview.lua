@@ -7,8 +7,6 @@ return {
   -- "nvim-tree/nvim-web-devicons",
   -- },
 
-  -- make sure markview hits the runtimepath before treesitter
-  -- priority = 10000,
   lazy = true,
 
   opts = {
