@@ -19,6 +19,7 @@ shell-integration-features = sudo
 
 # Linux
 gtk-titlebar = false
+window-subtitle = working-directory
 
 # Macos
 # font-thicken = true # I go back and forth on this...
