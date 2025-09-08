@@ -17,6 +17,7 @@
       # NIX_CONF_DIR = "$HOME/.config/nix";
       PATH = "$PATH:${pkgs.stdenv.shell}:$HOME/.bashrc:$(${pkgs.stdenv.shell} -c '/home/linuxbrew/.linuxbrew/bin/brew shellenv' | grep PATH | cut -d\"'\" -f2):$HOME/go/bin";
       TERMINAL = "ghostty";
+      ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     };
 
     # Put JNIX home manager in preferred location for full functionality.
