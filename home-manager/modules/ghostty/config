@@ -9,7 +9,7 @@ font-style-bold-italic = "ExtraBold Italic"
 
 # appearance
 # theme = rose-pine-moon-custom
-theme = MaterialDesignColors
+theme = Material Design Colors
 
 # General
 adjust-box-thickness = 1
