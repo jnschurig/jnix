@@ -15,11 +15,14 @@ theme = Material Design Colors
 adjust-box-thickness = 1
 maximize = true
 window-padding-x = 6
-shell-integration-features = sudo
+shell-integration-features = sudo,ssh-terminfo
 
 # Linux
 gtk-titlebar = false
 window-subtitle = working-directory
+
+# Shader
+custom-shader=/Users/james/git/jnix/home-manager/modules/ghostty/shaders/cursor_blaze.glsl
 
 # Macos
 # font-thicken = true # I go back and forth on this...
@@ -29,9 +32,11 @@ keybind = global:super+escape=toggle_quick_terminal
 macos-option-as-alt = true
 
 # Quick terminal
+quick-terminal-position = top
+quick-terminal-size = 85%
 quick-terminal-space-behavior = remain
 quick-terminal-autohide = false
-quick-terminal-screen = main
+quick-terminal-screen = macos-menu-bar
 quick-terminal-animation-duration = 0.1
 app-notifications = true
 
