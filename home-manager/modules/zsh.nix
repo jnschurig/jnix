@@ -70,10 +70,10 @@
         "pip"
         "python"
         "poetry"
-        "pyenv"
+        # "pyenv"
         "rust"
         "sudo"
-        "virtualenv"
+        # "virtualenv"
         "zoxide"
       ];
     };
