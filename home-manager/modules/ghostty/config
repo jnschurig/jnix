@@ -27,8 +27,7 @@ gtk-titlebar = false
 window-subtitle = working-directory
 
 # Shader
-# custom-shader=./shaders/cursor_blaze.glsl
-custom-shader=./shaders/cursor_frost.glsl
+custom-shader=./shaders/cursor_blaze.glsl
 
 # Macos
 # font-thicken = true # I go back and forth on this...
