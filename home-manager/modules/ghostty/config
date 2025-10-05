@@ -10,6 +10,11 @@ font-style-bold-italic = "ExtraBold Italic"
 # appearance
 # theme = rose-pine-moon-custom
 theme = Material Design Colors
+# theme = Adventure Time
+# theme = Afterglow
+# theme = Arcoiris
+# theme = Bluloco Dark
+# theme = Desert
 
 # General
 adjust-box-thickness = 1
@@ -22,7 +27,7 @@ gtk-titlebar = false
 window-subtitle = working-directory
 
 # Shader
-custom-shader=/Users/james/git/jnix/home-manager/modules/ghostty/shaders/cursor_blaze.glsl
+custom-shader=$HOME/git/jnix/home-manager/modules/ghostty/shaders/cursor_blaze.glsl
 
 # Macos
 # font-thicken = true # I go back and forth on this...
