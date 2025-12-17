@@ -16,8 +16,11 @@
       # LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
       # NIX_CONF_DIR = "$HOME/.config/nix";
       PATH = "$PATH:${pkgs.stdenv.shell}:$HOME/.bashrc:$(${pkgs.stdenv.shell} -c '/home/linuxbrew/.linuxbrew/bin/brew shellenv' | grep PATH | cut -d\"'\" -f2):$HOME/go/bin:$HOME/.local/bin";
+      # XDG_DATA_DIRS = "$XDG_DATA_DIRS:$HOME/.local/share/flatpak/app";
+      XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share/applications";
       TERMINAL = "ghostty";
       ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+      KIRO_ROOT = "$HOME/kiro/202510022241-distro-linux-x64/Kiro";
     };
 
     # Put JNIX home manager in preferred location for full functionality.
