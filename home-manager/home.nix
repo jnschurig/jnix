@@ -20,7 +20,7 @@
       XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share/applications";
       TERMINAL = "ghostty";
       ELECTRON_OZONE_PLATFORM_HINT = "wayland";
-      KIRO_ROOT = "$HOME/kiro/202510022241-distro-linux-x64/Kiro";
+      KIRO_ROOT = "$HOME/kiro/kiro-ide-0.7.45-stable-linux-x64/Kiro";
     };
 
     # Put JNIX home manager in preferred location for full functionality.
