@@ -57,6 +57,7 @@
       # source ${pkgs.zsh-autoenv}/share/zsh-autoenv/autoenv.zsh
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
       # source $HOME/.local/bin/env
+      eval "$(mise activate zsh)"
     '';
 
     oh-my-zsh = {

@@ -19,7 +19,7 @@
       # XDG_DATA_DIRS = "$XDG_DATA_DIRS:$HOME/.local/share/flatpak/app";
       XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share/applications";
       TERMINAL = "ghostty";
-      ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
       KIRO_ROOT = "$HOME/kiro/kiro-ide-0.7.45-stable-linux-x64/Kiro";
     };
 
